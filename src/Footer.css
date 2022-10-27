@@ -1,0 +1,8 @@
+.footer__container {
+    position: relative;
+    height: 331px;
+    width: 100vw;
+    left: 135px;
+   background: var(--secondary400);
+}
+

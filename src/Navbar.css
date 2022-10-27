@@ -1,7 +1,7 @@
 nav.nav__container {
     height: 162px;
     width: 100vw;
-    position: fixed;
+    /*position: fixed; */
 }
 
 .nav__top {
@@ -135,11 +135,12 @@ nav.nav__container {
 }
 
 button.nav__search {
-    padding: 25px 20px;
+    width: 88px;
+    height: 68px;
     background: var(--tertiary300);
     border-radius: 0px 5px 5px 0px;
-    cursor: pointer;
-    border-color: var(--tertiary300) !important;
+    padding: 25px 20px;
+    border-color: var(--tertiary300);
 }
 
 button.nav__search:hover {

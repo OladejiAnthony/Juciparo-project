@@ -10,6 +10,7 @@ import Home from './HomePage/Home';
 import Footer from './Footer';
 import AboutUs from './AboutUs/AboutUs';
 import Login from './LoginPage/Login';
+import Newsletter from './Newsletter';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/Login' exact component={Login} />
           <Route path='/AboutUs' exact component={AboutUs} />
         </Routes> 
+        <Newsletter />
         <Footer />
       </Router>
     </div>
