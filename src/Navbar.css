@@ -1,0 +1,181 @@
+nav.nav__container {
+    height: 162px;
+    width: 100vw;
+    position: fixed;
+}
+
+.nav__top {
+    height: 113px;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    z-index: -1;
+}
+
+.nav__top img {
+    position: absolute;
+    width: 169px;
+    height: 113px;
+    left: 133px;
+}
+
+.nav__links {
+    position: absolute;
+    width: 358px;
+    height: 100%;
+    left: 302px;
+}
+
+.nav__links a.navLinkOne {
+    position: absolute;
+    left: 116px;
+    width: 105px;
+    height: 24px;
+    top: 41px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--secondary400);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav__links a.navLinkTwo {
+    position: absolute;
+    left: 276px;
+    width: 83px;
+    height: 24px;
+    top: 41px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--secondary400);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav__top a.nav__notification {
+    position: absolute;
+    align-items: center;
+    width: 100px;
+    height: 18px;
+    right: 133px;
+    top: 46px;
+    display: flex;
+    gap: 5px;
+    padding-top: 0px;
+    color: var(--secondary400);
+    text-decoration: none;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+
+.nav__bottom {
+    height: 70px;
+    width: 100vw;
+    position: absolute;
+    border-bottom: 2px solid black;
+    top: 91px;
+}
+
+.nav__bottom > button {
+    position: absolute;
+    width: 201px;
+    height: 65px;
+    left: 134px;
+    background: var(--tertiary300);
+    border-radius: 5px 5px 0px 0px;
+    border-width: 0px;
+    padding: 8px 20px;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--primary100);
+    border-color: var(--tertiary300) !important;
+}
+
+.nav__bottom > button:hover {
+    background: var(--tertiary200);
+    border-radius: 5px;
+}
+
+.nav__input {
+    position: absolute;
+    width: 531px;
+    height: 68px;
+    left: 368px;
+    display: flex;
+}
+
+.nav__input input[type="text"] {
+    width: 443px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--secondary100);
+    padding-left: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+button.nav__search {
+    padding: 25px 20px;
+    background: var(--tertiary300);
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    border-color: var(--tertiary300) !important;
+}
+
+button.nav__search:hover {
+    background: var(--tertiary200);
+    border-radius: 5px;
+}
+
+button.nav__search svg.iconify.iconify--ion {
+    color: var(--primary100)!important;
+}
+
+.nav__bottom__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 60px;
+    align-items: center;
+    position: absolute;
+    width: 393px;
+    height: 68px;
+    right: 133px;
+    background: var(--primary200);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.nav__bottom__list a {
+    text-decoration: none;
+    width: 76px;
+    height: 18px;
+    display: flex;
+    gap: 5px;
+    padding-top: 0px;
+    cursor: pointer;
+}
+
+svg.iconify {
+    padding-top: 3px!important;
+}
