@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Footer.css"
 import { Link } from 'react-router-dom'
+import { Icon } from '@iconify/react';
 import logo from "./Images/JuciAlternative.jpg"
 
 function Footer() {
@@ -8,10 +9,13 @@ function Footer() {
     <div className='footer__container'>
       <img src={logo} alt='logo' />
       <Link to="/">
+        <Icon icon="ant-design:twitter-outlined" />
+      </Link>
+      <Link to="/"> 
+        <Icon icon="ant-design:instagram-outlined" />
       </Link>
       <Link to="/">
-      </Link>
-      <Link to="/">
+        <Icon icon="ei:sc-facebook" />
       </Link>
       <div className='footer__list'>
         <ul>

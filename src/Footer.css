@@ -22,6 +22,17 @@
     background: var(--primary300);
     border-radius: 50%;
     z-index: 1;
+    padding: 12px;
+    color: black;
+}
+
+.footer__container a svg.iconify.iconify--ei {
+    padding: 0px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 7px;
+    top: 6px;
 }
 
 .footer__container a:nth-child(2) {
@@ -33,6 +44,16 @@
     background: var(--primary300);
     border-radius: 50%;
     z-index: 1;
+    padding: 12px;
+}
+
+.footer__container a:nth-child(2) svg.iconify.iconify--ant-design {
+    padding: 0px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 7px;
+    top: 7px;
 }
 
 
@@ -45,6 +66,17 @@
     background: var(--primary300);
     border-radius: 50%;
     z-index: 1;
+    padding: 12px;
+}
+
+
+.footer__container a:nth-child(3) svg.iconify.iconify--ant-design {
+    padding: 0px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 7px;
+    top: 5px;
 }
 
 .footer__list {
