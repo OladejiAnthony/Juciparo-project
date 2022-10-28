@@ -1,0 +1,17 @@
+.landing {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 1174px;
+    height: 553px;
+    left: 133px;
+    background: greenyellow;
+}
+
+
+.landing__right {
+    position: absolute;
+    width: 938px;
+    height: 553px;
+    right: 0px;
+}

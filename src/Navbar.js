@@ -18,15 +18,15 @@ function Navbar() {
       <div className='nav__top'>
         <img src={logo} alt='logo' />
         <div className='nav__links'>
-          <Link className='navLinkOne' to='/'>
+          <Link className='navLinkOne' to="">
               Sell An Item
           </Link>
-          <Link className='navLinkTwo' to='/'>
+          <Link className='navLinkTwo' to="AboutUs">
               About Us
           </Link>
         </div>
         
-        <Link className='nav__notification' to='/'>
+        <Link className='nav__notification' to="">
           <Icon icon="clarity:notification-line" />
           Notification
         </Link>
@@ -47,15 +47,15 @@ function Navbar() {
           </button>
         </div>
         <div className='nav__bottom__list'>
-          <Link to='/'>
+          <Link to="">
             <Icon icon="teenyicons:user-outline" />
             Account
           </Link>
-          <Link to='/'>
+          <Link to="">
             <Icon icon="ant-design:shopping-cart-outlined" />
             Cart
           </Link>
-          <Link to='/'>
+          <Link to="">
             <Icon icon="bx:help-circle" />
             Help
           </Link>

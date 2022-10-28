@@ -1,12 +1,16 @@
 import React from 'react'
 import "./Home.css"
+import Landing from './Landing'
+import Next from './Next'
 
 function Home() {
   return (
-    <div className='home__container'>
-      Home
-      ade is a boy
-    </div>
+    <>
+      <div className='home__container'>
+        <Landing />
+        <Next />
+      </div>
+    </>
   )
 }
 

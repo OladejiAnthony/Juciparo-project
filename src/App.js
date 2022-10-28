@@ -19,9 +19,9 @@ function App() {
       <Router>
         <Navbar />  
         <Routes> 
-          <Route path='/' exact component={Home} />
-          <Route path='/Login' exact component={Login} />
-          <Route path='/AboutUs' exact component={AboutUs} />
+          <Route path='/' exact element={<Home />}  />
+          <Route path='Login/*' element={<Login />} />
+          <Route path='AboutUs/*' element={<AboutUs />} />
         </Routes> 
         <Newsletter />
         <Footer />

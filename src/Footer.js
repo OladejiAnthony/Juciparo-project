@@ -1,12 +1,18 @@
 import React from 'react'
 import "./Footer.css"
 import { Link } from 'react-router-dom'
-import logo from "./Images/footer_Logo.jpg"
+import logo from "./Images/JuciAlternative.jpg"
 
 function Footer() {
   return (
     <div className='footer__container'>
       <img src={logo} alt='logo' />
+      <Link to="/">
+      </Link>
+      <Link to="/">
+      </Link>
+      <Link to="/">
+      </Link>
       <div className='footer__list'>
         <ul>
           <li>Help</li>

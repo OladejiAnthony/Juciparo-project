@@ -9,6 +9,42 @@
     position: absolute;
     top: 24px;
     left: 135px;
+    width: 197px;
+    height: 132px;
+}
+
+.footer__container a {
+    width: 44px;
+    position: absolute;
+    height: 44px;
+    top: 122px;
+    left: 135px;
+    background: var(--primary300);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.footer__container a:nth-child(2) {
+    width: 44px;
+    position: absolute;
+    height: 44px;
+    top: 122px;
+    left: 191px;
+    background: var(--primary300);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+.footer__container a:nth-child(3) {
+    width: 44px;
+    position: absolute;
+    height: 44px;
+    top: 122px;
+    left: 247px;
+    background: var(--primary300);
+    border-radius: 50%;
+    z-index: 1;
 }
 
 .footer__list {
