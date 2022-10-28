@@ -2,7 +2,51 @@
     position: relative;
     height: 331px;
     width: 100vw;
-    left: 135px;
-   background: var(--secondary400);
+    background: var(--secondary400);
 }
 
+.footer__container > img {
+    position: absolute;
+    top: 24px;
+    left: 135px;
+}
+
+.footer__list {
+    position: relative;
+    left: 700px;
+    width: 51%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    gap: 108px;
+}
+
+.footer__list > ul {
+    position: relative;
+    width: 107px;
+    height: 148px;
+    list-style-type: none;
+    top: 74px;
+    text-align: start;
+}
+
+.footer__list > ul > li:nth-child(1) {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    color: var(--primary300);
+}
+
+.footer__list > ul > li {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--primary400);
+    margin-bottom: 11px;
+    width: 137px;
+}
