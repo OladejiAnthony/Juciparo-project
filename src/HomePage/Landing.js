@@ -14,9 +14,6 @@ function Landing() {
         </div>
 
         <img src={bcg} alt='background' />
-        <div className='landing__text'>
-            kshdjks
-        </div>
       </div>
       
     </div>

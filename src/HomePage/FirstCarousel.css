@@ -101,6 +101,19 @@ div > p {
 }
 
 /* ... */
+.carousel-content.show-2 > * {
+    width: 50%;
+}
+
+.carousel-content.show-3 > * {
+    width: calc(100% / 3);
+}
+
+.carousel-content.show-4 > * {
+    width: calc(100% / 4);
+}
+
+/* ... */
 .left-arrow, .right-arrow {
     position: absolute;
     z-index: 1;
@@ -124,11 +137,11 @@ div > p {
 }
 /* ... */
 
-/* ... */
+/* 
 @media (hover: none) and (pointer: coarse) {
     .left-arrow, .right-arrow {
         display: none;
     }
 }
-/* ... */
+*/
 
