@@ -11,6 +11,12 @@ import imgA from "../Images/product1.jpg"
 import imgB from "../Images/product2.jpg"
 import imgC from "../Images/product3.jpg"
 import imgD from "../Images/product4.jpg"
+import RecommendCarousel from './RecommendCarousel'
+import imgOne from "../Images/recom1.jpg"
+import imgTwo from "../Images/recom2.jpg"
+import imgThree from "../Images/recom3.jpg"
+import imgFour from "../Images/recom4.jpg"
+import Gadget from './Gadget'
 
 function Home() {
   return (
@@ -90,7 +96,6 @@ function Home() {
             </div>
           </div>
           <div>
-            <button>New</button>
             <div className="img">
               <img src={imgC} alt="placeholder"  /> 
             </div> 
@@ -115,9 +120,94 @@ function Home() {
               </div>
             </div>
           </div>
-          
-          
+      
         </ProductCarousel>
+        <RecommendCarousel 
+          show={3} 
+          style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
+        >
+          <div>
+            <button>New</button>
+            <div className="img">
+              <img src={imgOne} alt="placeholder"  /> 
+            </div>
+            <div className='product-text'>
+              <p>Adidas sport sneakers</p>
+              <div>
+                <h5>#500</h5>
+                <p>#600</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="img">
+              <img src={imgTwo} alt="placeholder"  /> 
+            </div>
+            <div className='product-text'>
+              <p>Adidas sport sneakers</p>
+              <div>
+                <h5>#500</h5>
+                <p>#600</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <button>New</button>
+            <div className="img">
+              <img src={imgThree} alt="placeholder"  /> 
+            </div> 
+            <div className='product-text'>
+              <p>Adidas sport sneakers</p>
+              <div>
+                <h5>#500</h5>
+                <p>#600</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="img">
+              <img src={imgFour} alt="placeholder"  /> 
+            </div>
+            <div className='product-text'>
+              <p>Adidas sport sneakers</p>
+              <div>
+                <h5>#500</h5>
+                <p>#600</p>
+              </div>
+            </div>
+          </div>
+          
+        </RecommendCarousel>
+        <Gadget
+            show={3} 
+            style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
+        >
+            <div>
+              <button>New</button>
+              <div className="img">
+                <img src={imgOne} alt="placeholder"  /> 
+              </div>
+              <div className='product-text'>
+                <p>Adidas sport sneakers</p>
+                <div>
+                  <h5>#500</h5>
+                  <p>#600</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="img">
+                <img src={imgTwo} alt="placeholder"  /> 
+              </div>
+              <div className='product-text'>
+                <p>Adidas sport sneakers</p>
+                <div>
+                  <h5>#500</h5>
+                  <p>#600</p>
+                </div>
+              </div>
+            </div>
+        </Gadget>
       </div>
     </>
   )

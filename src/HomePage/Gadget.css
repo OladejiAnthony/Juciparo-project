@@ -1,5 +1,5 @@
 
-.product-carousel-container {
+.gadget-carousel-container {
     position: relative;
     width: 1172px;
     height: 411px;
@@ -9,7 +9,7 @@
     flex-direction: column;
 }
 
-.product-carousel-wrapper {
+.gadget-carousel-wrapper {
     display: flex;
     width: 100%;
     height: 100%;
@@ -17,16 +17,16 @@
 }
 
 
-.wrapper-text {
+.gadget-wrapper-text {
     width: 100%;
     height: 34px;
     position: absolute;
     display: flex;
 }
 
-.wrapper-text h4 {
+.gadget-wrapper-text h4 {
     position: absolute;
-    width: 240px;
+    width: 290px;
     height: 34px;
     left: 0px;
     font-family: 'Montserrat', sans-serif;
@@ -37,7 +37,7 @@
     color: #000000;
 }
 
-.wrapper-text h5 {
+.gadget-wrapper-text h5 {
     position: absolute;
     width: 65px;
     height: 18px;
@@ -51,7 +51,7 @@
 }
 
 
-.product-carousel-content-wrapper {
+.gadget-carousel-content-wrapper {
     overflow: hidden;
     width: 100%;
     top: 40px;
@@ -59,9 +59,9 @@
     position: relative;
 }
 
-.product-carousel-content {
-    width: 270px;
-    height: 352px;
+.gadget-carousel-content {
+    width: 570px;
+    height: 313px;
     position: relative;
     display: flex;
     gap: 42px;
@@ -70,19 +70,19 @@
     scrollbar-width: none;  /* hide scrollbar in Firefox */
 }
 
-.product-carousel-content> div {
+.gadget-carousel-content> div {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     position: relative;
     align-items: center;
     width: 100%;
     height: 100%;
-    background: #FFFFFF; 
+    background: #F4F4F4;
     box-shadow: 3px 5px 15px 5px rgba(0, 0, 0, 0.05);
     border-radius: 5px;
 }
 
-.product-carousel-content> div > button {
+.gadget-carousel-content> div > button {
     text-align: center;
     background: var(--tertiary300);
     color: var(--primary100);
@@ -101,7 +101,7 @@
     z-index: 1;
 }
 
-.product-carousel-content> div .img{
+.gadget-carousel-content> div .img{
     position: relative;
     width: 200px;
     height: 200px;
@@ -111,18 +111,25 @@
     border-radius: 30px;
 }
 
-.product-carousel-content> div .img > img{
+.gadget-carousel-content> div .img > img{
     position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 30px;
-}
-
-.product-carousel-content> div:nth-child(4) .img >img {
     left: 0px;
 }
 
-.product-carousel-content>  div > p {
+.gadget-carousel-content> div:nth-child(3) .img >img {
+    width: 89px;
+    height: 185px;
+    left: 25px;
+}
+
+.gadget-carousel-content> div:nth-child(4) .img >img {
+    left: 0px;
+}
+
+.gadget-carousel-content>  div > p {
     position: absolute;
     top: 214px;
     font-family: 'Montserrat', sans-serif;
@@ -134,7 +141,7 @@
     color: #000000;
 }
 
-.product-text {
+.gadget-text {
     position: absolute;
     width: 123px;
     height: 76px;
@@ -144,7 +151,7 @@
     flex-direction: column;
 }
 
-.product-text > p {
+.gadget-text > p {
     position: absolute;
     width: 119px;
     height: 56px;
@@ -157,7 +164,7 @@
     color: #212121;
 }
 
-.product-text > div {
+.gadget-text > div {
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -167,7 +174,7 @@
     height: 25px;
 }
 
-.product-text > div > h5 {
+.gadget-text > div > h5 {
     position: absolute;
     position: absolute;
     width: 35px;
@@ -180,7 +187,7 @@
     color: #EB0000;
 }
 
-.product-text > div > p {
+.gadget-text > div > p {
     position: absolute;
     width: 27px;
     height: 18px;
@@ -195,31 +202,31 @@
 }
 
 /* hide scrollbar in webkit browser */
-.product-carousel-content::-webkit-scrollbar, .carousel-content::-webkit-scrollbar {
+.gadget-carousel-content::-webkit-scrollbar, .carousel-content::-webkit-scrollbar {
     display: none;
 }
 
-.product-carousel-content > * {
+.gadget-carousel-content > * {
     width: 100%;
     flex-shrink: 0;
     flex-grow: 1;
 }
 
 /* ... */
-.product-carousel-content.show-2 > * {
+.gadget-carousel-content.show-2 > * {
     width: 50%;
 }
 
-.product-carousel-content.show-3 > * {
+.gadget-carousel-content.show-3 > * {
     width: calc(100% / 3);
 }
 
-.product-carousel-content.show-4 > * {
+.gadget-carousel-content.show-4 > * {
     width: calc(100% / 4);
 }
 
 /* ... */
-.product-left-arrow, .product-right-arrow {
+.gadget-left-arrow, .recommend-right-arrow {
     position: absolute;
     z-index: 1;
     top: 50%;
@@ -233,11 +240,11 @@
     font-size: 32px;
 }
 
-.product-left-arrow {
+.gadget-left-arrow {
     left: 24px;
 }
 
-.product-right-arrow {
+.gadget-right-arrow {
     right: 24px;
 }
 /* ... */
