@@ -17,6 +17,8 @@ import imgTwo from "../Images/recom2.jpg"
 import imgThree from "../Images/recom3.jpg"
 import imgFour from "../Images/recom4.jpg"
 import Gadget from './Gadget'
+import Gad from "../Images/gadget1.jpg"
+import GadTwo from "../Images/gadget2.png"
 
 function Home() {
   return (
@@ -182,31 +184,32 @@ function Home() {
             show={3} 
             style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
         >
-            <div>
-              <button>New</button>
-              <div className="img">
-                <img src={imgOne} alt="placeholder"  /> 
-              </div>
-              <div className='product-text'>
-                <p>Adidas sport sneakers</p>
-                <div>
-                  <h5>#500</h5>
-                  <p>#600</p>
+          <div>
+              <div className='gadget-right'>
+                <div className='gadget-text'>
+                    <h5>Quality Headset</h5>
+                    <p>Get this headset at an affordable price.</p>
                 </div>
+                <button>Shop Now</button>
               </div>
-            </div>
-            <div>
               <div className="img">
-                <img src={imgTwo} alt="placeholder"  /> 
+                <img src={Gad} alt="placeholder"  /> 
               </div>
-              <div className='product-text'>
-                <p>Adidas sport sneakers</p>
-                <div>
-                  <h5>#500</h5>
-                  <p>#600</p>
+          </div>
+          <div>
+              <div className='gadget-right'>
+                <div className='gadget-text'>
+                    <h5>Quality Headset</h5>
+                    <p>Get this headset at an affordable price.</p>
                 </div>
+                <button>Shop Now</button>
               </div>
-            </div>
+              <div className="img">
+                <img src={GadTwo} alt="placeholder"  /> 
+              </div>
+          </div>
+            
+
         </Gadget>
       </div>
     </>
