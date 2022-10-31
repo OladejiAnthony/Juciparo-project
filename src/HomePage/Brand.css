@@ -1,0 +1,21 @@
+.brand {
+    position: relative;
+    width: 1172px;
+    height: 323px;
+    left: 133px;
+    margin-bottom: 25px;
+    display: grid;
+    gap: 30px 50px;
+    grid-template-columns: auto auto auto auto;
+    padding: 0px;
+}
+
+.grid-item {
+    height: 109px;
+    width: 165px;
+    padding: 20px;
+    padding-top: 0px;
+    font-size: 30px;
+    text-align: center;
+}
+
