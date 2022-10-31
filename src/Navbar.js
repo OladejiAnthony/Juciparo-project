@@ -3,6 +3,7 @@ import "./Navbar.css"
 import logo from "./Images/Logo.jpg"
 import { Link } from 'react-router-dom'
 import { Icon } from '@iconify/react';
+import AccountDropDown from './AccountDropDown';
 
 
 function Navbar() {
@@ -48,8 +49,8 @@ function Navbar() {
         </div>
         <div className='nav__bottom__list'>
           <Link to="">
-            <Icon icon="teenyicons:user-outline" />
-            Account
+            
+            <AccountDropDown />
           </Link>
           <Link to="">
             <Icon icon="ant-design:shopping-cart-outlined" />

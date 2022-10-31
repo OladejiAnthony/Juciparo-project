@@ -5,6 +5,10 @@
   font-family: 'PT Sans', sans-serif;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 .app {
   max-width: 100vw;
   min-height: 100vh;

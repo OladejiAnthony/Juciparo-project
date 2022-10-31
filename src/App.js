@@ -9,8 +9,8 @@ import Navbar from './Navbar';
 import Home from './HomePage/Home';
 import Footer from './Footer';
 import AboutUs from './AboutUs/AboutUs';
-import Login from './LoginPage/Login';
 import Newsletter from './Newsletter';
+import CreateAccount from './LoginPage/CreateAccount';
 
 
 function App() {
@@ -20,8 +20,8 @@ function App() {
         <Navbar />  
         <Routes> 
           <Route path='/' exact element={<Home />}  />
-          <Route path='Login/*' element={<Login />} />
           <Route path='AboutUs/*' element={<AboutUs />} />
+          <Route path='SignUp/*' element={<CreateAccount />} />
         </Routes> 
         <Newsletter />
         <Footer />
