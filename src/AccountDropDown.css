@@ -15,6 +15,10 @@
     font-size: 15px;
 }
 
+.dropdown_container > button:hover {
+    color: white;
+}
+
 .dropdown__list {
     position: absolute;
     width: 166px;
@@ -59,7 +63,16 @@
     border-radius: 5px;
     color: black;
     top: 69px;
-    padding: 8px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.dropdown__list a:nth-child(2):hover {
+    color: #FFFFFF;
+    top: 69px;
+    padding: 0px;
+    padding-top: 5px;
+    padding-left: 5px;
 }
 
 .dropdown__list a:nth-child(3) {
@@ -77,3 +90,13 @@
     line-height: 18px;
 }
 
+
+.dropdown__list a:nth-child(3):hover {
+    top: 117px;
+    width: 133px;
+    height: 35px;
+    color: #FFFFFF;
+    padding: 0px;
+    padding-top: 7px;
+    padding-left: 15px;
+}
