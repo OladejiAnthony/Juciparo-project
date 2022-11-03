@@ -1,0 +1,74 @@
+.sellerLanding {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 1174px;
+    height: 553px;
+    left: 133px;
+    background: #F4F4F4;
+    border-radius: 5px;
+}
+
+.sellerLanding > div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 268px;
+    height: 271px;
+    left: 177px;
+    top: 141px;
+}
+
+.sellerLanding > div > h3 {
+    position: absolute;
+    width: 268px;
+    height: 112px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 45px;
+    top: 0px;
+    line-height: 54px;
+    color: #000000;
+}
+
+.sellerLanding > div > h5 {
+    position: absolute;
+    width: 268px;
+    height: 73px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    text-align: start;
+    top: 118px;
+}
+
+.sellerLanding > div > a {
+    position: absolute;
+    width: 171px;
+    height: 65px;
+    background: #000000;
+    color: #FDFDFD;
+    border-radius: 5px;
+    bottom: 0px;
+    text-align: center;
+    padding-top: 20.5px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.sellerLanding > img {
+    position: absolute;
+    width: 566px;
+    height: 514px;
+    right: 129px;
+    top: 19px;
+    background: #F4F4F4;
+}

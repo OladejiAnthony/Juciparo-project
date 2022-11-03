@@ -1,0 +1,79 @@
+.createAccount {
+    width: 100vw;
+    height: 75vw;
+    background: #ffffff;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+
+.createAccount .create__head {
+    position: relative;
+    width: 400px;
+    height: 213px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.createAccount .create__head > img {
+    position: absolute;
+    width: 169px;
+    height: 113px;
+    top: 29px;
+}
+
+.createAccount .create__head > h3 {
+    position: absolute;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+    top: 125.34px;
+}
+
+.createAccount .create__head > h5 {
+    position: absolute;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #212121;
+    top: 166.97px;
+    text-align: start;
+}
+
+/*
+.form{
+    background-color: white;
+    border-radius: 5px;
+    width: 550px;
+    margin: 20px auto;
+    padding: 20px;
+    top: 36px;
+}
+
+.form-body{
+    text-align: left;
+    padding: 20px 10px;
+}
+
+.form-body > *{
+    padding: 5px;
+}
+
+.form__label{
+    width: 40%;
+}
+
+.form_input{
+    width: 60%;
+}
+
+
+*/

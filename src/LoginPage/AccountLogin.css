@@ -1,0 +1,50 @@
+.accountLogin {
+    width: 100vw;
+    height: 60vw;
+    background: #ffffff;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+
+.accountLogin .account_head {
+    position: relative;
+    width: 400px;
+    height: 213px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.accountLogin .account_head > img {
+    position: absolute;
+    width: 169px;
+    height: 113px;
+    top: 29px;
+}
+
+.accountLogin .account_head > h3 {
+    position: absolute;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+    top: 125.34px;
+}
+
+.accountLogin .account_head > h5 {
+    position: absolute;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #212121;
+    top: 166.97px;
+    text-align: start;
+}
+

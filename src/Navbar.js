@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import "./Navbar.css"
-import logo from "./Images/Logo.jpg"
+import logo from "../src/Images/logoOne.jpg"
 import { Link } from 'react-router-dom'
 import { Icon } from '@iconify/react';
 import AccountDropDown from './AccountDropDown';
@@ -19,7 +19,7 @@ function Navbar() {
       <div className='nav__top'>
         <img src={logo} alt='logo' />
         <div className='nav__links'>
-          <Link className='navLinkOne' to="">
+          <Link className='navLinkOne' to="/IntroPage">
               Sell An Item
           </Link>
           <Link className='navLinkTwo' to="AboutUs">
@@ -49,7 +49,6 @@ function Navbar() {
         </div>
         <div className='nav__bottom__list'>
           <Link to="">
-            
             <AccountDropDown />
           </Link>
           <Link to="">

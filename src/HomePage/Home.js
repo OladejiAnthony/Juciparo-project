@@ -22,10 +22,14 @@ import GadTwo from "../Images/gadget2.png"
 import SellingCarousel from './SellingCarousel'
 import Brand from './Brand'
 import Discuss from './Discuss'
+import Navbar from '../Navbar'
+import Footer from '../Footer'
+import Newsletter from "../Newsletter"
 
 function Home() {
   return (
     <>
+      <Navbar /> 
       <div className='home__container'>
         <Landing />
         <FirstCarousel 
@@ -272,6 +276,8 @@ function Home() {
         <Brand />
 
       </div>
+      <Newsletter />
+      <Footer />
     </>
   )
 }

@@ -1,0 +1,60 @@
+.sellerNext {
+    position: relative;
+    width: 1170px;
+    height: 313px;
+    left: 135px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #F4F4F4;
+    border-radius: 5px;
+    margin-bottom: 51px;
+}
+
+.sellerNext > div {
+    position: absolute;
+    width: 193.29px;
+    height: 142px;
+    left: 178px;
+    top: 86px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sellerNext > div > h3 {
+    width: 193.29px;
+    height: 71px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+}
+
+.sellerNext > div > a {
+    width: 136.74px;
+    height: 54px;
+    background: #EF0000;
+    border-radius: 5px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FDFDFD;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 18px;
+}
+
+.sellerNext > img {
+    position: absolute;
+    width: 461px;
+    height: 279px;
+    right: 153px;
+    top: 17px;
+}
+
+
