@@ -1,0 +1,10 @@
+.profile__container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 1174px;
+    height: 553px;
+    left: 133px;
+    background: #F4F4F4;
+    border-radius: 5px;
+}

@@ -9,7 +9,7 @@ function SellerLanding() {
        <div>
         <h3>Own An Online store</h3>
         <h5>Reach millions of customers with your online store</h5>
-        <Link>Register Now</Link>
+        <Link to="/SellerCreate">Register Now</Link>
        </div>
        <img src={storeImg} alt="storeImg" />
     </div>

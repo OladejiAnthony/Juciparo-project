@@ -8,7 +8,7 @@ function SellerNext() {
     <div className='sellerNext'>
       <div>
         <h3>Start Selling Today</h3>
-        <Link>Get Started</Link>
+        <Link to="/SellerCreate">Get Started</Link>
       </div>
       <img src={app} alt="add" />
     </div>

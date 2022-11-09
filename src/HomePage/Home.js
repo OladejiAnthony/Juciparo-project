@@ -25,6 +25,9 @@ import Discuss from './Discuss'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
 import Newsletter from "../Newsletter"
+import { Link } from 'react-router-dom'
+
+
 
 function Home() {
   return (
@@ -78,7 +81,7 @@ function Home() {
           show={3} 
           style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
         >
-          <div>
+          <Link to="/productDetails">
             <button>New</button>
             <div className="img">
               <img src={imgA} alt="placeholder"  /> 
@@ -90,8 +93,8 @@ function Home() {
                 <p>#600</p>
               </div>
             </div>
-          </div>
-          <div>
+          </Link>
+          <Link to="/productDetails">
             <button>New</button>
             <div className="img">
               <img src={imgB} alt="placeholder"  /> 
@@ -103,8 +106,8 @@ function Home() {
                 <p>#600</p>
               </div>
             </div>
-          </div>
-          <div>
+          </Link>
+          <Link to="/productDetails">
             <div className="img">
               <img src={imgC} alt="placeholder"  /> 
             </div> 
@@ -115,8 +118,8 @@ function Home() {
                 <p>#600</p>
               </div>
             </div>
-          </div>
-          <div>
+          </Link>
+          <Link to="/productDetails">
             <button>New</button>
             <div className="img">
               <img src={imgD} alt="placeholder"  /> 
@@ -128,7 +131,7 @@ function Home() {
                 <p>#600</p>
               </div>
             </div>
-          </div>
+          </Link>
       
         </ProductCarousel>
         <RecommendCarousel 

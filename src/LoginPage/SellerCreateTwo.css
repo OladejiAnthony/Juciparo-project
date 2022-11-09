@@ -1,6 +1,6 @@
-.sellerAccount {
+.sellerTwo {
     width: 100vw;
-    height: 80vw;
+    height: 100vw;
     background: #ffffff;
     align-items: center;
     display: flex;
@@ -9,7 +9,7 @@
 }
 
 
-.sellerAccount .account_head {
+.sellerTwo .account_head {
     position: relative;
     width: 400px;
     height: 213px;
@@ -18,14 +18,14 @@
     flex-direction: column;
 }
 
-.sellerAccount .account_head > img {
+.sellerTwo .account_head > img {
     position: absolute;
     width: 169px;
     height: 113px;
     top: 29px;
 }
 
-.sellerAccount .account_head > h3 {
+.sellerTwo .account_head > h3 {
     position: absolute;
     font-family: 'Lato';
     font-style: normal;
@@ -36,7 +36,7 @@
     top: 125.34px;
 }
 
-.sellerAccount .account_head > h5 {
+.sellerTwo .account_head > h5 {
     position: absolute;
     font-family: 'Lato';
     font-style: normal;

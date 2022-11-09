@@ -1,20 +1,20 @@
 import React from 'react'
-import "./SellerCreateAccount.css"
+import "./SellerCreateTwo.css"
 import abc from "../Images/logoOne.jpg"
 import AccountHeader from './AccountHeader';
-import SellerRegister from './SellerRegister';
+import SellerRegisterTwo from './SellerRegisterTwo';
 
-function SellerCreateAccount() {
+function SellerCreateTwo() {
   return (
-    <div className='sellerAccount'>
+    <div className='sellerTwo'>
         <AccountHeader
             img ={abc}
             head = "Create Your Seller Account"
-            headFive = "STEP 1"
+            headFive = "STEP 2"
         />
-        <SellerRegister />
+        <SellerRegisterTwo />
     </div>
   )
 }
 
-export default SellerCreateAccount;
+export default SellerCreateTwo;
