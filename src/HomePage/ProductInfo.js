@@ -44,7 +44,7 @@ function ProductInfo() {
                 </div>
                 <button>
                   <Icon icon="ant-design:shopping-cart-outlined" />
-                  Cart
+                  Add to Cart
                 </button>
                 <div className='prod__menuWish'>
                   <Icon icon="icon-park-outline:like" />

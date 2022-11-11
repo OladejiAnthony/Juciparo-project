@@ -1,0 +1,11 @@
+.cart__container {
+    max-width: 100vw;
+    min-height: 70vh;
+    background: #ffffff; 
+    position: relative;
+    top: 10px;
+    left: 136px;
+    display: flex;
+    flex-direction: row;
+    gap: 26px;
+}

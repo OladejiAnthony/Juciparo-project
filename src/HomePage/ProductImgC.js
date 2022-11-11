@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import "./FirstCarousel.css"
+import "./ProductImgC.css"
+//import { firstCarousel } from '../util/Data'
 
-const FirstCarousel = (props) => {
+const ProductImgC = (props) => {
   const {children} = props;
   // ...
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -52,25 +53,25 @@ const FirstCarousel = (props) => {
         setCurrentIndex(prevState => prevState - 1)
     }
   }
-  // ...
+  // ...ImgC
 
 
   return (
-      <div className="carousel-container">
-          <div className="carousel-wrapper">
+      <div className="productImgC-carousel-container">
+          <div className="productImgC-carousel-wrapper">
             {
               currentIndex > 0 &&
-              <button onClick={prev} className="left-arrow">
+              <button onClick={prev} className="productImgC-left-arrow">
                 &lt;
               </button>
             }
             <div 
-              className="carousel-content-wrapper"
+              className="productImgC-carousel-content-wrapper"
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
             >
                 <div
-                    className="carousel-content"
+                    className="productImgC-carousel-content"
                     style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                 >
                     {children}
@@ -78,7 +79,7 @@ const FirstCarousel = (props) => {
             </div>
             {
               currentIndex < (length - 1) &&
-              <button onClick={next} className="right-arrow">
+              <button onClick={next} className="productImgC-right-arrow">
                 &gt;
               </button>
             }
@@ -88,4 +89,4 @@ const FirstCarousel = (props) => {
   )
 }
 
-export default FirstCarousel;
+export default ProductImgC;

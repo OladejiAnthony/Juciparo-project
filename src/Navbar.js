@@ -17,7 +17,9 @@ function Navbar() {
   return (
     <nav className='nav__container'>
       <div className='nav__top'>
-        <img src={logo} alt='logo' />
+        <Link to="/">
+          <img src={logo} alt='logo' />
+        </Link>
         <div className='nav__links'>
           <Link className='navLinkOne' to="/IntroPage">
               Sell An Item
@@ -51,7 +53,7 @@ function Navbar() {
           <Link to="">
             <AccountDropDown />
           </Link>
-          <Link to="">
+          <Link to="/Cart">
             <Icon icon="ant-design:shopping-cart-outlined" />
             Cart
           </Link>

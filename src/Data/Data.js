@@ -1,0 +1,823 @@
+//FirstCarousel Images
+import img1 from "../Images/pngwing.jpg"
+import img2 from "../Images/pngwing1.jpg"
+import img3 from "../Images/pngwing2.jpg"
+import img4 from "../Images/pngwing3.jpg"
+import imgA from "../Images/product1.jpg"
+import imgB from "../Images/product2.jpg"
+import imgC from "../Images/product3.jpg"
+import imgD from "../Images/product4.jpg"
+import prod from "../Images/recom1.jpg"
+
+
+/*
+import {
+    UilEstate,
+    UilClipboardAlt,
+    UilUsersAlt,
+    UilPackage,
+    UilChart,
+    UilSignOutAlt,
+    UilUsdSquare,
+    UilMoneyWithdrawal
+} from "@iconscout/react-unicons"
+
+import { UilShoppingCart } from '@iconscout/react-unicons'
+import { UilChartBar } from '@iconscout/react-unicons'
+import { UilChartLine } from '@iconscout/react-unicons'
+import { UilPlus } from '@iconscout/react-unicons'
+import { UilUser } from '@iconscout/react-unicons'
+import { UilChartPie } from '@iconscout/react-unicons'
+import { UilToggleOn } from '@iconscout/react-unicons'
+import { UilToggleOff } from '@iconscout/react-unicons'
+import { UilStore } from '@iconscout/react-unicons'
+
+
+//import LegendToggleRoundedIcon from '@mui/icons-material/LegendToggleRounded';
+//import BubbleChartRoundedIcon from '@mui/icons-material/BubbleChartRounded';
+//import StackedLineChartRoundedIcon from '@mui/icons-material/StackedLineChartRounded';
+//import BarChartRoundedIcon from '@mui/icons-material/BarChartRounded';
+//import AddShoppingCartRoundedIcon from '@mui/icons-material/AddShoppingCartRounded';
+//import LocalMallRoundedIcon from '@mui/icons-material/LocalMallRounded';
+//import PersonOutlineRoundedIcon from '@mui/icons-material/PersonOutlineRounded';
+//import AddRoundedIcon from '@mui/icons-material/AddRounded';
+
+
+import img1 from "../../images/photos/profile-1.jpg"
+import img2 from "../../images/photos/profile-2.jpg"
+import img3 from "../../images/photos/profile-4.jpg"
+*/
+
+
+//Sidebar Data Array
+export const SidebarData = [
+    {
+        icon: "icon-park-solid:lipstick",
+        heading: "Health & Beauty",
+    },
+    {
+        icon: "charm:home",
+        heading: "Home & Office",
+    },
+    {
+        icon: "bi:phone-vibrate",
+        heading: "Phone & Tablet",
+    },
+    {
+        icon: "gridicons:computer" ,
+        heading: "Computers",
+    },
+    {
+        icon: "icon-park:clothes-crew-neck" ,
+        heading: "Fashion",
+    },
+    {
+        icon: "fluent-mdl2:game",
+        heading: "Games",
+    },
+    {
+        icon: "clarity:car-line",
+        heading: "Automobile",
+    },
+    {
+        icon: "mdi:television-classic",
+        heading: "Electronics",
+    },
+    {
+        icon: "bx:help-circle",
+        heading: "Others",
+    }
+];
+
+//First Carousel Data
+export const FirstCarouselData = [
+ {
+    img: img1,
+    text: "Fashion",
+ },
+ {
+    img: img2,
+    text: "Computers",
+ },
+ {
+    img: img3,
+    text: "Home and Offices",
+ },
+ {
+    img: img4,
+    text: "Phone & Tablet",
+ },
+ {
+    img: img1,
+    text: "Others",
+ },
+ {
+    img: img2,
+    text: "Electronics",
+ },
+]
+
+export const ProductCarouselData = [
+    {
+      btn : "New",
+      img : imgA,
+      pText : "Adidas sport sneakers",
+      Hprice : "#500",
+      Pprice : "#600",
+    },
+    {
+        btn : "New",
+        img : imgB,
+        pText : "Adidas sport sneakers",
+        Hprice : "#500",
+        Pprice : "#600",
+      },
+      {
+        img : imgC,
+        pText : "Adidas sport sneakers",
+        Hprice : "#500",
+        Pprice : "#600",
+      },
+      {
+        btn : "New",
+        img : imgD,
+        pText : "Adidas sport sneakers",
+        Hprice : "#500",
+        Pprice : "#600",
+      },
+]
+
+
+export const ProductImgCData = [
+    {
+        img : prod,
+    },
+    {
+        img : prod,
+    },
+    {
+        img : prod,
+    },
+    {
+        img : prod,
+    }
+]
+
+
+/*
+export const CardsData = [
+    {
+        title: UilChartBar,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "#7380ec",
+        },
+        barValue: 81,
+        value: "Total Inquiry, 162",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartPie,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "tomato",
+        },
+        barValue: 50,
+        value: "Total Invoice, 150",
+        png: UilMoneyWithdrawal,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartLine,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "yellow",
+        },
+        barValue: 76,
+        value: "Total Procured, 158",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartBar,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "#ff7782",
+        },
+        barValue: 81,
+        value: "Total Shipment, 90",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+];
+
+
+//CustomerCard
+
+export const CustomerCardData = [
+    {
+        title: UilChartBar,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "#7380ec",
+        },
+        barValue: 81,
+        value: "Total Users, 162",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartPie,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "tomato",
+        },
+        barValue: 50,
+        value: "Offline Users, 150",
+        png: UilMoneyWithdrawal,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartLine,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "yellow",
+        },
+        barValue: 76,
+        value: "New Users, 158",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartBar,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "#ff7782",
+        },
+        barValue: 81,
+        value: "Online Users, 90",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+];
+
+
+//InquiryCard
+export const InquiryCardData = [
+    {
+        title: UilChartBar,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "#7380ec",
+        },
+        barValue: 81,
+        value: "Total Inquiry, 162",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartPie,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "tomato",
+        },
+        barValue: 75,
+        value: "Assigned, 20",
+        png: UilMoneyWithdrawal,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartLine,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "yellow",
+        },
+        barValue: 28,
+        value: "Un-Assigned, 46",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartBar,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "#ff7782",
+        },
+        barValue: 89,
+        value: "Invoice, 142",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+];
+
+
+
+//InvoiceCard
+export const InvoiceCardData = [
+    {
+        title: UilChartBar,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "#7380ec",
+        },
+        barValue: 81,
+        value: "Total Order, 162",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartPie,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "tomato",
+        },
+        barValue: 75,
+        value: "Declined, 150",
+        png: UilMoneyWithdrawal,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartLine,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "yellow",
+        },
+        barValue: 78,
+        value: "Pending, 156",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartBar,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "#ff7782",
+        },
+        barValue: 45,
+        value: "Confirmed, 90",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+];
+
+//OrderData
+export const OrderCardData = [
+    {
+        title: UilChartBar,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "#7380ec",
+        },
+        barValue: 81,
+        value: "Total Invoice, 162",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartPie,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "tomato",
+        },
+        barValue: 75,
+        value: "Submitted, 150",
+        png: UilMoneyWithdrawal,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartLine,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "yellow",
+        },
+        barValue: 78,
+        value: "Pending, 156",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartBar,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "#ff7782",
+        },
+        barValue: 45,
+        value: "Certified, 90",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+]
+
+
+//PurchaseData
+export const PurchaseCardData = [
+    {
+        title: UilChartBar,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "#7380ec",
+        },
+        barValue: 81,
+        value: "Total Order, 162",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartPie,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "tomato",
+        },
+        barValue: 75,
+        value: "Low Quality, 150",
+        png: UilMoneyWithdrawal,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartLine,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "yellow",
+        },
+        barValue: 78,
+        value: "Out of Stocks, 156",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartBar,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "#ff7782",
+        },
+        barValue: 45,
+        value: "Purchases, 90",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+]
+
+
+//LogisticsData
+export const LogisticsCardData = [
+    {
+        title: UilChartBar,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "#7380ec",
+        },
+        barValue: 81,
+        value: "Received, 162",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartPie,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "tomato",
+        },
+        barValue: 75,
+        value: "Unsorted, 150",
+        png: UilMoneyWithdrawal,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartLine,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "yellow",
+        },
+        barValue: 78,
+        value: "Sorted, 156",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartBar,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "#ff7782",
+        },
+        barValue: 45,
+        value: "Sent, 90",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+]
+
+
+//MessagesData
+export const MessagesCardData = [
+    {
+        title: UilChartBar,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "#7380ec",
+        },
+        barValue: 81,
+        value: "Received, 162",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartPie,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "tomato",
+        },
+        barValue: 75,
+        value: "Unsorted, 150",
+        png: UilMoneyWithdrawal,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartLine,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "yellow",
+        },
+        barValue: 78,
+        value: "Sorted, 156",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+    {
+        title: UilChartBar,
+        color: {
+            boxShadow: "0 0.8rem 1rem  rgba(132, 139, 200, 0.18)",
+            backGround: "#ff7782",
+        },
+        barValue: 45,
+        value: "Sent, 90",
+        png: UilUsdSquare,
+        series: [
+            {
+                name: "Sales",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            },
+        ],
+    },
+]
+
+
+
+
+//Recent Update Card Data
+export const UpdatesData = [
+    {
+        img: img1,
+        name: "Chika Nkosi",
+        noti: "has ordered Apple smart watch 2500mh battery.",
+        time: "1 minute ago",
+    },
+    {
+        img: img2,
+        name: "Chika Nkosi",
+        noti: "has ordered Apple smart watch 2500mh battery.",
+        time: "1 minute  ago",
+    },
+    {
+        img: img3,
+        name: "Chika Nkosi",
+        noti: "has ordered Apple smart watch 2500mh battery.",
+        time: "1 minute  ago",
+    },
+]
+
+//Customers Data
+export const CustomersData = [
+    {
+        icon : UilShoppingCart,
+        info : "Online Inquiry",
+        successOne : "+40%",
+        successTwo : "4895",
+        text : "Last 24hours",
+    },
+    {
+        icon : UilStore,
+        info : "Offline Enquiry",
+        successOne : "-17%",
+        successTwo : "2586",
+        text : "Last 24hours",
+    },
+    {
+        icon : UilUser,
+        info : "New Customers",
+        successOne : "+25%",
+        successTwo : "8495",
+        text : "Last 24hours",
+    },
+    {
+        icon : UilPlus,
+        info : "Add Product",
+    },
+
+]
+
+
+//Search
+
+export const SearchData = [
+    {
+        name : "First Name",
+    },
+    {
+        name : "Last Name",
+    },
+    {
+        name : "Nationality",
+    },
+    {
+        name : "Phone Number",
+    },
+]
+
+export const AdminSearch = [
+    {
+        data : "First Name",
+    },
+    {
+        data : "User-Id",
+    },
+    {
+        data : "department",
+    },
+    {
+        data : "nationality",
+    },
+]
+
+export const InquirySearch = [
+    {
+        data : "First Name",
+    },
+    {
+        data : "User-Id",
+    },
+    {
+        data : "department",
+    },
+    {
+        data : "nationality",
+    },
+]
+
+
+*/

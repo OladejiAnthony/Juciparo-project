@@ -101,6 +101,10 @@
     z-index: 1;
 }
 
+.product-carousel-content> a > button:nth-child(3) {
+    background: var(--primary100);
+}
+
 .product-carousel-content> a .img{
     position: relative;
     width: 200px;

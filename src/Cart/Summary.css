@@ -1,0 +1,33 @@
+.cartSummary {
+    position: relative;
+    width: 371px;
+    height: 280px;
+    border-radius: 5px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cartSummary > div {
+    height: 209px;
+    width: 371px;
+    background: #F2F2F2;
+}
+
+.cartSummary > a {
+    width: 370px;
+    height: 60px;
+    background: var(--tertiary300);
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FDFDFD;
+    text-decoration: none;
+    padding-top: 18px;
+}
+
