@@ -1,0 +1,178 @@
+.profileHead {
+    position: absolute;
+    width: 1171px;
+    height: 249px;
+    background: #F4F4F4;
+    top: 21px;
+    display: flex;
+    flex-direction: row;
+    gap: 89px;
+}
+
+.profileHead > .avatar__section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 143px;
+    height: 220px;
+    left: 11px;
+    top: 15px;
+    align-items: center;
+}
+
+.css-nen11g-MuiStack-root {
+    width: 143px;
+    height: 143px;
+}
+
+.MuiAvatar-root.MuiAvatar-circular.MuiAvatar-colorDefault.css-1upixug-MuiAvatar-root {
+    width: 143px;
+    height: 143px;
+    background: #ffffff;
+}
+
+.MuiAvatar-root.MuiAvatar-circular.MuiAvatar-colorDefault.css-1upixug-MuiAvatar-root  > svg.iconify.iconify--fontisto {
+    width: 32px;
+    color: black;
+    height: 24px;
+}
+
+.avatar__section > h4 {
+    width: 140px;
+    height: 24px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    padding-left: 10px;
+    margin-bottom: 0px;
+}
+
+.avatar__section > .profileHead__star {
+    display: flex;
+    flex-direction: row;
+    gap: 2.75px;
+    width: 121px;
+    height: 22px;
+    align-items: flex-start;
+}
+
+.profileHead__star > svg.iconify.iconify--clarity {
+    width: 22px;
+    height: 22px;
+    color: yellow;
+}
+
+.avatar__section > p {
+    width: 141px;
+    height: 18px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    top: 200px;
+}
+
+.profileHead__deli {
+    position: relative;
+    height: 100%;
+    width: 484px;
+    display: flex;
+    gap: 25px;
+    align-items: flex-end;
+}
+.profileHead__deli > h4 {
+    width: 160px;
+    height: 26px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.profileHead__deli > div {
+    width: 230px;
+    height: 100px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.progress {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 3rem;
+    width: 230px;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    background-color: #8C8C8C;
+    transition: width .6s ease;
+}
+
+
+.profileHead__fol {
+    position: relative;
+    height: 100%;
+    width: 520px;
+    background: rgb(50, 143, 205);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.fol__top {
+    position: relative;
+    width: 271px;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    right: 0px;
+    align-self: flex-end;
+}
+
+.fol__top > button {
+    position: absolute;
+    right: 10px;
+}
+
+.fol__bottom {
+    height: 100px;
+    width: 300px;
+    position: relative;
+    display: flex;
+    gap: 21px;
+    right: 10px;
+    align-self: flex-end;
+    margin-bottom: 15px;
+}
+
+.fol__bottom > div {
+    width: 140px;
+    height: 100px;
+    background: #FDFDFD;
+    border-radius: 5px;
+}

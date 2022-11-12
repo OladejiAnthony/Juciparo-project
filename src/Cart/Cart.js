@@ -6,6 +6,8 @@ import "./Cart.css"
 import CartOne from './CartOne'
 import Summary from './Summary'
 
+
+//use material ui badge
 function Cart() {
   return (
     <>
