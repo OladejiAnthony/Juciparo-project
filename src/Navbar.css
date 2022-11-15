@@ -1,7 +1,12 @@
 nav.nav__container {
-    height: 162px;
+    height: 170px;
     width: 100vw;
     /*position: fixed; */
+}
+
+.nav__contain {
+    height: 170px;
+    width: 100vw;
 }
 
 .nav__top {
@@ -123,7 +128,7 @@ nav.nav__container {
     position: absolute;
     width: 531px;
     height: 68px;
-    left: 368px;
+    left: 28%;
     display: flex;
 }
 
@@ -161,22 +166,23 @@ button.nav__search svg.iconify.iconify--ion {
 .nav__bottom__list {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    column-gap: 60px;
+    justify-content: space-evenly;
     align-items: center;
     position: absolute;
     width: 393px;
     height: 68px;
-    right: 133px;
+    right: 7%;
     background: var(--primary200);
     border-radius: 5px;
     text-decoration: none;
+    padding-top: 15px;
 }
 
 .nav__bottom__list a {
+    position: relative;
     text-decoration: none;
-    width: 76px;
-    height: 18px;
+    width: 140px;
+    height: 43px;
     display: flex;
     gap: 5px;
     padding-top: 0px;
@@ -184,6 +190,7 @@ button.nav__search svg.iconify.iconify--ion {
     color: black;
 }
 
+/*
 .nav__bottom__list a:hover {
     background: var(--tertiary300);
     color: var(--primary100);
@@ -193,7 +200,202 @@ button.nav__search svg.iconify.iconify--ion {
     padding: 15px;
     gap: 10px;
 }
+*/
 
 svg.iconify {
     padding-top: 3px!important;
 }
+
+
+.nav-icon {
+    display: none;
+}
+  
+
+
+/* RESPONSIVENESS  */
+@media only screen and (max-width: 1439px) and (min-width: 1200px)  {
+    .nav__input {
+        width: 450px;
+        left: 29%;
+    }
+    .nav__input input[type="text"] {
+        width: 350px;
+    }
+    .nav__bottom__list {
+        width: 340px;
+        right: 5%;
+    }
+    .nav__bottom__list > a:nth-child(3) {
+        left: 5%;
+    }
+}
+
+@media only screen and (max-width: 1200px)  {
+    
+    .nav__top > a:nth-child(1) {
+        left: 5%;
+    }
+
+    .nav__top > .nav__links {
+        left: 20%;
+    }
+    
+    .nav__bottom > button {
+        left: 5%;
+        width: 150px;
+    }
+    .nav__input {
+        width: 450px;
+        left: 23%;
+    }
+    .nav__input input[type="text"] {
+        width: 300px;
+    }
+    .nav__bottom__list {
+        width: 300px;
+        right: 5%;
+        gap: 3px;
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    nav.nav__container {
+        background-color: black;
+        height: 375px;
+    }
+
+    .nav__top a:nth-child(1) {
+        left: 10%;
+    }
+
+    .nav__top .nav__links {
+        display: none;
+    }
+
+    .nav__top a.nav__notification {
+        display: none;
+    }
+
+    .nav__bottom {
+        z-index: -1;
+        top: 30px;
+        display: none;
+    }
+
+    .nav__contain.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background: white;
+        transition: all 2s ease;
+        height: 375px;
+        border-bottom: 1px solid black;
+    }
+
+    .nav__contain.active .nav__top {
+        top: 10px;
+        height: 120px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        transition: all 1s ease;
+    }
+
+    .nav__contain.active .nav__top > a:nth-child(1) {
+        display: none;
+    }
+
+    .nav__contain.active .nav__top .nav__links {
+        width: 200px;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        left: 35%;
+        display: unset;
+    }
+
+    .nav__contain.active .nav__top .nav__links a.navLinkOne {
+        left: 10px;
+        top: 15px;
+        width: 185px;
+        font-size: 35px;
+    }
+
+    .nav__contain.active .nav__top .nav__links a.navLinkTwo {
+        left: 10px;
+        top: 80px;
+        width: 185px;
+        font-size: 35px;
+    }
+
+
+    .nav__contain.active .nav__bottom {
+        height: 250px;
+        position: relative;
+        z-index: unset;
+        top: 65px;
+        display: unset;
+    }
+
+    .nav__contain.active .nav__bottom > button {
+        left: 37%;
+        top: 25px;
+    }
+
+    .nav__contain.active .nav__bottom .nav__input {
+        display: none;
+    }
+
+    .nav__contain.active .nav__bottom .nav__bottom__list {
+        left: 30%;
+        top: 125px;
+    }
+
+    .dropdown_container {
+        width: 90px;
+    }
+
+    svg.iconify.iconify--teenyicons {
+        width: 50px;
+        padding: 0px 5px 5px 0px;
+    }
+
+
+    .nav-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 5%;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: var(--tertiary300);
+    }
+
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .nav__contain.active .nav__top .nav__links {
+        left: 25%;
+    }
+
+    .nav__contain.active .nav__bottom > button {
+        left: 27%;
+    }
+
+    .nav__contain.active .nav__bottom .nav__bottom__list {
+        left: 14%;
+    }
+}
+
+
+@media screen and (max-width: 479px) {
+    .nav__contain.active .nav__bottom .nav__bottom__list {
+        left: 12%;
+    }
+}
+

@@ -8,7 +8,7 @@ import ProgressBar from 'react-bootstrap/ProgressBar';
 function ProfileHead() {
 
   const now = 60;
-  const zero = 0;
+  const zero = 10;
   return (
     <div className='profileHead'>
       <div className='avatar__section'>
@@ -47,10 +47,18 @@ function ProfileHead() {
           </div>
           <div className='fol__bottom'>
             <div>
-
+              <Icon icon="fontisto:shopping-sale" />
+              <div>
+                <h4>26</h4>
+                <p>Successful Sales</p>
+              </div>
             </div>
             <div>
-              
+              <Icon icon="mdi:timer-sand" />
+              <div>
+                <h4>5 Years</h4>
+                <p>Selling on Juciparo</p>
+              </div>
             </div>
           </div>
       </div>

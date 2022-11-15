@@ -8,61 +8,71 @@ import AccountDropDown from './AccountDropDown';
 
 function Navbar() {
   const [searchInput, setSearchInput] = useState("");
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
 
   const handleChange = (e) => {
     e.preventDefault();
     setSearchInput(e.target.value);
   };
 
+
+
   return (
     <nav className='nav__container'>
-      <div className='nav__top'>
-        <Link to="/">
-          <img src={logo} alt='logo' />
-        </Link>
-        <div className='nav__links'>
-          <Link className='navLinkOne' to="/IntroPage">
-              Sell An Item
+      <div className={click ? "nav__contain active" : "nav__contain"}>
+        <div className="nav__top">
+          <Link to="/">
+            <img src={logo} alt='logo' />
           </Link>
-          <Link className='navLinkTwo' to="AboutUs">
-              About Us
+          <div className='nav__links'>
+            <Link className='navLinkOne' to="/IntroPage">
+                Sell An Item
+            </Link>
+            <Link className='navLinkTwo' to="AboutUs">
+                About Us
+            </Link>
+          </div>
+          
+          <Link className='nav__notification' to="">
+            <Icon icon="clarity:notification-line" />
+            Notification
           </Link>
         </div>
-        
-        <Link className='nav__notification' to="">
-          <Icon icon="clarity:notification-line" />
-          Notification
-        </Link>
-      </div>
-      <div className='nav__bottom'>
-        <button>
-          Categories
-        </button>
-        <div className='nav__input'>
-          <input
-              type="text"
-              placeholder="Search for anything"
-              onChange={handleChange}
-              value={searchInput} 
-          />
-          <button className='nav__search'>
-            <Icon icon="ion:search-outline" />
+        <div className='nav__bottom'>
+          <button>
+            Categories
           </button>
+          <div className='nav__input'>
+            <input
+                type="text"
+                placeholder="Search for anything"
+                onChange={handleChange}
+                value={searchInput} 
+            />
+            <button className='nav__search'>
+              <Icon icon="ion:search-outline" />
+            </button>
+          </div>
+          <div className='nav__bottom__list'>
+            <Link to="">
+              <AccountDropDown />
+            </Link>
+            <Link to="/Cart">
+              <Icon icon="ant-design:shopping-cart-outlined" />
+              Cart
+            </Link>
+            <Link to="">
+              <Icon icon="bx:help-circle" />
+              Help
+            </Link>
+          </div>
         </div>
-        <div className='nav__bottom__list'>
-          <Link to="">
-            <AccountDropDown />
-          </Link>
-          <Link to="/Cart">
-            <Icon icon="ant-design:shopping-cart-outlined" />
-            Cart
-          </Link>
-          <Link to="">
-            <Icon icon="bx:help-circle" />
-            Help
-          </Link>
+        <div className="nav-icon" onClick={handleClick}>
+          <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
         </div>
       </div>
+      
     </nav>
   )
 }

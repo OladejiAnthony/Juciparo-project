@@ -138,25 +138,51 @@
     position: relative;
     height: 100%;
     width: 520px;
-    background: rgb(50, 143, 205);
+    /* background: rgb(50, 143, 205); */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
 .fol__top {
-    position: relative;
+    position: absolute;
     width: 271px;
     height: 65px;
     display: flex;
+    top: 19px;
     justify-content: space-between;
     right: 0px;
     align-self: flex-end;
+    align-items: center;
+}
+
+.fol__top > h4 {
+    width: 123px;
+    height: 22px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    color: #212121;
 }
 
 .fol__top > button {
-    position: absolute;
     right: 10px;
+    position: absolute;
+    width: 109px;
+    height: 65px;
+    background: #EF0000;
+    border-color: #EF0000;
+    border-radius: 5px;
+    border-width: 0px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FDFDFD;
 }
 
 .fol__bottom {
@@ -175,4 +201,52 @@
     height: 100px;
     background: #FDFDFD;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.fol__bottom > div > svg.iconify.iconify--fontisto {
+    width: 48px;
+    height: 48px;
+    color: #EF0000;
+}
+
+.fol__bottom > div > svg.iconify.iconify--mdi {
+    width: 54px;
+    height: 54px;
+    color: #EF0000;
+}
+
+.fol__bottom > div > div {
+    display: flex;
+    flex-direction: column;
+    width: 69px;
+    height: 58px;
+    right: 9px;
+    background: #FDFDFD;
+    border-radius: 5px;
+}
+
+.fol__bottom > div > div > h4 {
+    width: 78px;
+    height: 22px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.fol__bottom > div > div > p {
+    width: 69px;
+    height: 36px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #212121;
+    text-align: start;
+    top: 40px;
 }

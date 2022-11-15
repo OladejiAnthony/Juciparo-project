@@ -1,37 +1,56 @@
 .dropdown_container {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 140px;
+    height: 43px;
     display: flex;
     gap: 5px;
     z-index: 1;
 }
 
 .dropdown_container > button {
+    position: absolute;
     text-decoration: none;
     border-color: var(--primary100);
     border-width: 0px;
     background-color: var(--primary00);
     color: black;
-    font-size: 15px;
+    font-size: 17px;
+    right: 32px;
+    top: 0px;
+    border-style: hidden;
 }
 
-.dropdown_container > button:hover {
-    color: white;
+.dropdown_container > svg.iconify.iconify--teenyicons {
+    left: 15px;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+}
+
+.dropdown_container > svg.iconify.iconify--ant-design {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    padding: 0px;
+}
+
+ svg.iconify.iconify--bx {
+    width: 25px;
+    height: 25px;
 }
 
 .dropdown__list {
     position: absolute;
     width: 166px;
     top: 30px;
-    height: 156px;
+    height: 176px;
     background: #FFFFFF;
     z-index: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
     color: black;
-    left: -22px;
+    left: 0px;
     padding: 15px;
 }
 
@@ -81,9 +100,10 @@
     top: 123px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 5px;
-    width: 108px;
-    height: 18px;
+    width: 133px;
+    height: 28px;
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
