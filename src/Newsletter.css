@@ -1,7 +1,7 @@
 .newsletter {
     position: relative;
     width: 100vw;
-    height: 238px;
+    height: 300px;
     background: var(--secondary200);
     display: grid;
     place-items: center; /* cool stuff */
@@ -72,4 +72,30 @@ button.newsletter__search:hover {
 
 .newsletter__search svg.iconify.iconify--bi {
     color: var(--primary300);
+}
+
+
+/* RESPONSIVENESS  */
+@media screen and (max-width: 600px) {
+    .newsletter {
+        height: 300px;
+    }
+
+    .newsletter__text {
+        top: 60px;
+    }
+    .newsletter__input {
+        width: 90%;
+        top: 185px;
+    }
+    .newsletter__text > p {
+        width: 100%;
+        height: 40px;
+        top: 35px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+
 }

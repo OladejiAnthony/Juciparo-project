@@ -50,3 +50,74 @@
     padding: 0px;
     text-align: start;
 }
+
+
+
+/* RESPONSIVENESS  */
+@media only screen and (min-width: 1400px)  {
+    .discuss__container {
+        width: 87%;
+        gap: 50px;
+    }
+}
+
+@media only screen and (max-width: 1200px)  {
+    .discuss__container {
+        left: 1%;
+        width: 90%;
+        gap: 5%;
+    }
+    div.discuss__card {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .discuss__container {
+        margin-bottom: 10%;
+    }
+    div.discuss__card > h3 {
+        width: 100%;
+        height: 50px;
+    }
+    div.discuss__card > p {
+        width: 100%;
+        top: 430px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .discuss__container {
+        left: 5%;
+        min-height: 150vh;
+        width: 90%;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    div.discuss__card {
+        width: 100%;
+        height: 400px;
+    }
+
+    div.discuss__card > img {
+        height: 70%;
+    }
+
+    div.discuss__card > h3 {
+        top: 280px;
+    }
+    div.discuss__card > p {
+        top: 320px;
+        width: 100%;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 479px) {
+
+}
+

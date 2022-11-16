@@ -135,13 +135,41 @@ div > p {
 .right-arrow {
     right: 24px;
 }
-/* ... */
 
-/* 
-@media (hover: none) and (pointer: coarse) {
-    .left-arrow, .right-arrow {
-        display: none;
+
+/* RESPONSIVENESS  */
+@media only screen and (min-width: 1440px)  {
+    .carousel-container {
+        width: 87%;
     }
 }
-*/
+
+@media only screen and (max-width: 1200px)  {
+    .carousel-container {
+        width: 82%;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .carousel-container {
+        left: 5%;
+        width: 92%;
+    }
+
+    .carousel-content { 
+        gap: 45px;
+        left: 20px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .carousel-content { 
+        gap: 45px;
+        left: 7%;
+    }
+}
+
+
+
 

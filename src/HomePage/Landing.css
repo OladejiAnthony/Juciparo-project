@@ -49,3 +49,59 @@
 
 
 
+/* RESPONSIVENESS  */
+@media only screen and (max-width: 1439px) and (min-width: 1200px)  {
+
+}
+
+@media only screen and (max-width: 1200px)  {
+    
+}
+
+@media screen and (max-width: 960px) {
+    .landing {
+        left: 0px;
+        flex-direction: column;
+        min-height: 75vh;
+        /* position: absolute; */
+    }
+
+    .landing__right {
+        position: relative;
+        right: unset;
+        top: 50px;
+        width: 60%;
+        left: 5%;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .landing__right {
+        position: relative;
+        right: unset;
+        top: 50px;
+        width: 50%;
+        left: 5%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .landing__right {
+        width: 45%;
+        left: 2%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .landing__right {
+        width: 35%;
+        left: 2%;
+    }
+}
+
+@media screen and (max-width: 433px) {
+    .landing__right {
+        width: 28%;
+        left: 1%;
+    }
+}

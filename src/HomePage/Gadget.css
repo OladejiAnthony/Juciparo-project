@@ -208,13 +208,64 @@
 .gadget-right-arrow {
     right: 24px;
 }
-/* ... */
 
-/*
-@media (hover: none) and (pointer: coarse) {
-    .product-left-arrow, .product-right-arrow {
+
+
+/* RESPONSIVENESS  */
+@media only screen and (max-width: 1439px) and (min-width: 1201px)  {
+
+}
+
+@media only screen and (max-width: 1200px)  {
+    
+}
+
+@media screen and (max-width: 960px) {
+    .gadget-carousel-container {
+        left: 5%;
+        min-height: 100vh;
+        width: 90%;
+    }
+
+    .gadget-carousel-container .gadget-carousel-content {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .gadget-carousel-content> div {
+        width: 90%;
+    }
+
+    .gadget-right {
+        width: 50%;
+    }
+
+    .gadget-carousel-content> div .img {
+        width: 50%;
+        left: 50%;
+    }
+
+    .gadget-right-arrow {
+        display: none;
+    }
+    .gadget-left-arrow {
         display: none;
     }
 }
- */
+
+@media screen and (max-width: 600px) {
+    .gadget-carousel-content> div .img {
+        width: 50%;
+        left: 55%;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .gadget-right > .gadget-text {
+        left: 30px;
+    }
+    .gadget-right > button {
+        left: 30px;
+    }
+}
 

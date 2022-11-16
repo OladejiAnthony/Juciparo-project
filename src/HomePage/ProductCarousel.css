@@ -244,13 +244,40 @@
 .product-right-arrow {
     right: 24px;
 }
-/* ... */
 
-/*
-@media (hover: none) and (pointer: coarse) {
-    .product-left-arrow, .product-right-arrow {
-        display: none;
+
+
+/* RESPONSIVENESS  */
+@media only screen and (min-width: 1440px)  {
+    .product-carousel-container {
+        width: 87%;
     }
 }
- */
+
+@media only screen and (max-width: 1200px)  {
+    .product-carousel-container {
+        width: 82%;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .product-carousel-container {
+        left: 5%;
+        width: 92%;
+    }
+
+    .product-carousel-content { 
+        gap: 45px;
+        left: 20px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .product-carousel-content { 
+        gap: 35px;
+        left: 5%;
+    }
+}
+
 
