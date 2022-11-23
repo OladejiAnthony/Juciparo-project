@@ -26,7 +26,7 @@ function ProductDetails() {
         >
         {ProductImgCData.map((imgc) => {
             return (
-              <img src={imgc.img} alt="aba" />
+              <img key={imgc.id} src={imgc.img} alt="aba" />
             )
         })}
         </ProductImgC>

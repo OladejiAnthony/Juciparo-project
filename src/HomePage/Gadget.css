@@ -212,8 +212,10 @@
 
 
 /* RESPONSIVENESS  */
-@media only screen and (max-width: 1439px) and (min-width: 1201px)  {
-
+@media only screen and (min-width: 1440px)  {
+    .gadget-carousel-container {
+        width: 86%;
+    }
 }
 
 @media only screen and (max-width: 1200px)  {
@@ -223,7 +225,7 @@
 @media screen and (max-width: 960px) {
     .gadget-carousel-container {
         left: 5%;
-        min-height: 100vh;
+        min-height: 130vh;
         width: 90%;
     }
 
@@ -254,6 +256,9 @@
 }
 
 @media screen and (max-width: 600px) {
+    .gadget-carousel-container {
+        height: 150vh;
+    }
     .gadget-carousel-content> div .img {
         width: 50%;
         left: 55%;

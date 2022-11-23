@@ -15,7 +15,7 @@ function AccountDropDown() {
 
   return (
     <div className='dropdown_container'>
-    <Icon icon="teenyicons:user-outline" />
+      <Icon icon="teenyicons:user-outline" />
       <button onClick={handleOpen}>Account</button>
       {open ? 
         <div className='dropdown__list'>

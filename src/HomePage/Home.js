@@ -2,18 +2,10 @@ import React from 'react'
 import "./Home.css"
 import Landing from './Landing'
 import FirstCarousel from './FirstCarousel'
-import { FirstCarouselData } from '../Data/Data'
+import { ProductCarouselData, FirstCarouselData, GadgetData, RecomCarouselData } from '../Data/Data'
 import ProductCarousel from "../HomePage/ProductCarousel"
-import { ProductCarouselData } from '../Data/Data'
-
 import RecommendCarousel from './RecommendCarousel'
-import imgOne from "../Images/recom1.jpg"
-import imgTwo from "../Images/recom2.jpg"
-import imgThree from "../Images/recom3.jpg"
-import imgFour from "../Images/recom4.jpg"
 import Gadget from './Gadget'
-import Gad from "../Images/gadget1.jpg"
-import GadTwo from "../Images/gadget2.png"
 import SellingCarousel from './SellingCarousel'
 import imgA from "../Images/product1.jpg"
 import imgB from "../Images/product2.jpg"
@@ -45,7 +37,7 @@ function Home() {
                 <div className="img">
                   <img src={first.img} alt="placeholder"  /> 
                 </div>
-                <p>{first.text}</p>
+                <Link to={first.text}>{first.text}</Link>
               </div>
             )
           })}
@@ -57,7 +49,7 @@ function Home() {
         >
           {ProductCarouselData.map((product) => {
             return (
-              <Link to="/productDetails">
+              <Link to="/productDetails" key={product.id}>
                 <button className=''>{product.btn}</button>
                 <div className="img">
                   <img src={product.img} alt="placeholder"  /> 
@@ -74,90 +66,53 @@ function Home() {
           })}
       
         </ProductCarousel>
+
         <RecommendCarousel 
           show={3} 
           style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
         >
-          <div>
-            <button>New</button>
-            <div className="img">
-              <img src={imgOne} alt="placeholder"  /> 
-            </div>
-            <div className='product-text'>
-              <p>Adidas sport sneakers</p>
-              <div>
-                <h5>#500</h5>
-                <p>#600</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="img">
-              <img src={imgTwo} alt="placeholder"  /> 
-            </div>
-            <div className='product-text'>
-              <p>Adidas sport sneakers</p>
-              <div>
-                <h5>#500</h5>
-                <p>#600</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <button>New</button>
-            <div className="img">
-              <img src={imgThree} alt="placeholder"  /> 
-            </div> 
-            <div className='product-text'>
-              <p>Adidas sport sneakers</p>
-              <div>
-                <h5>#500</h5>
-                <p>#600</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="img">
-              <img src={imgFour} alt="placeholder"  /> 
-            </div>
-            <div className='product-text'>
-              <p>Adidas sport sneakers</p>
-              <div>
-                <h5>#500</h5>
-                <p>#600</p>
-              </div>
-            </div>
-          </div>
-          
+          {RecomCarouselData.map((recom) => {
+            return (
+              <Link to="/productDetails" key={recom.id}>
+                <button className=''>{recom.btn}</button>
+                <div className="img">
+                  <img src={recom.img} alt="placeholder"  /> 
+                </div>
+                <div className='product-text'>
+                  <p>{recom.pText}</p>
+                  <div>
+                    <h5>{recom.Hprice}</h5>
+                    <p>{recom.Pprice}</p>
+                  </div>
+                </div>
+              </Link>
+            )
+          })}
         </RecommendCarousel>
+
         <Gadget
             show={3} 
             style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
         >
-          <div>
-              <div className='gadget-right'>
-                <div className='gadget-text'>
-                    <h5>Quality Headset</h5>
-                    <p>Get this headset at an affordable price.</p>
-                </div>
-                <button>Shop Now</button>
-              </div>
-              <div className="img">
-                <img src={Gad} alt="placeholder"  /> 
-              </div>
-          </div>
-          <div>
-              <div className='gadget-right'>
-                <div className='gadget-text'>
-                    <h5>Quality Headset</h5>
-                    <p>Get this headset at an affordable price.</p>
-                </div>
-                <button>Shop Now</button>
-              </div>
-              <div className="img">
-                <img src={GadTwo} alt="placeholder"  /> 
-              </div>
-          </div>
+          {
+              GadgetData.map((gadget) => {
+                return (
+                  <div>
+                    <div className='gadget-right'>
+                      <div className='gadget-text'>
+                          <h5>{gadget.header}</h5>
+                          <p>{gadget.para}</p>
+                      </div>
+                      <button>{gadget.btn}</button>
+                    </div>
+                    <div className="img">
+                      <img src={gadget.img} alt="placeholder"  /> 
+                    </div>
+                  </div>
+                )
+              })
+          }
+
         </Gadget>
 
         <SellingCarousel 

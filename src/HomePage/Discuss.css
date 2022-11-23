@@ -111,13 +111,16 @@
         top: 320px;
         width: 100%;
     }
-
-
-
-
 }
 
 @media screen and (max-width: 479px) {
-
+    .discuss__container {
+        margin-top: 20%;
+        align-items: center;
+    }
+    div.discuss__card {
+        width: 90%;
+        height: 400px;
+    }
 }
 

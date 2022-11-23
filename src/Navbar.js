@@ -4,16 +4,27 @@ import logo from "../src/Images/logoOne.jpg"
 import { Link } from 'react-router-dom'
 import { Icon } from '@iconify/react';
 import AccountDropDown from './AccountDropDown';
+import { SidebarData } from './Data/Data';
 
 
 function Navbar() {
   const [searchInput, setSearchInput] = useState("");
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
+  const [selected, setSelected] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
 
   const handleChange = (e) => {
     e.preventDefault();
     setSearchInput(e.target.value);
+  };
+
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovering(true);
   };
 
 
@@ -40,9 +51,32 @@ function Navbar() {
           </Link>
         </div>
         <div className='nav__bottom'>
-          <button>
+          <button onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
             Categories
           </button>
+          {isHovering && (
+            <div className='categoryBar'>
+              {SidebarData.map((item, index) => {
+                  return (
+                    <>
+                      <div className = {selected===index ? 'categoryItem active' : 'categoryItem'}
+                        key={index}
+                        onClick={()=>setSelected(index)}
+                        onMouseOver={handleMouseOver} 
+                        onMouseOut={handleMouseOut}
+                      >
+                        <Icon icon={item.icon} />
+                        <Link to={item.heading}>{item.heading}
+                        </Link>
+            
+                      </div>
+                    </>
+                  )
+                }
+              )}
+            </div>
+          )}
+
           <div className='nav__input'>
             <input
                 type="text"

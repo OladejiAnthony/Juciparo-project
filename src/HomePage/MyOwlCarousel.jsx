@@ -7,7 +7,10 @@ const settings =  {
   arrows: false,
   arrowsBlock: false,
   autoplay: true,
-  dots: true
+  autoplaySpeed: 2000,
+  dots: true,
+  duration: 200,
+  pauseOnHover: true
 };
 
 function MyOwlCarousel() {

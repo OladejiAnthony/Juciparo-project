@@ -1,18 +1,26 @@
 import React from 'react'
 import "./ProductInfo.css"
-import prod from "../Images/recom1.jpg"
 import { Icon } from '@iconify/react';
-import { Link } from 'react-router-dom';
+import { ProductImgCData } from '../Data/Data';
 
+const handleClick = (event, key) => {
+  console.log(event.target);
+  console.log('key index: ', key);
+};
 
 function ProductInfo() {
   return (
     <div className='productInfo__container'>
       <h5>Product Information</h5>
       <div className='productInfo'>
-        <div className='prod_img'>
-            <img src={prod} alt="products" />
-        </div>
+      {ProductImgCData.map((product, key) => {
+            return (
+              <div className='prod_img' onClick={event => handleClick(event, key)}>
+                <img key={key} src={product.img} alt="products" />
+              </div>
+            )
+        })}
+        
         <div className='productInfo__right'>
             <div className='prod__header'>
                 <h3>HP LAPTOP: 12INCHES WITH 1TB AND 64BITS OS</h3>

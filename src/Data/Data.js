@@ -7,46 +7,13 @@ import imgA from "../Images/product1.jpg"
 import imgB from "../Images/product2.jpg"
 import imgC from "../Images/product3.jpg"
 import imgD from "../Images/product4.jpg"
-import prod from "../Images/recom1.jpg"
+import imgOne from "../Images/recom1.jpg"
+import imgTwo from "../Images/recom2.jpg"
+import imgThree from "../Images/recom3.jpg"
+import imgFour from "../Images/recom4.jpg"
+import Gad from "../Images/gadget1.jpg"
+import GadTwo from "../Images/gadget2.png"
 
-
-/*
-import {
-    UilEstate,
-    UilClipboardAlt,
-    UilUsersAlt,
-    UilPackage,
-    UilChart,
-    UilSignOutAlt,
-    UilUsdSquare,
-    UilMoneyWithdrawal
-} from "@iconscout/react-unicons"
-
-import { UilShoppingCart } from '@iconscout/react-unicons'
-import { UilChartBar } from '@iconscout/react-unicons'
-import { UilChartLine } from '@iconscout/react-unicons'
-import { UilPlus } from '@iconscout/react-unicons'
-import { UilUser } from '@iconscout/react-unicons'
-import { UilChartPie } from '@iconscout/react-unicons'
-import { UilToggleOn } from '@iconscout/react-unicons'
-import { UilToggleOff } from '@iconscout/react-unicons'
-import { UilStore } from '@iconscout/react-unicons'
-
-
-//import LegendToggleRoundedIcon from '@mui/icons-material/LegendToggleRounded';
-//import BubbleChartRoundedIcon from '@mui/icons-material/BubbleChartRounded';
-//import StackedLineChartRoundedIcon from '@mui/icons-material/StackedLineChartRounded';
-//import BarChartRoundedIcon from '@mui/icons-material/BarChartRounded';
-//import AddShoppingCartRoundedIcon from '@mui/icons-material/AddShoppingCartRounded';
-//import LocalMallRoundedIcon from '@mui/icons-material/LocalMallRounded';
-//import PersonOutlineRoundedIcon from '@mui/icons-material/PersonOutlineRounded';
-//import AddRoundedIcon from '@mui/icons-material/AddRounded';
-
-
-import img1 from "../../images/photos/profile-1.jpg"
-import img2 from "../../images/photos/profile-2.jpg"
-import img3 from "../../images/photos/profile-4.jpg"
-*/
 
 
 //Sidebar Data Array
@@ -89,6 +56,58 @@ export const SidebarData = [
     }
 ];
 
+
+
+//First Carousel Data
+export const CategoryList = [
+    {
+       headOne: "HEALTH CARE",
+       textOneA: "Face Protection",
+       textOneB: "Thermometers",
+       textOneC: "Hand Sanitizers",
+       textOneD: "Feminine Care",
+
+       headTwo: "HEALTH CARE",
+       textTwoA: "Face Protection",
+       textTwoB: "Thermometers",
+       textTwoC: "Hand Sanitizers",
+       textTwoD: "Feminine Care",
+
+       headThree: "HEALTH CARE",
+       textThreeA: "Face Protection",
+       textThreeB: "Thermometers",
+       textThreeC: "Hand Sanitizers",
+       textThreeD: "Feminine Care",
+
+       headFour: "HEALTH CARE",
+       textFourA: "Face Protection",
+       textFourB: "Thermometers",
+       textFourC: "Hand Sanitizers",
+       textFourD: "Feminine Care",
+    },
+    {
+       img: img2,
+       text: "Computers",
+    },
+    {
+       img: img3,
+       text: "Home and Offices",
+    },
+    {
+       img: img4,
+       text: "Phone & Tablet",
+    },
+    {
+       img: img1,
+       text: "Others",
+    },
+    {
+       img: img2,
+       text: "Electronics",
+    },
+   ]
+
+
 //First Carousel Data
 export const FirstCarouselData = [
  {
@@ -101,7 +120,7 @@ export const FirstCarouselData = [
  },
  {
     img: img3,
-    text: "Home and Offices",
+    text: "Home & Office",
  },
  {
     img: img4,
@@ -109,23 +128,37 @@ export const FirstCarouselData = [
  },
  {
     img: img1,
-    text: "Others",
+    text: "Automobile",
  },
  {
     img: img2,
     text: "Electronics",
  },
+ {
+    img: img3,
+    text: "Games",
+ },
+ {
+    img: img4,
+    text: "Health & Beauty",
+ },
+ {
+    img: img2,
+    text: "Others",
+ },
 ]
 
 export const ProductCarouselData = [
     {
-      btn : "New",
-      img : imgA,
-      pText : "Adidas sport sneakers",
-      Hprice : "#500",
-      Pprice : "#600",
+        id: 1,
+        btn : "New",
+        img : imgA,
+        pText : "Adidas sport sneakers",
+        Hprice : "#500",
+        Pprice : "#600",
     },
     {
+        id: 2,
         btn : "New",
         img : imgB,
         pText : "Adidas sport sneakers",
@@ -133,12 +166,14 @@ export const ProductCarouselData = [
         Pprice : "#600",
       },
       {
+        id: 3,
         img : imgC,
         pText : "Adidas sport sneakers",
         Hprice : "#500",
         Pprice : "#600",
       },
       {
+        id: 4,
         btn : "New",
         img : imgD,
         pText : "Adidas sport sneakers",
@@ -150,18 +185,78 @@ export const ProductCarouselData = [
 
 export const ProductImgCData = [
     {
-        img : prod,
+        id: 1,
+        img : imgB,
     },
     {
-        img : prod,
+        id: 2,
+        img : imgB,
     },
     {
-        img : prod,
+        id: 3,
+        img : imgB,
+    },
+    
+]
+
+
+export const RecomCarouselData = [
+    {
+        id: 1,
+        btn : "New",
+        img : imgOne,
+        pText : "Adidas sport sneakers",
+        Hprice : "#500",
+        Pprice : "#600",
     },
     {
-        img : prod,
+        id: 2,
+        img : imgTwo,
+        pText : "Adidas sport sneakers",
+        Hprice : "#500",
+        Pprice : "#600",
+      },
+      {
+        id: 3,
+        btn : "New",
+        img : imgThree,
+        pText : "Adidas sport sneakers",
+        Hprice : "#500",
+        Pprice : "#600",
+      },
+      {
+        id: 4,
+        img : imgFour,
+        pText : "Adidas sport sneakers",
+        Hprice : "#500",
+        Pprice : "#600",
+      },
+]
+
+export const GadgetData = [
+    {
+        id: 1,
+        header : "Quality Headset",
+        para : "Get this headset at an affordable price",
+        btn : "Shop Now",
+        img : Gad
+    },
+    {
+        id: 1,
+        header : "Quality Headset",
+        para : "Get this headset at an affordable price",
+        btn : "Shop Now",
+        img : GadTwo
+    },
+    {
+        id: 1,
+        header : "Quality Headset",
+        para : "Get this headset at an affordable price",
+        btn : "Shop Now",
+        img : Gad
     }
 ]
+
 
 
 /*
