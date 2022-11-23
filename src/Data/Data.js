@@ -164,6 +164,8 @@ export const ProductCarouselData = [
         pText : "Adidas sport sneakers",
         Hprice : "#500",
         Pprice : "#600",
+        Pname : "HP LAPTOP: 12INCHES WITH 1TB AND 64BITS OS ",
+        Mainprice : "100000"
       },
       {
         id: 3,

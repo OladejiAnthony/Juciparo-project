@@ -1,4 +1,4 @@
-.cartOne {
+.cartOne__container {
     position: relative;
     width: 774px;
     height: 209px;
@@ -6,3 +6,138 @@
     background: #F4F4F4;
     border-radius: 5px;
 }
+
+.cartOne__container > h4 {
+    position: absolute;
+    top: 37px;
+    width: 106px;
+    height: 24px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.cartBox {
+    height: 105px;
+    width: 100%;
+    position: relative;
+    top: 87px;
+    display: flex;
+    flex-direction: row;
+}
+
+.cart__left {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    float: left;
+    display: flex;
+}
+
+.cart__left > img {
+    width: 105px;
+    height: 105px;
+    left: 0px;
+}
+.cart__left > h5 {
+    position: absolute;
+    right: 0px;
+    width: 260px;
+    height: 44px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.cart__right {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    float: right;
+    display: flex;
+    right: 0px;
+}
+
+
+.cart__right > div {
+    width: 71px;
+    height: 60px;
+    border: 1px solid #8C8C8C;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1px;
+    right: 236px;
+    position: absolute;
+}
+
+.cart__right > div > .cart__menuIcon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 16px;
+    height: 26px;
+}
+
+.cart__right > h4 {
+    position: absolute;
+    right: 101px;
+    width: 70px;
+    height: 24px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.cart__right > svg.iconify.iconify--iconoir {
+    position: absolute;
+    right: 5%;
+    width: 24px;
+    height: 24px;
+}
+/*
+
+
+.prod__menu {
+    position: relative;
+    width: 571px;
+    height: 60px;
+    top: 370px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.prod__menu > div {
+    width: 71px;
+    height: 60px;
+    border: 1px solid #8C8C8C;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1px;
+}
+
+.prod__menu > div > .prod__menuIcon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 16px;
+    height: 26px;
+}
+
+
+*/
