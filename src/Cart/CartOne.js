@@ -3,14 +3,14 @@ import React from 'react'
 import imgB from "../Images/product2.jpg"
 import "./CartOne.css"
 
-function CartOne() {
+function CartOne(props) {
   return (
     <div className='cartOne__container'>
       <h4>Cart (1)</h4>
       <div className='cartBox'>
         <div className='cart__left'>
           <img src={imgB} alt="products" />
-          <h5>HP LAPTOP: 12INCHES WITH 1TB AND 64BITS OS </h5>
+          <h5>{props.productName}</h5>
         </div>
         <div className='cart__right'>
           <div>
@@ -20,7 +20,7 @@ function CartOne() {
             </div>
             1
           </div>
-          <h4>#100000</h4>
+          <h4>#{props.productPrice}</h4>
           <Icon icon="iconoir:cancel" />
         </div>
 

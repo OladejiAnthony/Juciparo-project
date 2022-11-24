@@ -17,6 +17,7 @@ import SellerCreateTwo from './LoginPage/SellerCreateTwo';
 import SellerProfile from './Seller/SellerProfile';
 import ProductsDetails from './HomePage/ProductDetails';
 import Cart from './Cart/Cart';
+import CheckoutOne from './Cart/CheckoutOne';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path='SellerProfile/' element={<SellerProfile />} />
           <Route path='productDetails' element={<ProductsDetails />} />
           <Route path='Cart/' element={<Cart />}  />
+          <Route path='CheckoutOne' element={<CheckoutOne />} />
         </Routes> 
       </Router>
     </div>

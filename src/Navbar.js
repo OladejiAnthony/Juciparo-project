@@ -24,7 +24,7 @@ function Navbar() {
   };
 
   const handleMouseOut = () => {
-    setIsHovering(true);
+    setIsHovering(false);
   };
 
 

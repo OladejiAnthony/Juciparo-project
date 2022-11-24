@@ -4,6 +4,7 @@ import Navbar from '../Navbar'
 import Newsletter from '../Newsletter'
 import "./Cart.css"
 import CartOne from './CartOne'
+import Shopping from './Shopping'
 import Summary from './Summary'
 
 
@@ -13,9 +14,19 @@ function Cart() {
     <>
       <Navbar />
       <div className='cart__container'>
-        <CartOne  />
-        <Summary />
+        <CartOne 
+          productName = "HP LAPTOP: 12INCHES WITH 1TB AND 64BITS OS "
+          productPrice = "100000"
+        />
+        <Summary 
+          head = "Cart Summary"
+          subTotal = "SubTotal"
+          price = "100000"
+          delivery = "Delivery"
+          status = "Not yet added"
+        />
       </div>
+      <Shopping />
       <Newsletter />
       <Footer />
     </>
