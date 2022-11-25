@@ -14,10 +14,15 @@ import Footer from '../Footer'
 import Newsletter from "../Newsletter"
 import { Link, useNavigate } from 'react-router-dom'
 
-
-
 function Home() {
   const navigate = useNavigate();
+  //const { id, name, color, gender, images, final_price, reviews, rating } = item;  
+  //const [img, setImg] = useState(images[0]);
+
+  const handleDes = () => {
+    navigate(`/productDetails`);
+    //navigate(`/productDetails/${id}`);
+  };
 
   return (
     <>
@@ -28,13 +33,13 @@ function Home() {
           show={3} 
           style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
         >
-          {FirstCarouselData.map((first) => {
+          {FirstCarouselData.map((product) => {
             return (
               <div>
                 <div className="img">
-                  <img src={first.img} alt="placeholder"  /> 
+                  <img src={product.img} alt="placeholder"  /> 
                 </div>
-                <Link to={first.route} onClick={() => navigate(first.route)}>{first.text}</Link>
+                <Link to={product.route} onClick={() => navigate(product.route)}>{product.text}</Link>
               </div>
             )
           })}
@@ -52,12 +57,13 @@ function Home() {
                   <img src={product.img} alt="placeholder"  /> 
                 </div>
                 <div className='product-text'>
-                  <Link to="/productDetails" onClick={() => navigate(product.route)}>
+                <Link to="/productDetails" onClick={() => navigate(product.route)}>
+               {/*   <Link onClick={handleDes}>  */}
                     {product.pText}
                   </Link>
                   <div>
                     <h5>{product.Hprice}</h5>
-                    <p>{product.Pprice}</p>
+                    <p style={{ textDecoration: "line-through" }}>{product.Pprice}</p>
                   </div>
                 </div>
               </div>
@@ -70,20 +76,21 @@ function Home() {
           show={3} 
           style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
         >
-          {RecomCarouselData.map((recom) => {
+          {RecomCarouselData.map((product) => {
             return (
-              <div  key={recom.id}>
-                <button className=''>{recom.btn}</button>
+              <div  key={product.id}>
+                <button className=''>{product.btn}</button>
                 <div className="img">
-                  <img src={recom.img} alt="placeholder"  /> 
+                  <img src={product.img} alt="placeholder"  /> 
                 </div>
                 <div className='product-text'>
-                  <Link to="/productDetails" onClick={() => navigate(recom.route)}>
-                    {recom.pText}
+                <Link to="/productDetails" onClick={() => navigate(product.route)}>
+              {/*    <Link onClick={handleDes}>   */}
+                    {product.pText}
                   </Link>
                   <div>
-                    <h5>{recom.Hprice}</h5>
-                    <p>{recom.Pprice}</p>
+                    <h5>{product.Hprice}</h5>
+                    <p style={{ textDecoration: "line-through" }}>{product.Pprice}</p>
                   </div>
                 </div>
               </div>
@@ -96,20 +103,21 @@ function Home() {
             style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
         >
           {
-              GadgetData.map((gadget) => {
+              GadgetData.map((product) => {
                 return (
                   <div>
                     <div className='gadget-right'>
                       <div className='gadget-text'>
-                          <h5>{gadget.header}</h5>
-                          <p>{gadget.para}</p>
+                          <h5>{product.header}</h5>
+                          <p>{product.para}</p>
                       </div>
-                      <Link to="/productDetails" onClick={() => navigate(gadget.route)}>
-                        {gadget.btn}
+                      <Link to="/productDetails" onClick={() => navigate(product.route)}>
+                 {/*     <Link onClick={handleDes}>  */}
+                        {product.btn}
                       </Link>
                     </div>
                     <div className="img">
-                      <img src={gadget.img} alt="placeholder"  /> 
+                      <img src={product.img} alt="placeholder"  /> 
                     </div>
                   </div>
                 )
@@ -122,76 +130,25 @@ function Home() {
           show={3} 
           style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
         >
-          {SellingCarouselData.map((sell) => {
+          {SellingCarouselData.map((product) => {
             return (
-              <div key={sell.id}>
-                <button className=''>{sell.btn}</button>
+              <div key={product.id}>
+                <button className=''>{product.btn}</button>
                 <div className="img">
-                  <img src={sell.img} alt="placeholder"  /> 
+                  <img src={product.img} alt="placeholder"  /> 
                 </div>
                 <div className='selling-text'>
-                  <Link to="/productDetails" onClick={() => navigate(sell.route)}>
-                    {sell.pText}
+                  <Link to="/productDetails" onClick={() => navigate(product.route)}>
+                    {product.pText}
                   </Link>
                   <div>
-                    <h5>{sell.Hprice}</h5>
-                    <p>{sell.Pprice}</p>
+                    <h5>{product.Hprice}</h5>
+                    <p style={{ textDecoration: "line-through" }}>{product.Pprice}</p>
                   </div>
                 </div>
               </div>
             )
           })}
-
-          {/*
-          <div>
-            <div className="img">
-              <img src={imgA} alt="placeholder"  /> 
-            </div>
-            <div className='selling-text'>
-              <p>Adidas sport sneakers</p>
-              <div>
-                <h5>#500</h5>
-                <p>#600</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="img">
-              <img src={imgB} alt="placeholder"  /> 
-            </div>
-            <div className='selling-text'>
-              <p>Adidas sport sneakers</p>
-              <div>
-                <h5>#500</h5>
-                <p>#600</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="img">
-              <img src={imgC} alt="placeholder"  /> 
-            </div> 
-            <div className='selling-text'>
-              <p>Adidas sport sneakers</p>
-              <div>
-                <h5>#500</h5>
-                <p>#600</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="img">
-              <img src={imgD} alt="placeholder"  /> 
-            </div>
-            <div className='selling-text'>
-              <p>Adidas sport sneakers</p>
-              <div>
-                <h5>#500</h5>
-                <p>#600</p>
-              </div>
-            </div>
-          </div>
-        */}
         </SellingCarousel>
         <Discuss />
 
@@ -205,3 +162,5 @@ function Home() {
 }
 
 export default Home
+
+

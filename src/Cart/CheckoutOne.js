@@ -9,10 +9,10 @@ import BasicTabs from './BasicTabs'
 function CheckoutOne() {
   return (
     <div className='checkoutOne'>
-      <div className='header'>
+      <Link to="/" className='header'>
         <img src={logo} alt='logo' />
         <h4>Checkout</h4>
-      </div>
+      </Link>
       <h4>Review Order</h4>
       <div className='cart__container'>
         <CartOne 

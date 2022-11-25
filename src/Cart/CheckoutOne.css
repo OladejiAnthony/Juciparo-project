@@ -13,7 +13,9 @@
     width: 100%;
     height: 113px;
     display: flex;
+    text-decoration: none;
 }
+
 
 .checkoutOne > .header > img {
     left: 0px;
@@ -33,6 +35,9 @@
     color: #000000;
 }
 
+.checkoutOne > .header > h4:hover { 
+    color: var(--tertiary300);
+}
 
 .checkoutOne > h4 {
     position: absolute;

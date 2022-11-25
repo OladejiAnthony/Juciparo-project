@@ -9,6 +9,8 @@ import Summary from './Summary'
 
 
 //use material ui badge
+//use react-redux for cart
+
 function Cart() {
   return (
     <>
