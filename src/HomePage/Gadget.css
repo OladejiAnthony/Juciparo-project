@@ -126,10 +126,11 @@
     text-align: initial;
 }
 
-.gadget-right > button {
+.gadget-right > a {
     top: 200px;
     position: absolute;
     text-align: center;
+    padding-top: 15px;
     width: 133px;
     height: 54px;
     left: 68px;
@@ -142,6 +143,8 @@
     font-size: 15px;
     line-height: 18px;
     color: var(--primary100);
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .gadget-carousel-content> div .img {
@@ -269,7 +272,7 @@
     .gadget-right > .gadget-text {
         left: 30px;
     }
-    .gadget-right > button {
+    .gadget-right > a {
         left: 30px;
     }
 }

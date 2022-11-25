@@ -70,7 +70,7 @@
     scrollbar-width: none;  /* hide scrollbar in Firefox */
 }
 
-.recommend-carousel-content> a {
+.recommend-carousel-content> div {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -82,7 +82,7 @@
     border-radius: 5px;
 }
 
-.recommend-carousel-content> a > button {
+.recommend-carousel-content> div > button {
     text-align: center;
     background: var(--tertiary300);
     color: var(--primary100);
@@ -101,7 +101,7 @@
     z-index: 1;
 }
 
-.recommend-carousel-content> a .img{
+.recommend-carousel-content> div .img{
     position: relative;
     width: 200px;
     height: 200px;
@@ -111,7 +111,7 @@
     border-radius: 30px;
 }
 
-.recommend-carousel-content> a .img > img{
+.recommend-carousel-content> div .img > img{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -119,17 +119,17 @@
     left: 0px;
 }
 
-.recommend-carousel-content> a:nth-child(3) .img >img {
+.recommend-carousel-content> div:nth-child(3) .img >img {
     width: 89px;
     height: 185px;
     left: 25px;
 }
 
-.recommend-carousel-content> a:nth-child(4) .img >img {
+.recommend-carousel-content> div:nth-child(4) .img >img {
     left: 0px;
 }
 
-.recommend-carousel-content>  a > p {
+.recommend-carousel-content>  div > p {
     position: absolute;
     top: 214px;
     font-family: 'Montserrat', sans-serif;
@@ -151,7 +151,7 @@
     flex-direction: column;
 }
 
-.recommend-text > p {
+.recommend-text > a {
     position: absolute;
     width: 119px;
     height: 56px;
@@ -162,7 +162,14 @@
     font-size: 18px;
     line-height: 22px;
     color: #212121;
+    cursor: pointer;
+    text-decoration: none;
 }
+
+.recommend-text > a:hover {
+    color: var(--tertiary300);
+}
+
 
 .recommend-text > div {
     position: absolute;

@@ -66,7 +66,8 @@ function Navbar() {
                         onMouseOut={handleMouseOut}
                       >
                         <Icon icon={item.icon} />
-                        <Link to={item.heading}>{item.heading}
+                        <Link to={item.heading}>
+                          {item.heading}
                         </Link>
             
                       </div>

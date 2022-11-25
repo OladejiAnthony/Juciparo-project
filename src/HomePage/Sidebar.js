@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import "./Sidebar.css"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Icon } from '@iconify/react';
 import {CategoryList, SidebarData} from "../Data/Data"
 //import { List } from '@mui/material';
@@ -9,6 +9,7 @@ import {CategoryList, SidebarData} from "../Data/Data"
 function Sidebar() {
   const [selected, setSelected] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
+  const navigate = useNavigate();
 
   const handleMouseOver = () => {
     setIsHovering(true);
@@ -29,7 +30,7 @@ function Sidebar() {
             onMouseOut={handleMouseOut}
           >
             <Icon icon={item.icon} />
-            <Link to={item.heading}>{item.heading}
+            <Link to={item.route} onClick={() => navigate(item.route)}>{item.heading}
             </Link>
 
           </div>

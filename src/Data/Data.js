@@ -21,38 +21,47 @@ export const SidebarData = [
     {
         icon: "icon-park-solid:lipstick",
         heading: "Health & Beauty",
+        route: "/Health",
     },
     {
         icon: "charm:home",
         heading: "Home & Office",
+        route: "/Home",
     },
     {
         icon: "bi:phone-vibrate",
         heading: "Phone & Tablet",
+        route: "/Phone",
     },
     {
         icon: "gridicons:computer" ,
         heading: "Computers",
+        route: "/Computers",
     },
     {
         icon: "icon-park:clothes-crew-neck" ,
         heading: "Fashion",
+        route: "/Fashion",
     },
     {
         icon: "fluent-mdl2:game",
         heading: "Games",
+        route: "/Games",
     },
     {
         icon: "clarity:car-line",
         heading: "Automobile",
+        route: "/Automobile",
     },
     {
         icon: "mdi:television-classic",
         heading: "Electronics",
+        route: "/Electronics",
     },
     {
         icon: "bx:help-circle",
         heading: "Others",
+        route: "/Others",
     }
 ];
 
@@ -113,38 +122,47 @@ export const FirstCarouselData = [
  {
     img: img1,
     text: "Fashion",
+    route: "/Fashion",
  },
  {
     img: img2,
     text: "Computers",
+    route: "/Computers",
  },
  {
     img: img3,
     text: "Home & Office",
+    route: "/Home",
  },
  {
     img: img4,
     text: "Phone & Tablet",
+    route: "/Phone",
  },
  {
     img: img1,
     text: "Automobile",
+    route: "/Automobile",
  },
  {
     img: img2,
     text: "Electronics",
+    route: "/Electronics",
  },
  {
     img: img3,
     text: "Games",
+    route: "/Games",
  },
  {
     img: img4,
     text: "Health & Beauty",
+    route: "/Health",
  },
  {
     img: img2,
     text: "Others",
+    route: "/Others",
  },
 ]
 
@@ -258,6 +276,44 @@ export const GadgetData = [
         img : Gad
     }
 ]
+
+
+export const SellingCarouselData = [
+    {
+        id: 1,
+        btn : "New",
+        img : imgA,
+        pText : "Adidas sport sneakers",
+        Hprice : "#500",
+        Pprice : "#600",
+    },
+    {
+        id: 2,
+        btn : "New",
+        img : imgB,
+        pText : "Adidas sport sneakers",
+        Hprice : "#500",
+        Pprice : "#600",
+        Pname : "HP LAPTOP: 12INCHES WITH 1TB AND 64BITS OS ",
+        Mainprice : "100000"
+      },
+      {
+        id: 3,
+        img : imgC,
+        pText : "Adidas sport sneakers",
+        Hprice : "#500",
+        Pprice : "#600",
+      },
+      {
+        id: 4,
+        btn : "New",
+        img : imgD,
+        pText : "Adidas sport sneakers",
+        Hprice : "#500",
+        Pprice : "#600",
+      },
+]
+
 
 
 

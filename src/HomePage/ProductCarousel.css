@@ -70,7 +70,7 @@
     scrollbar-width: none;  /* hide scrollbar in Firefox */
 }
 
-.product-carousel-content> a {
+.product-carousel-content> div {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -83,7 +83,7 @@
     top: 0px;
 }
 
-.product-carousel-content> a > button {
+.product-carousel-content> div > button {
     text-align: center;
     background: var(--tertiary300);
     color: var(--primary100);
@@ -102,11 +102,11 @@
     z-index: 1;
 }
 
-.product-carousel-content> a > button:nth-child(3) {
+.product-carousel-content> div > button:nth-child(3) {
     background: var(--primary100);
 }
 
-.product-carousel-content> a .img{
+.product-carousel-content> div .img{
     position: relative;
     width: 200px;
     height: 200px;
@@ -116,7 +116,7 @@
     border-radius: 30px;
 }
 
-.product-carousel-content> a .img > img{
+.product-carousel-content> div .img > img{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -124,11 +124,11 @@
     left: 0px;
 }
 
-.product-carousel-content> a:nth-child(4) .img >img {
+.product-carousel-content> div:nth-child(4) .img >img {
     left: 0px;
 }
 
-.product-carousel-content> a > p {
+.product-carousel-content> div > p {
     position: absolute;
     top: 214px;
     font-family: 'Montserrat', sans-serif;
@@ -150,7 +150,7 @@
     flex-direction: column;
 }
 
-.product-text > p {
+.product-text > a {
     position: absolute;
     width: 119px;
     height: 56px;
@@ -161,6 +161,12 @@
     font-size: 18px;
     line-height: 22px;
     color: #212121;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.product-text > a:hover {
+    color: var(--tertiary300);
 }
 
 .product-text > div {

@@ -4,17 +4,15 @@ import Navbar from '../Navbar'
 import Footer from '../Footer'
 import Newsletter from "../Newsletter"
 import ProductInfo from './ProductInfo'
-import { ProductImgCData } from '../Data/Data'
+import { ProductImgCData, RecomCarouselData } from '../Data/Data'
 import ProductImgC from './ProductImgC'
 import ProductSection from './ProductSection'
 import RecommendCarousel from './RecommendCarousel'
-import imgOne from "../Images/recom1.jpg"
-import imgTwo from "../Images/recom2.jpg"
-import imgThree from "../Images/recom3.jpg"
-import imgFour from "../Images/recom4.jpg"
+import { Link, useNavigate } from 'react-router-dom'
 
 
 function ProductDetails() {
+  const navigate = useNavigate();
   return (
     <>
       <Navbar /> 
@@ -35,114 +33,52 @@ function ProductDetails() {
           show={3} 
           style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
         >
-          <div>
-            <button>New</button>
-            <div className="img">
-              <img src={imgOne} alt="placeholder"  /> 
-            </div>
-            <div className='product-text'>
-              <p>Adidas sport sneakers</p>
-              <div>
-                <h5>#500</h5>
-                <p>#600</p>
+          {RecomCarouselData.map((recom) => {
+            return (
+              <div  key={recom.id}>
+                <button className=''>{recom.btn}</button>
+                <div className="img">
+                  <img src={recom.img} alt="placeholder"  /> 
+                </div>
+                <div className='product-text'>
+                  <Link to="/productDetails" onClick={() => navigate(recom.route)}>
+                    {recom.pText}
+                  </Link>
+                  <div>
+                    <h5>{recom.Hprice}</h5>
+                    <p>{recom.Pprice}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div>
-            <div className="img">
-              <img src={imgTwo} alt="placeholder"  /> 
-            </div>
-            <div className='product-text'>
-              <p>Adidas sport sneakers</p>
-              <div>
-                <h5>#500</h5>
-                <p>#600</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <button>New</button>
-            <div className="img">
-              <img src={imgThree} alt="placeholder"  /> 
-            </div> 
-            <div className='product-text'>
-              <p>Adidas sport sneakers</p>
-              <div>
-                <h5>#500</h5>
-                <p>#600</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="img">
-              <img src={imgFour} alt="placeholder"  /> 
-            </div>
-            <div className='product-text'>
-              <p>Adidas sport sneakers</p>
-              <div>
-                <h5>#500</h5>
-                <p>#600</p>
-              </div>
-            </div>
-          </div>
-          
+            )
+          })}
+
+
         </RecommendCarousel>
 
         <RecommendCarousel 
           show={3} 
           style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
         >
-          <div>
-            <button>New</button>
-            <div className="img">
-              <img src={imgOne} alt="placeholder"  /> 
-            </div>
-            <div className='product-text'>
-              <p>Adidas sport sneakers</p>
-              <div>
-                <h5>#500</h5>
-                <p>#600</p>
+          {RecomCarouselData.map((recom) => {
+            return (
+              <div  key={recom.id}>
+                <button className=''>{recom.btn}</button>
+                <div className="img">
+                  <img src={recom.img} alt="placeholder"  /> 
+                </div>
+                <div className='product-text'>
+                  <Link to="/productDetails" onClick={() => navigate(recom.route)}>
+                    {recom.pText}
+                  </Link>
+                  <div>
+                    <h5>{recom.Hprice}</h5>
+                    <p>{recom.Pprice}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div>
-            <div className="img">
-              <img src={imgTwo} alt="placeholder"  /> 
-            </div>
-            <div className='product-text'>
-              <p>Adidas sport sneakers</p>
-              <div>
-                <h5>#500</h5>
-                <p>#600</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <button>New</button>
-            <div className="img">
-              <img src={imgThree} alt="placeholder"  /> 
-            </div> 
-            <div className='product-text'>
-              <p>Adidas sport sneakers</p>
-              <div>
-                <h5>#500</h5>
-                <p>#600</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="img">
-              <img src={imgFour} alt="placeholder"  /> 
-            </div>
-            <div className='product-text'>
-              <p>Adidas sport sneakers</p>
-              <div>
-                <h5>#500</h5>
-                <p>#600</p>
-              </div>
-            </div>
-          </div>
-          
+            )
+          })}
         </RecommendCarousel>
       </div>
       <Newsletter />

@@ -139,12 +139,11 @@
     width: 123px;
     height: 76px;
     top: 243px;
-    left: 32px;
     display: flex;
     flex-direction: column;
 }
 
-.selling-text > p {
+.selling-text > a {
     position: absolute;
     width: 119px;
     height: 56px;
@@ -154,7 +153,13 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
+    text-decoration: none;
+    cursor: pointer;
     color: #212121;
+}
+
+.selling-text > a:hover {
+    color: var(--tertiary300);
 }
 
 .selling-text > div {
