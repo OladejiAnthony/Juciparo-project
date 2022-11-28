@@ -7,3 +7,8 @@
     top: 10px;
 }
 
+@media screen and (max-width: 960px) {
+    .introPage__container {
+        min-height: 150vh;
+    }
+}

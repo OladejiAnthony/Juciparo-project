@@ -1,6 +1,6 @@
 .sellerNext {
     position: relative;
-    width: 1170px;
+    width: 80%;
     height: 313px;
     left: 135px;
     display: flex;
@@ -58,3 +58,53 @@
 }
 
 
+
+/* RESPONSIVENESS  */
+@media only screen and (max-width: 1439px) and (min-width: 1201px)  {
+    .sellerNext > img {
+        right: 0%;
+    }
+}
+
+@media only screen and (max-width: 1200px)  {
+    .sellerNext > img {
+        right: 3%;
+        width: 400px;
+        top: 50px;
+        height: 200px;
+    }
+    .sellerNext > div {
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .sellerNext {
+        left: 5%;
+        width: 90%;
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .sellerNext {
+        height: 500px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sellerNext > div {
+        left: 30%;
+    }
+    .sellerNext > img {
+        right: 0%;
+        left: 20%;
+        top: 270px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sellerNext > img {
+        left: 10%;
+        width: 80%;
+    }
+}
