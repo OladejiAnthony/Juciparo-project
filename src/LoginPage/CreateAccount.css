@@ -1,13 +1,13 @@
 .createAccount {
     width: 100vw;
-    height: 75vw;
+    min-height: 100vh;
     background: #ffffff;
     align-items: center;
     display: flex;
     flex-direction: column;
     gap: 0px;
+    margin-bottom: 100px;
 }
-
 
 .createAccount .create__head {
     position: relative;
@@ -16,6 +16,15 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.createAccount .create__head > a {
+    position: absolute;
+    width: 169px;
+    height: 113px;
+    top: 29px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .createAccount .create__head > img {
@@ -48,32 +57,25 @@
     text-align: start;
 }
 
-/*
-.form{
-    background-color: white;
-    border-radius: 5px;
-    width: 550px;
-    margin: 20px auto;
-    padding: 20px;
-    top: 36px;
+
+/* RESPONSIVENESS  */
+@media only screen and (max-width: 1439px) and (min-width: 1201px)  {
+
 }
 
-.form-body{
-    text-align: left;
-    padding: 20px 10px;
+@media only screen and (max-width: 1200px)  {
+    
 }
 
-.form-body > *{
-    padding: 5px;
+@media screen and (max-width: 960px) {
+
 }
 
-.form__label{
-    width: 40%;
+@media screen and (max-width: 600px) {
+
 }
 
-.form_input{
-    width: 60%;
+@media screen and (max-width: 479px) {
+
 }
 
-
-*/

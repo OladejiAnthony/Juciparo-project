@@ -1,6 +1,6 @@
 .sellerAccount {
     width: 100vw;
-    height: 80vw;
+    min-height: 100vh;
     background: #ffffff;
     align-items: center;
     display: flex;
@@ -46,5 +46,27 @@
     color: #212121;
     top: 166.97px;
     text-align: start;
+}
+
+
+/* RESPONSIVENESS  */
+@media only screen and (max-width: 1439px) and (min-width: 1201px)  {
+
+}
+
+@media only screen and (max-width: 1200px)  {
+    
+}
+
+@media screen and (max-width: 960px) {
+
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 479px) {
+
 }
 

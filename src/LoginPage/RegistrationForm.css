@@ -131,3 +131,50 @@
     text-decoration: none;
     bottom: 0px;
 }
+
+/** Responsiveness **/
+
+@media screen and (max-width: 600px) {
+    .form {
+        width: 80%;
+    }
+    .form-body {
+        width: 100%;
+    }
+    .form-body > div {
+        width: 90%;
+    }
+    .form-body > button {
+        width: 90%;
+    }
+    .terms > div > a {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 479px) {
+    div.mainform-body {
+        width: 60%;
+        left: 20%;
+    }
+    .mainform-body > div {
+        width: 90%;
+    }
+    .mainform-body > button {
+        width: 90%;
+    }
+
+    .social__login {
+        width: 60%;
+        left: 20%;
+    }
+    .line {
+        width: 90%;
+    }
+    .social__login  a, .social__login  a:nth-child(2){
+        width: 90%;
+    }
+}
+
+

@@ -1,6 +1,6 @@
 .accountLogin {
     width: 100vw;
-    height: 60vw;
+    height: 100vh;
     background: #ffffff;
     align-items: center;
     display: flex;
@@ -16,6 +16,15 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.accountLogin .account_head > a {
+    position: absolute;
+    width: 169px;
+    height: 113px;
+    top: 29px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .accountLogin .account_head > img {
@@ -69,3 +78,4 @@
 @media screen and (max-width: 479px) {
 
 }
+

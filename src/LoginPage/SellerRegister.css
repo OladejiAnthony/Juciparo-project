@@ -68,3 +68,28 @@
     padding-top: 23px;
 }
 
+
+@media screen and (max-width: 960px) {
+
+}
+
+@media screen and (max-width: 600px) {
+    .sellerform {
+        width: 90%;
+    }
+    .sellerform-body {
+        width: 90%;
+        left: 5%;
+    }
+    .sellerform-body > div {
+        width: 100%;
+    }
+    .sellerform-body > a {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 479px) {
+
+}
+

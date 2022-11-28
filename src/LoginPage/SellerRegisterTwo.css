@@ -78,3 +78,23 @@
     padding-top: 23px;
     top: 50px;
 }
+
+@media screen and (max-width: 600px) {
+    .sellform {
+        width: 90%;
+    }
+    .sellform-body {
+        width: 90%;
+        left: 5%;
+    }
+    .sellform-body > div {
+        width: 100%;
+    }
+    .sellform-body > a {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 479px) {
+
+}

@@ -1,11 +1,12 @@
 .sellerTwo {
     width: 100vw;
-    height: 100vw;
+    min-height: 100vh;
     background: #ffffff;
     align-items: center;
     display: flex;
     flex-direction: column;
     gap: 36px;
+    margin-bottom: 50px;
 }
 
 
@@ -46,5 +47,27 @@
     color: #212121;
     top: 166.97px;
     text-align: start;
+}
+
+
+/* RESPONSIVENESS  */
+@media only screen and (max-width: 1439px) and (min-width: 1201px)  {
+
+}
+
+@media only screen and (max-width: 1200px)  {
+    
+}
+
+@media screen and (max-width: 960px) {
+
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 479px) {
+
 }
 
