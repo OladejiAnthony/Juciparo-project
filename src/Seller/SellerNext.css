@@ -1,110 +1,325 @@
-.sellerNext {
-    position: relative;
-    width: 80%;
-    height: 313px;
-    left: 135px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background: #F4F4F4;
-    border-radius: 5px;
-    margin-bottom: 51px;
-}
 
-.sellerNext > div {
-    position: absolute;
-    width: 193.29px;
-    height: 142px;
-    left: 178px;
-    top: 86px;
+.seller-carousel-container {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    left: 2%;
+    margin: 36px 0px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
-.sellerNext > div > h3 {
-    width: 193.29px;
-    height: 71px;
-    font-family: 'Lato';
+.seller-carousel-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+.seller-wrapper-text {
+    width: 100%;
+    height: 34px;
+    position: absolute;
+    display: flex;
+}
+
+.seller-wrapper-text h4 {
+    position: absolute;
+    width: 240px;
+    height: 34px;
+    left: 0px;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-weight: 800;
-    font-size: 30px;
-    line-height: 36px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
     color: #000000;
 }
 
-.sellerNext > div > a {
-    width: 136.74px;
-    height: 54px;
-    background: #EF0000;
+.seller-wrapper-text h5 {
+    position: absolute;
+    width: 205px;
+    height: 18px;
+    right: 0px;
+    font-family: 'Montsearrat' sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+}
+
+
+.seller-carousel-content-wrapper {
+    overflow: hidden;
+    width: 100%;
+    top: 40px;
+    height: 90%;
+    position: relative;
+}
+
+.seller-carousel-content {
+    width: 20%;
+    height: 352px;
+    position: relative;
+    display: flex;
+    gap: 42px;
+    transition: all 250ms linear;
+    -ms-overflow-style: none;  /* hide scrollbar in IE and Edge */
+    scrollbar-width: none;  /* hide scrollbar in Firefox */
+}
+
+.seller-carousel-content> div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF; 
+    box-shadow: 3px 5px 15px 5px rgba(0, 0, 0, 0.05);
     border-radius: 5px;
-    font-family: 'Lato';
+    top: 0px;
+}
+
+.seller-carousel-content> div > button {
+    text-align: center;
+    background: var(--tertiary300);
+    color: var(--primary100);
+    border-color: var(--tertiary300);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 113px;
+    height: 52px;
+    border-radius: 5px;
+    font-family: 'Montserrat' sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    z-index: 1;
+}
+
+.seller-carousel-content> div > button:nth-child(3) {
+    background: var(--primary100);
+}
+
+.seller-carousel-content> div .img{
+    position: relative;
+    width: 80%;
+    height: 200px;
+    top: 28px;
+    left: 15px;
+    /* background: #FFFFFF; */
+    border-radius: 30px;
+}
+
+.seller-carousel-content> div .img > img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    left: 0px;
+}
+
+.seller-carousel-content> div:nth-child(4) .img >img {
+    left: 0px;
+}
+
+.seller-carousel-content> div > p {
+    position: absolute;
+    top: 214px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+}
+
+.seller-text {
+    position: absolute;
+    width: 123px;
+    height: 76px;
+    top: 243px;
+    left: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.seller-text > a {
+    position: absolute;
+    width: 119px;
+    height: 56px;
+    top: 0px;
+    font-family: 'Montserrat' sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #212121;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.seller-text > a:hover {
+    color: var(--tertiary300);
+}
+
+.seller-text > div {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 53px;
+    width: 100%;
+    height: 25px;
+}
+
+.seller-text > div > h5 {
+    position: absolute;
+    position: absolute;
+    width: 35px;
+    height: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #EB0000;
+}
+
+.seller-text > div > p {
+    position: absolute;
+    width: 27px;
+    height: 18px;
+    top: 0px;
+    right: 0px;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 18px;
-    color: #FDFDFD;
-    text-decoration: none;
-    text-align: center;
-    padding-top: 18px;
+    color: #000000;
 }
 
-.sellerNext > img {
+/* hide scrollbar in webkit browser */
+.seller-carousel-content::-webkit-scrollbar, .carousel-content::-webkit-scrollbar {
+    display: none;
+}
+
+.seller-carousel-content > * {
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+/* ... */
+.seller-carousel-content.show-2 > * {
+    width: 50%;
+}
+
+.seller-carousel-content.show-3 > * {
+    width: calc(100% / 3);
+}
+
+.seller-carousel-content.show-4 > * {
+    width: calc(100% / 4);
+}
+
+/* ... */
+.seller-left-arrow, .seller-right-arrow {
     position: absolute;
-    width: 461px;
-    height: 279px;
-    right: 153px;
-    top: 17px;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    background: #E3E3E3;
+    border: 1px solid #ddd;
+    color: #FFFFFF;
+    font-size: 32px;
+}
+
+.seller-left-arrow {
+    left: 24px;
+}
+
+.seller-right-arrow {
+    right: 24px;
 }
 
 
 
 /* RESPONSIVENESS  */
-@media only screen and (max-width: 1439px) and (min-width: 1201px)  {
-    .sellerNext > img {
-        right: 0%;
+@media only screen and (min-width: 1440px)  {
+    .seller-carousel-container {
+        width: 100%;
     }
 }
 
 @media only screen and (max-width: 1200px)  {
-    .sellerNext > img {
-        right: 3%;
-        width: 400px;
-        top: 50px;
-        height: 200px;
+    .seller-carousel-container {
+        width: 100%;
     }
-    .sellerNext > div {
+}
+
+@media only screen and (max-width: 960px) {
+    .seller-carousel-container {
+        left: 0%;
+        width: 100%;
+    }
+
+    .seller-carousel-content { 
+        gap: 15px;
         left: 10%;
+        width: 22%;
     }
-}
 
-@media screen and (max-width: 960px) {
-    .sellerNext {
+    .seller-text {
         left: 5%;
-        width: 90%;
-        margin-top: 100px;
     }
+
 }
 
-@media screen and (max-width: 740px) {
-    .sellerNext {
-        height: 500px;
+
+@media screen and (max-width: 840px) {
+    .seller-carousel-container {
+        min-height: 250vh;
+    }
+    .seller-carousel-content-wrapper {
+        min-height: 160vh;
+    }
+    .seller-carousel-content {
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        width: 80%;
+        height: 450px;
     }
-    .sellerNext > div {
-        left: 30%;
+    .seller-carousel-content> div .img {
+        height: 300px;
     }
-    .sellerNext > img {
-        right: 0%;
-        left: 20%;
-        top: 270px;
+    .seller-text {
+        width: 90%;
+        height: 22%;
+        top: 350px;
+    }
+    .seller-text > a {
+        top: 10px;
+        width: 100%;
+        font-size: 30px;
+    }
+    .seller-text > div {
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .sellerNext > img {
-        left: 10%;
-        width: 80%;
-    }
+   
 }
+
+

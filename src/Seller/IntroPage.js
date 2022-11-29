@@ -5,7 +5,8 @@ import Footer from '../Footer'
 import Newsletter from "../Newsletter"
 import SellerLanding from './SellerLanding'
 import Why from './Why'
-import SellerNext from './SellerNext'
+import Sell from './Sell'
+//import SellerNext from './SellerNext'
 
 function IntroPage() {
   return (
@@ -14,7 +15,7 @@ function IntroPage() {
       <div className='introPage__container'>
         <SellerLanding /> 
         <Why />  
-        <SellerNext />
+        <Sell />
       </div>
       <Newsletter />
       <Footer />

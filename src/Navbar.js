@@ -40,7 +40,7 @@ function Navbar() {
             <Link className='navLinkOne' to="/IntroPage">
                 Sell An Item
             </Link>
-            <Link className='navLinkTwo' to="AboutUs">
+            <Link className='navLinkTwo' to="/AboutUs">
                 About Us
             </Link>
           </div>

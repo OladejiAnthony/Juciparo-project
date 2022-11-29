@@ -144,7 +144,7 @@
 
 @media screen and (max-width: 440px) {
     .sellerLanding {
-        height: 600px;
+        height: 620px;
     }
     .sellerLanding > div {
         top: 60%;
