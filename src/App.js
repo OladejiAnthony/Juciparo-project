@@ -18,6 +18,7 @@ import SellerProfile from './Seller/SellerProfile';
 import ProductsDetails from './HomePage/ProductDetails';
 import Cart from './Cart/Cart';
 import CheckoutOne from './Cart/CheckoutOne';
+import Help from './Help/Help';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path='productDetails' element={<ProductsDetails />} />
           <Route path='Cart/' element={<Cart />}  />
           <Route path='CheckoutOne' element={<CheckoutOne />} />
+          <Route path='Help/' element={<Help />} />
         </Routes> 
       </Router>
     </div>

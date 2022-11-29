@@ -97,7 +97,7 @@ function Navbar() {
               <Icon icon="ant-design:shopping-cart-outlined" />
               Cart
             </Link>
-            <Link to="">
+            <Link to="/Help">
               <Icon icon="bx:help-circle" />
               Help
             </Link>
