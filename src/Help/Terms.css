@@ -1,0 +1,180 @@
+.terms {
+    min-height: 320vh;
+    width: 80%;
+    position: relative;
+    left: 9%;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.terms > h2 {
+    position: relative;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 42px;
+    top: 30px;
+    height: 42px;
+    width: 80%;
+    color: #000000;
+    text-align: center;
+}
+
+.terms > h4 {
+    position: relative;
+    top: 50px;
+    width: 85%;
+    height: 96px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #212121;
+}
+
+.terms > div {
+    position: relative;
+    top: 70px;
+    background-color: yellow;
+    width: 100%;
+    min-height: 135vh;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 100px;
+}
+
+.terms--card {
+    position: relative;
+    width: 100%;
+    height: 32vh;
+    background: #F4F4F4;
+    border-radius: 5px;
+}
+
+.terms--card > h4 {
+    width: 90%;
+    text-align: start;
+    height: 48px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    position: absolute;
+    top: 20px;
+    left: 5%;
+}
+
+.terms--card > p {
+    position: absolute;
+    top: 55px;
+    left: 5%;
+    width: 90%;
+    height: 179px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #212121;
+}
+
+
+.termsUse {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: pink;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* RESPONSIVENESS  */
+@media only screen and (max-width: 1439px) and (min-width: 1201px)  {
+
+}
+
+@media only screen and (max-width: 1130px)  {
+    .terms {
+        min-height: 420vh;
+    }
+    .terms > div {
+        min-height: 180vh;
+    }
+    .terms--card {
+        height: 40vh;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .terms {
+        min-height: 520vh;
+    }
+    .terms > h4 {
+        margin-bottom: 100px;
+        height: 120px;
+    }
+    .terms > div {
+        min-height: 225vh;
+    }
+    .terms--card {
+        height: 55vh;
+    }
+    .terms--card > p {
+        line-height: 18px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .terms {
+        min-height: 500vh;
+    }
+    .terms--card > h4 {
+        height: 50px;
+    }
+    .terms > h4 {
+        margin-bottom: 120px;
+        height: 50px;
+    }
+    .terms--card > p {
+        line-height: 15px;
+    }
+    .termsUse {
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .terms {
+        min-height: 570vh;
+    }
+    .terms > h2 {
+        height: 90px;
+    }
+    .terms > h4 {
+        height: 200px;
+    }
+    .terms > div {
+        min-height: 300vh;
+    }
+    .terms--card {
+        height: 80vh;
+    }
+    .terms--card > h4 {
+        margin-bottom: 20px;
+    }
+    .terms--card > p {
+        top: 74px;
+        line-height: 154x;
+    }
+}
+
+

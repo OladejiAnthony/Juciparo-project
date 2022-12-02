@@ -19,6 +19,10 @@ import ProductsDetails from './HomePage/ProductDetails';
 import Cart from './Cart/Cart';
 import CheckoutOne from './Cart/CheckoutOne';
 import Help from './Help/Help';
+import Privacy from './Help/Privacy';
+import Track from './Help/Track';
+import ContactUs from './Help/ContactUs';
+import Terms from './Help/Terms';
 
 function App() {
   return (
@@ -37,6 +41,11 @@ function App() {
           <Route path='Cart/' element={<Cart />}  />
           <Route path='CheckoutOne' element={<CheckoutOne />} />
           <Route path='Help/' element={<Help />} />
+          <Route path='/Primacy' exact element={<Privacy />}  />
+          <Route path='/Track' exact element={<Track />}  />
+          <Route path='/ContactUs' exact element={<ContactUs />}  />
+          <Route path='/Terms' exact element={<Terms />}  />
+          
         </Routes> 
       </Router>
     </div>

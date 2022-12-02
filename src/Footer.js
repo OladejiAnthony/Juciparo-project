@@ -19,23 +19,23 @@ function Footer() {
       </Link>
       <div className='footer__list'>
         <ul>
-          <li>Help</li>
-          <li>Privacy Policy</li>
-          <li>FAQs</li>
-          <li>Track My Order</li>
-          <li>Contact Us</li>
+          <Link to="/Help">Help</Link>
+          <Link to="/Privacy">Privacy Policy</Link>
+          <Link to="/Faq">FAQs</Link>
+          <Link to="/Track">Track My Order</Link>
+          <Link to="/ContactUs">Contact Us</Link>
         </ul>
         <ul>
-          <li>Store</li>
-          <li>Top Products</li>
-          <li>Official Store</li>
-          <li>Become a seller</li>
+          <Link to="/Store">Store</Link>
+          <Link to="/">Top Products</Link>
+          <Link to="/">Official Store</Link>
+          <Link to="/SellerProfile">Become a seller</Link>
         </ul>
         <ul>
-          <li>Support</li>
-          <li>About Us</li>
-          <li>Customer service</li>
-          <li>Terms and Condition</li>
+          <Link to="/Support">Support</Link>
+          <Link to="/AboutUs">About Us</Link>
+          <Link to="/Customer">Customer service</Link>
+          <Link to="/Terms">Terms and Condition</Link>
         </ul>
       </div>
         
