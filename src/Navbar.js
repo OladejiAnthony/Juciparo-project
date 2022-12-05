@@ -30,8 +30,8 @@ function Navbar() {
 
 
   return (
-    <nav className='nav__container'>
-      <div className={click ? "nav__contain active" : "nav__contain"}>
+    <nav className={click ? "nav__container active" : "nav__container"}>
+      <div className='nav__contain' >
         <div className="nav__top">
           <Link to="/">
             <img src={logo} alt='logo' />

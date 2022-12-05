@@ -336,7 +336,6 @@ svg.iconify {
 @media screen and (max-width: 960px) {
     nav.nav__container {
         background-color: white;
-        height: 375px;
     }
 
     .nav__top {
@@ -365,7 +364,10 @@ svg.iconify {
         background: black;
     }
 
-    .nav__contain.active {
+    .nav__container.active .nav__contain {
+        background: white;
+    }
+    .nav__container.active {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -375,7 +377,7 @@ svg.iconify {
         border-bottom: 1px solid black;
     }
 
-    .nav__contain.active .nav__top {
+    .nav__container.active .nav__top {
         top: 10px;
         height: 120px;
         position: absolute;
@@ -384,11 +386,11 @@ svg.iconify {
         transition: all 1s ease;
     }
 
-    .nav__contain.active .nav__top > a:nth-child(1) {
+    .nav__container.active .nav__top > a:nth-child(1) {
         display: none;
     }
 
-    .nav__contain.active .nav__top .nav__links {
+    .nav__container.active .nav__top .nav__links {
         width: 200px;
         height: 120px;
         display: flex;
@@ -397,14 +399,14 @@ svg.iconify {
         display: unset;
     }
 
-    .nav__contain.active .nav__top .nav__links a.navLinkOne {
+    .nav__container.active .nav__top .nav__links a.navLinkOne {
         left: 10px;
         top: 15px;
         width: 185px;
         font-size: 35px;
     }
 
-    .nav__contain.active .nav__top .nav__links a.navLinkTwo {
+    .nav__container.active .nav__top .nav__links a.navLinkTwo {
         left: 10px;
         top: 80px;
         width: 185px;
@@ -412,24 +414,24 @@ svg.iconify {
     }
 
 
-    .nav__contain.active .nav__bottom {
+    .nav__container.active .nav__bottom {
         height: 250px;
-        position: relative;
+        position: absolute;
         z-index: unset;
-        top: 65px;
+        top: 145px;
         display: unset;
     }
 
-    .nav__contain.active .nav__bottom > button {
+    .nav__container.active .nav__bottom > button {
         left: 37%;
         top: 25px;
     }
 
-    .nav__contain.active .nav__bottom .nav__input {
+    .nav__container.active .nav__bottom .nav__input {
         display: none;
     }
 
-    .nav__contain.active .nav__bottom .nav__bottom__list {
+    .nav__container.active .nav__bottom .nav__bottom__list {
         left: 30%;
         top: 125px;
     }
@@ -468,15 +470,19 @@ svg.iconify {
         left: 29%;
     }
 
-    .nav__contain.active .nav__bottom .nav__bottom__list {
-        left: 14%;
-    }
+    
 }
 
 
 @media screen and (max-width: 479px) {
-    .nav__contain.active .nav__bottom .nav__bottom__list {
-        left: 8%;
+    .nav__container.active .nav__top .nav__links {
+        left: 25%;
+    }
+    .nav__container.active .nav__bottom > button {
+        left: 30%;
+    }
+    .nav__container.active .nav__bottom .nav__bottom__list {
+        left: 15%;
     }
 }
 
