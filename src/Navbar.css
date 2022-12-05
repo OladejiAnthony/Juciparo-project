@@ -155,12 +155,11 @@ nav.nav__container {
     margin: 10.5px 0px;
 }
 
-
-
 .categoryItem:hover {
     cursor: pointer;
     background: var(--tertiary300);
     color: white;
+    height: 60px;
 }
 
 .categoryItem > a:hover {
@@ -434,6 +433,7 @@ svg.iconify {
     .nav__container.active .nav__bottom .nav__bottom__list {
         left: 30%;
         top: 125px;
+        transition: all 2s ease;
     }
 
     .dropdown_container {
@@ -456,7 +456,6 @@ svg.iconify {
         cursor: pointer;
         color: var(--tertiary300);
     }
-
 
 }
 
@@ -482,7 +481,7 @@ svg.iconify {
         left: 30%;
     }
     .nav__container.active .nav__bottom .nav__bottom__list {
-        left: 15%;
+        left: 10%;
     }
 }
 

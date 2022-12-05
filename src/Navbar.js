@@ -14,6 +14,7 @@ function Navbar() {
   const [selected, setSelected] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
 
+  
   const handleChange = (e) => {
     e.preventDefault();
     setSearchInput(e.target.value);
@@ -24,7 +25,7 @@ function Navbar() {
   };
 
   const handleMouseOut = () => {
-    setIsHovering(false);
+    setIsHovering(true);
   };
 
 

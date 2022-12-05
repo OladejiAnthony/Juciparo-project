@@ -3,7 +3,7 @@ import "./ProductCarousel.css"
 //import { firstCarousel } from '../util/Data'
 
 const ProductCarousel = (props) => {
-  const {children} = props;
+  const {children, show} = props;
   // ...
   const [currentIndex, setCurrentIndex] = useState(0)
   const [length, setLength] = useState(children.length)
@@ -76,7 +76,7 @@ const ProductCarousel = (props) => {
             >
                 <div
                     className="product-carousel-content"
-                    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                    style={{ transform: `translateX(-${currentIndex * 100 / show}%)` }}
                 >
                     {children}
                 </div>

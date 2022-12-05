@@ -18,6 +18,14 @@
     right: 32px;
     top: 0px;
     border-style: hidden;
+    cursor: pointer;
+}
+
+.dropdown_container > button:focus {
+    border-color: var(--primary100);
+    border-width: 0px;
+    outline: 0px;
+    cursor: pointer;
 }
 
 .dropdown_container > svg.iconify.iconify--teenyicons {

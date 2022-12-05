@@ -200,6 +200,15 @@ export const ProductCarouselData = [
         Hprice : "#500",
         Pprice : "#600",
       },
+      {
+        id: 5,
+        btn : "New",
+        img : imgA,
+        pText : "Adidas sport sneakers",
+        Hprice : "#500",
+        Pprice : "#600",
+    },
+     
 ]
 
 
@@ -251,6 +260,14 @@ export const RecomCarouselData = [
         Hprice : "#500",
         Pprice : "#600",
       },
+      {
+        id: 5,
+        btn : "New",
+        img : imgOne,
+        pText : "Adidas sport sneakers",
+        Hprice : "#500",
+        Pprice : "#600",
+    },
 ]
 
 export const GadgetData = [
@@ -312,6 +329,14 @@ export const SellingCarouselData = [
         Hprice : "#500",
         Pprice : "#600",
       },
+      {
+        id: 5,
+        btn : "New",
+        img : imgA,
+        pText : "Adidas sport sneakers",
+        Hprice : "#500",
+        Pprice : "#600",
+    },
 ]
 
 

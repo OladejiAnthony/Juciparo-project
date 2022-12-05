@@ -18,11 +18,12 @@ function Home() {
   const navigate = useNavigate();
   //const { id, name, color, gender, images, final_price, reviews, rating } = item;  
   //const [img, setImg] = useState(images[0]);
-
+/*
   const handleDes = () => {
     navigate(`/productDetails`);
     //navigate(`/productDetails/${id}`);
   };
+*/
 
   return (
     <>

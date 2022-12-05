@@ -27,7 +27,7 @@
 .carousel-content {
     width: 200px;
     height: 248px;
-    left: 120px;
+    left: 50px;
     top: 34px;
     position: absolute;
     display: flex;
@@ -92,6 +92,7 @@
 
 .carousel-content> div > a:hover {
     color: red;
+    text-decoration: underline;
 }
 
 /* hide scrollbar in webkit browser */
