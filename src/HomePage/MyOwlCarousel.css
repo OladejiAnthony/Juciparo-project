@@ -1,30 +1,14 @@
-.carousel__container {
+.carousel {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-
-.carousel__container > div {
-    position: absolute;
+.carousel-inner {
+    position: relative;
     width: 100%;
     height: 100%;
-    display: block;
-}
-
-
-.carousel__container .carousel-initialized {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-div.carousel-track {
-    width: 100%;
-    height: 100%!important;
-    display: flex;
-    position: absolute;
-    z-index: 0;
+    overflow: hidden;
 }
 
 .carousel-item {
@@ -33,18 +17,10 @@ div.carousel-track {
     height: 100%!important;
     top: 0;
     left: 0;
+    background: black;
 }
 
-.carousel-row {
-    position: absolute;
-    width: 100%!important;
-    height: 100%!important;
-    top: 0;
-    left: 0;
-    background: black; 
-}
-
-.carousel-row > div {
+.carousel-caption {
     position: absolute;
     width: 100%!important;
     height: 100%!important;
@@ -53,11 +29,12 @@ div.carousel-track {
     left: 0;
 }
 
-.carousel-row > div > h3 {
+
+.carousel-caption > h3 {
     position: absolute;
     width: 249px;
     height: 112px;
-    left: 68px;
+    left: 38px;
     top: 103px;
     font-family: 'Lato';
     font-style: normal;
@@ -68,7 +45,7 @@ div.carousel-track {
 }
 
 
-.carousel-row > div > p {
+.carousel-caption > p {
     position: absolute;
     width: 217px;
     height: 73px;
@@ -85,7 +62,7 @@ div.carousel-track {
 }
 
 
-.carousel-row > div > button {
+.carousel-caption > button {
     padding: 8px 20px;
     position: absolute;
     width: 171px;
@@ -104,24 +81,50 @@ div.carousel-track {
     color: #FDFDFD;
 }
 
-ul.carousel-dots {
+
+.carousel-indicators {
     display: block;
-    width: 100%;
+    width: 80%;
+    height: 40px;
     padding: 0;
     margin-top: 1em;
     list-style: none;
-    top: 450px!important;
+    top: 490px!important;
     position: relative;
     text-align: center;
     z-index: 1;
+    
 }
 
-ul.carousel-dots li.carousel-dots-active button:before {
-    color: red;
+.carousel-indicators > button.active {
+    background-color: red!important;
+    color: red!important; 
+    background: red;
+    z-index: 1;
+}
+
+span.visually-hidden {
+    color: transparent;
+}
+
+.carousel-indicators > button {
+   /* background-color: #D9D9D9;
+    opacity: 1; */
+    background-color: #D9D9D9;
+    background: #d9d9d9;
+    margin: 0px 10px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border-color: none;
+    border-width: 0px;
+}
+
+.carousel-indicators > button:before {
+    
     opacity: 1;
 }
 
-ul.carousel-dots > li > button:before {
-    color: #D9D9D9;
-    opacity: 1;
-}
+
+
+

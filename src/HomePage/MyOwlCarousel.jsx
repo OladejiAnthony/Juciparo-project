@@ -1,41 +1,51 @@
 //import React, { Component } from 'react';
 import React from 'react'
-import Slider from 'infinite-react-carousel';
 import "./MyOwlCarousel.css"
+import Carousel from 'react-bootstrap/Carousel';
+//import bcg from "../Images/bcg.jpg"
 
-const settings =  {
-  arrows: false,
-  arrowsBlock: false,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  dots: true,
-  duration: 200,
-  pauseOnHover: true
-};
-
-function MyOwlCarousel() {
+function IndividualIntervalsExample() {
   return (
-    <div className='carousel__container'>
-        <Slider { ...settings }>
-          <div>
-            <h3>Shop Best Products</h3>
-            <p>Experience buying of products at good rates</p>
-            <button>Shop Now</button>
-          </div>
-          <div>
-            <h3>Shop Best Products</h3>
-            <p>Experience buying of products at good rates</p>
-            <button>Shop Now</button>
-          </div>
-          <div>
-            <h3>Shop Best Products</h3>
-              <p>Experience buying of products at good rates</p>
-              <button>Shop Now</button>
-            </div>
-        </Slider>
-    </div>
-  )
+    <Carousel>
+      <Carousel.Item interval={1000}>
+        <Carousel.Caption>
+          <h3>Shop Best Products</h3>
+          <p>Experience buying of products at good rates</p>
+          <button>Shop Now</button>
+        </Carousel.Caption>
+        <img
+          className="d-block w-100"
+          src=""
+          alt="First slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item interval={500}>
+        <Carousel.Caption>
+          <h3>Shop Best Products</h3>
+          <p>Experience buying of products at good rates</p>
+          <button>Shop Now</button>
+        </Carousel.Caption>
+        <img
+          className="d-block w-100"
+          src=""
+          alt="Second slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <Carousel.Caption>
+          <h3>Shop Best Products</h3>
+          <p>Experience buying of products at good rates</p>
+          <button>Shop Now</button>
+        </Carousel.Caption>
+        <img
+          className="d-block w-100"
+          src=""
+          alt="Third slide"
+        />
+      </Carousel.Item>
+    </Carousel>
+  );
 }
 
-export default MyOwlCarousel
+export default IndividualIntervalsExample;
 

@@ -2,7 +2,7 @@ import React from 'react'
 import "./Landing.css"
 import Sidebar from './Sidebar'
 //import bcg from "../Images/bcg.jpg"
-import MyCarousel from './MyOwlCarousel'
+import IndividualIntervalsExample from './MyOwlCarousel'
 
 
 function Landing() {
@@ -11,7 +11,7 @@ function Landing() {
       <Sidebar />
       <div className='landing__right'>
         <div className='landing__slideShow'>
-         <MyCarousel />
+         <IndividualIntervalsExample />
         </div>
       </div>
       
