@@ -6,9 +6,9 @@ import Newsletter from "../Newsletter"
 import ProductInfo from './ProductInfo'
 import { ProductImgCData, RecomCarouselData } from '../Data/Data'
 import ProductImgC from './ProductImgC'
-import ProductSection from './ProductSection'
 import RecommendCarousel from './RecommendCarousel'
 import { Link, useNavigate } from 'react-router-dom'
+import ProductDetailsTabs from './ProductSection'
 
 //use react-redux to get current product images, descriptions.
 
@@ -29,7 +29,13 @@ function ProductDetails() {
             )
         })}
         </ProductImgC>
-        <ProductSection />
+
+        <ProductDetailsTabs />
+
+        <div className='storeName'>
+          <h4>Sold by <span>Jmk Store</span></h4>
+        </div>
+        
         <RecommendCarousel 
           show={3} 
           style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
