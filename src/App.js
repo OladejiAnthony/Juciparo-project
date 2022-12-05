@@ -41,7 +41,7 @@ function App() {
           <Route path='Cart/' element={<Cart />}  />
           <Route path='CheckoutOne' element={<CheckoutOne />} />
           <Route path='Help/' element={<Help />} />
-          <Route path='/Primacy' exact element={<Privacy />}  />
+          <Route path='/Privacy' exact element={<Privacy />}  />
           <Route path='/Track' exact element={<Track />}  />
           <Route path='/ContactUs' exact element={<ContactUs />}  />
           <Route path='/Terms' exact element={<Terms />}  />
