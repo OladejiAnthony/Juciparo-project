@@ -1,5 +1,5 @@
-.terms {
-    min-height: 320vh;
+.termsC {
+    min-height: 550vh;
     width: 80%;
     position: relative;
     left: 9%;
@@ -9,7 +9,7 @@
     align-items: center;
 }
 
-.terms > h2 {
+.termsC > h2 {
     position: relative;
     font-family: 'Lato';
     font-style: normal;
@@ -23,7 +23,7 @@
     text-align: center;
 }
 
-.terms > h4 {
+.termsC > h4 {
     position: relative;
     top: 50px;
     width: 85%;
@@ -37,10 +37,9 @@
     color: #212121;
 }
 
-.terms > div {
+.termsC > .term--top {
     position: relative;
     top: 70px;
-    background-color: yellow;
     width: 100%;
     min-height: 135vh;
     display: flex;
@@ -86,15 +85,130 @@
     color: #212121;
 }
 
+.termsUse--section {
+    width: 100%;
+    height: 265vh;
+}
 
 .termsUse {
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     position: relative;
     background: pink;
     display: flex;
     flex-direction: column;
 }
+
+.termsUse > ol {
+    position: absolute;
+    top: 80px;
+    height: 100%;
+    width: 90%;
+    left: 5%;
+}
+
+.termsUse > ol > li {
+    height: 3%;
+    width: 100%;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #212121;
+}
+
+.termsUse > h4 {
+    width: 100%;
+    text-align: start;
+    height: 48px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    position: absolute;
+    top: 20px;
+    left: 5%;
+}
+
+.termsUse > h5 {
+    position: absolute;
+    top: 55px;
+    left: 5%;
+    width: 100%;
+    height: 59px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #212121;
+}
+
+.termsUse > p {
+    position: absolute;
+    top: 55px;
+    left: 5%;
+    width: 90%;
+    height: 179px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #212121;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+ 
+.termsC > .middle {
+    width: 100%;
+    height: 100vh;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap:  15px;
+} 
+.termsC > .middle > .terms--card--two {
+    position: relative;
+    width: 100%;
+    height: 32vh;
+    background: #F4F4F4;
+    border-radius: 5px;
+}
+
+.termsC > .middle >.terms--card--two > h4 {
+    width: 90%;
+    text-align: start;
+    height: 48px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    position: absolute;
+    top: 20px;
+    left: 5%;
+}
+
+.termsC > .middle > .terms--card--two > p {
+    position: absolute;
+    top: 55px;
+    left: 5%;
+    width: 90%;
+    height: 179px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #212121;
+}
+
 
 
 /* RESPONSIVENESS  */
@@ -103,10 +217,10 @@
 }
 
 @media only screen and (max-width: 1130px)  {
-    .terms {
+    .termsC {
         min-height: 420vh;
     }
-    .terms > div {
+    .termsC > .term--top {
         min-height: 180vh;
     }
     .terms--card {
@@ -115,14 +229,15 @@
 }
 
 @media screen and (max-width: 960px) {
-    .terms {
-        min-height: 520vh;
+    .termsC {
+        min-height: 660vh;
     }
-    .terms > h4 {
+    .termsC > h4 {
         margin-bottom: 100px;
         height: 120px;
+        width: 90%;
     }
-    .terms > div {
+    .termsC > .term--top {
         min-height: 225vh;
     }
     .terms--card {
@@ -131,50 +246,107 @@
     .terms--card > p {
         line-height: 18px;
     }
+    .termsUse > ol > li {
+        line-height: 12px;
+        font-size: 13px;
+        height: 3.2%;
+    }
 }
 
 @media screen and (max-width: 600px) {
-    .terms {
-        min-height: 500vh;
+    .termsC {
+        min-height: 700vh;
+    }
+    .termsC > h2 {
+        width: 90%;
+    }
+    .termsC > h4 {
+        margin-bottom: 120px;
+        height: 120px;
     }
     .terms--card > h4 {
         height: 50px;
     }
-    .terms > h4 {
-        margin-bottom: 120px;
-        height: 50px;
-    }
     .terms--card > p {
         line-height: 15px;
+        top: 80px;
+    }
+    .termsUse--section {
+        width: 100%;
+        height: 345vh;
     }
     .termsUse {
         margin-bottom: 100px;
     }
+    .termsUse > ol {
+        top: 100px;
+    }
+
+    .termsC > .middle {
+        height: 130vh;
+    }
+    .termsC > .middle > .terms--card--two {
+        height: 40vh;
+    }
+    .termsC > .middle > .terms--card--two > p {
+        font-size: 13px;
+    }
 }
 
-@media screen and (max-width: 479px) {
-    .terms {
-        min-height: 570vh;
+@media screen and (max-width: 500px) {
+    .termsC {
+        min-height: 780vh;
     }
-    .terms > h2 {
+    .termsC > h2 {
         height: 90px;
     }
-    .terms > h4 {
-        height: 200px;
+    .termsC > h4 {
+        height: 250px;
+        margin-bottom: 50px;
     }
-    .terms > div {
+    .termsC > .term--top {
         min-height: 300vh;
     }
     .terms--card {
-        height: 80vh;
+        height: 75vh;
     }
     .terms--card > h4 {
         margin-bottom: 20px;
     }
     .terms--card > p {
         top: 74px;
-        line-height: 154x;
+        line-height: 15px;
+    }
+    .termsC > .middle > .terms--card--two > p {
+        line-height: 15px;
     }
 }
 
 
+@media screen and (max-width: 400px) {
+    .termsC {
+        min-height:  990vh;
+    }
+    .terms > div {
+        min-height: 340vh;
+    }
+    .terms--card {
+        height: 85vh;
+    }
+    .termsUse--section {
+        width: 100%;
+        height: 450vh;
+    }
+    .termsUse > ol {
+        position: absolute;
+        top: 100px;
+        width: 95%;
+    }
+    .termsUse > ol > li {
+        height: 3.2%;
+    }
+    .termsC > .middle > .terms--card--two {
+        height: 50vh;
+    }
+
+}
