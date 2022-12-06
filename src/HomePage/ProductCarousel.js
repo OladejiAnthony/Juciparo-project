@@ -43,7 +43,7 @@ const ProductCarousel = (props) => {
 
   // ...
   const next = () => {
-    if (currentIndex < (length - 1)) {
+    if (currentIndex < (length - show)) {
         setCurrentIndex(prevState => prevState + 1)
     }
   }
@@ -75,14 +75,14 @@ const ProductCarousel = (props) => {
               onTouchMove={handleTouchMove}
             >
                 <div
-                    className="product-carousel-content"
-                    style={{ transform: `translateX(-${currentIndex * 100 / show}%)` }}
+                    className={`product-carousel-content div-${show}`}
+                    style={{ transform: `translateX(-${currentIndex * 100 / show }%)` }}
                 >
                     {children}
                 </div>
             </div>
             {
-              currentIndex < (length - 1) &&
+              currentIndex < (length - show) &&
               <button onClick={next} className="product-right-arrow">
                 &gt;
               </button>

@@ -31,8 +31,9 @@
     padding-left: 5%;
 }
 
-.storeName > h4 > span {
+.storeName > h4 > a {
     color: red;
+    text-decoration: none;
 }
 
 

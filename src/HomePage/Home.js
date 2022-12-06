@@ -47,7 +47,7 @@ function Home() {
           
         </FirstCarousel>
         <ProductCarousel 
-          show={3} 
+          show={2} 
           style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
         >
           {ProductCarouselData.map((product) => {

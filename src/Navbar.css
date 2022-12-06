@@ -483,5 +483,8 @@ svg.iconify {
     .nav__container.active .nav__bottom .nav__bottom__list {
         left: 10%;
     }
+    .nav__bottom > .categoryBar {
+        left: 120px;
+    }
 }
 

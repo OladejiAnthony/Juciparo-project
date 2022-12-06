@@ -21,20 +21,19 @@ function Footer() {
         <ul>
           <Link to="/Help">Help</Link>
           <Link to="/Privacy">Privacy Policy</Link>
-          <Link to="/Faq">FAQs</Link>
-          <Link to="/Track">Track My Order</Link>
+          <Link to="/Help">FAQs</Link>
           <Link to="/ContactUs">Contact Us</Link>
         </ul>
         <ul>
           <Link to="/Store">Store</Link>
           <Link to="/">Top Products</Link>
           <Link to="/">Official Store</Link>
-          <Link to="/SellerProfile">Become a seller</Link>
+          <Link to="/IntroPage">Become a seller</Link>
         </ul>
         <ul>
           <Link to="/Support">Support</Link>
           <Link to="/AboutUs">About Us</Link>
-          <Link to="/Customer">Customer service</Link>
+          <Link to="/PlaceOrder">How To Place Order</Link>
           <Link to="/Terms">Terms and Condition</Link>
         </ul>
       </div>

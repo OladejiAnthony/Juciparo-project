@@ -31,6 +31,7 @@
     width: 80%;
     height: 553px;
     left: 133px;
+    margin-bottom: 130px;
 }
 
 
@@ -62,16 +63,17 @@
     .landing {
         left: 0px;
         flex-direction: column;
-        min-height: 75vh;
+        width: 100%;
+        margin-bottom: 0px;
         /* position: absolute; */
     }
 
     .landing__right {
         position: relative;
         right: unset;
-        top: 50px;
-        width: 100%;
-        left: 12%;
+        top: 0px;
+        width: 90%;
+        left: 5%;
     }
 }
 
@@ -79,16 +81,16 @@
     .landing__right {
         position: relative;
         right: unset;
-        top: 50px;
-        width: 100%;
-        left: 10%;
+        top: 0px;
+        width: 95%;
+        left: 2%;
     }
 }
 
 @media screen and (max-width: 600px) {
     .landing__right {
-        width: 100%;
-        left: 10%;
+        width: 95%;
+        left: 2%;
     }
 }
 

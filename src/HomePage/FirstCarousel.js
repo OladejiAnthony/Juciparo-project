@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "./FirstCarousel.css"
 
 const FirstCarousel = (props) => {
-  const {children, show} = props;
+  const {children} = props;
   // ...
   const [currentIndex, setCurrentIndex] = useState(0)
   const [length, setLength] = useState(children.length)
@@ -71,13 +71,13 @@ const FirstCarousel = (props) => {
             >
                 <div
                     className="carousel-content"
-                    style={{ transform: `translateX(-${currentIndex * 100 / show}%)` }}
+                    style={{ transform: `translateX(-${currentIndex * 100 }%)` }}
                 >
                     {children}
                 </div>
             </div>
             {
-              currentIndex < (length - 1) &&
+              currentIndex < (length ) &&
               <button onClick={next} className="right-arrow">
                 &gt;
               </button>

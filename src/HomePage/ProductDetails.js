@@ -33,7 +33,7 @@ function ProductDetails() {
         <ProductDetailsTabs />
 
         <div className='storeName'>
-          <h4>Sold by <span>Jmk Store</span></h4>
+          <h4>Sold by <Link to="/SellerProfile">Jmk Store</Link></h4>
         </div>
         
         <RecommendCarousel 

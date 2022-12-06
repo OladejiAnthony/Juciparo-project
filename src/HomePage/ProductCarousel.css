@@ -70,6 +70,7 @@
     scrollbar-width: none;  /* hide scrollbar in Firefox */
 }
 
+
 .product-carousel-content> div {
     display: flex;
     flex-direction: column;
@@ -82,6 +83,9 @@
     border-radius: 5px;
     top: 0px;
 }
+
+
+
 
 .product-carousel-content> div > button {
     text-align: center;
@@ -127,6 +131,7 @@
 .product-carousel-content> div:nth-child(4) .img >img {
     left: 0px;
 }
+
 
 .product-carousel-content> div > p {
     position: absolute;
@@ -274,10 +279,7 @@
         width: 92%;
     }
 
-    .product-carousel-content { 
-        gap: 45px;
-        left: 20px;
-    }
+   
 
 }
 
@@ -292,3 +294,10 @@
 }
 
 
+
+@media screen and (max-width: 400px) {
+    .product-carousel-content { 
+        gap: 5px;
+        left: 5%;
+    }
+}

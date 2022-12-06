@@ -2,12 +2,12 @@
 import React from 'react'
 import "./MyOwlCarousel.css"
 import Carousel from 'react-bootstrap/Carousel';
-//import bcg from "../Images/bcg.jpg"
+import bcg from "../Images/woman.png"
 
 function IndividualIntervalsExample() {
   return (
     <Carousel>
-      <Carousel.Item interval={1000}>
+      <Carousel.Item interval={3000}>
         <Carousel.Caption>
           <h3>Shop Best Products</h3>
           <p>Experience buying of products at good rates</p>
@@ -15,11 +15,11 @@ function IndividualIntervalsExample() {
         </Carousel.Caption>
         <img
           className="d-block w-100"
-          src=""
+          src={bcg}
           alt="First slide"
         />
       </Carousel.Item>
-      <Carousel.Item interval={500}>
+      <Carousel.Item interval={3000}>
         <Carousel.Caption>
           <h3>Shop Best Products</h3>
           <p>Experience buying of products at good rates</p>
@@ -27,7 +27,7 @@ function IndividualIntervalsExample() {
         </Carousel.Caption>
         <img
           className="d-block w-100"
-          src=""
+          src={bcg}
           alt="Second slide"
         />
       </Carousel.Item>
@@ -39,7 +39,7 @@ function IndividualIntervalsExample() {
         </Carousel.Caption>
         <img
           className="d-block w-100"
-          src=""
+          src={bcg}
           alt="Third slide"
         />
       </Carousel.Item>

@@ -1,6 +1,6 @@
 .accountLogin {
     width: 100vw;
-    height: 100vh;
+    height: 150vh;
     background: #ffffff;
     align-items: center;
     display: flex;
@@ -36,7 +36,7 @@
 
 .accountLogin .account_head > h3 {
     position: absolute;
-    font-family: 'Lato';
+    font-family: 'Montserrat, sans-serif';
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
