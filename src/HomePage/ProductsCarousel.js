@@ -6,6 +6,7 @@ import "./ProductsCarousel.css"
 import right from "../Images/right.svg"
 import left from "../Images/left.svg"
 
+
 function SampleNextArrow(props) {
   const { className, onClick } = props;
   return (
@@ -63,7 +64,9 @@ function ProductsCarousel () {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            initialSlide: 0,
+            infinite : true
           }
         }
       ]
