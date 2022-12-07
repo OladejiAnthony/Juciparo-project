@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import "./RecommendsCarousel.css"
+import "./RecommendCarousel.css"
 //import { firstCarousel } from '../util/Data'
 
-const RecommendsCarousel = (props) => {
+const RecommendCarousel = (props) => {
   const {children} = props;
   // ...
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -93,4 +93,4 @@ const RecommendsCarousel = (props) => {
   )
 }
 
-export default RecommendsCarousel;
+export default RecommendCarousel;
