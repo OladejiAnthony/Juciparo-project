@@ -1,21 +1,50 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Slider from "react-slick";
+import { ProductCarouselData } from "../Data/Data";
 import "./ProductsCarousel.css"
 
+
+function SampleNextArrow(props) {
+  const { className, onClick } = props;
+  return (
+    <div
+      className={className}
+      onClick={onClick}
+    >
+      a
+    </div>
+  );
+}
+function SamplePrevArrow(props) {
+  const { className,  onClick } = props;
+  return (
+    <div
+      className={className}
+      onClick={onClick}
+    >
+      b
+    </div>
+    
+  );
+}
+
 function ProductsCarousel () {
- 
+  const navigate = useNavigate();
     var settings = {
-      dots: true,
+      dots: false,
       infinite: false,
       speed: 500,
       slidesToShow: 4,
-      slidesToScroll: 4,
+      slidesToScroll: 1,
       initialSlide: 0,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />,
       responsive: [
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 4,
             slidesToScroll: 3,
             infinite: true,
             dots: true
@@ -40,25 +69,35 @@ function ProductsCarousel () {
     };
     return (
       <div className="products-carousel-container">
-        <h2> Responsive </h2>
-        <Slider {...settings}>
-          <div>
-            <h3>1</h3>
+        <div className="products-carousel-wrapper">
+          <div className='wrappers-text'>
+            <h4>Top Selling Products</h4>
+            <h5>See All</h5>
           </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
+          <Slider {...settings}>
+
+          {ProductCarouselData.map((product) => {
+            return (
+              <div key={product.id}>
+                <button className=''>{product.btn}</button>
+                <div className="img">
+                  <img src={product.img} alt="placeholder"  /> 
+                </div>
+                <div className='products-text'>
+                <Link to="/productDetails" onClick={() => navigate(product.route)}>
+                    {product.pText}
+                  </Link>
+                  <div>
+                    <h5>{product.Hprice}</h5>
+                    <p style={{ textDecoration: "line-through" }}>{product.Pprice}</p>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
          
-        </Slider>
+          </Slider>
+        </div>
       </div>
     );
   
