@@ -11,24 +11,13 @@ function Navbar() {
   const [searchInput, setSearchInput] = useState("");
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
-  const [selected, setSelected] = useState(0);
-  const [isHovering, setIsHovering] = useState(false);
-
+  const [showDiv, setShowDiv] = useState(false);
+  const onClick = () => setShowDiv(!showDiv);
   
   const handleChange = (e) => {
     e.preventDefault();
     setSearchInput(e.target.value);
   };
-
-  const handleMouseOver = () => {
-    setIsHovering(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsHovering(true);
-  };
-
-
 
   return (
     <nav className={click ? "nav__container active" : "nav__container"}>
@@ -52,32 +41,35 @@ function Navbar() {
           </Link>
         </div>
         <div className='nav__bottom'>
-          <button onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+          <button onClick={onClick}>
             Categories
           </button>
-          {isHovering && (
-            <div className='categoryBar'>
-              {SidebarData.map((item, index) => {
-                  return (
-                    <>
-                      <div className = {selected===index ? 'categoryItem active' : 'categoryItem'}
-                        key={index}
-                        onClick={()=>setSelected(index)}
-                        onMouseOver={handleMouseOver} 
-                        onMouseOut={handleMouseOut}
-                      >
-                        <Icon icon={item.icon} />
-                        <Link to={item.heading}>
-                          {item.heading}
-                        </Link>
+          {
+            showDiv ?
             
-                      </div>
-                    </>
-                  )
-                }
-              )}
-            </div>
-          )}
+              <div className='categoryBar'>
+                {SidebarData.map((item, index) => {
+                    return (
+                      <>
+                        <div className = {index ? 'categoryItem active' : 'categoryItem'}
+                          key={index}
+                         
+                        >
+                          <Icon icon={item.icon} />
+                          <Link to={item.heading}>
+                            {item.heading}
+                          </Link>
+              
+                        </div>
+                      </>
+                    )
+                  }
+                )}
+              </div>
+            
+             : null 
+          }
+          
 
           <div className='nav__input'>
             <input

@@ -7,34 +7,29 @@ import {CategoryList, SidebarData} from "../Data/Data"
 
 
 function Sidebar() {
-  const [selected, setSelected] = useState(0);
-  const [isHovering, setIsHovering] = useState(false);
-  const navigate = useNavigate();
-
-  const handleMouseOver = () => {
-    setIsHovering(true);
-  }
-  const handleMouseOut = () => {
-    setIsHovering(false);
-  }
+  const [showDiv, setShowDiv] = useState(false);
+  const onClick = () => setShowDiv(!showDiv);
+  
+  //const navigate = useNavigate();
 
   return (
     <div className='sidebar'>
       {SidebarData.map((item, index) => {
         return (
           <>
-          <div className = {selected===index ? 'menuItem active' : 'menuItem'}
+          <div className = {index ? 'menuItem active' : 'menuItem'}
             key={index}
-            onClick={()=>setSelected(index)}
-            onMouseOver={handleMouseOver} 
-            onMouseOut={handleMouseOut}
+            onClick={onClick}
           >
             <Icon icon={item.icon} />
-            <Link to={item.route} onClick={() => navigate(item.route)}>{item.heading}
+            <Link>{item.heading}
             </Link>
-
+            {/* 
+              <Link to={item.route} onClick={() => navigate(item.route)}>{item.heading}
+              </Link> 
+            */}
           </div>
-          {isHovering && (
+          {showDiv ? (
             <div 
               className='categoryList'
             >
@@ -75,7 +70,9 @@ function Sidebar() {
                 })
               }
             </div>
-          )}
+          )
+          : null
+        }
           </>
         )
       })}
