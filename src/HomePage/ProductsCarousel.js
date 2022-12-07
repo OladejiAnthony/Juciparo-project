@@ -3,7 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import { ProductCarouselData } from "../Data/Data";
 import "./ProductsCarousel.css"
-
+import right from "../Images/right.svg"
+import left from "../Images/left.svg"
 
 function SampleNextArrow(props) {
   const { className, onClick } = props;
@@ -12,7 +13,7 @@ function SampleNextArrow(props) {
       className={className}
       onClick={onClick}
     >
-      a
+      <img src={right} alt="right" />
     </div>
   );
 }
@@ -23,7 +24,7 @@ function SamplePrevArrow(props) {
       className={className}
       onClick={onClick}
     >
-      b
+      <img src={left} alt="left" />
     </div>
     
   );

@@ -99,6 +99,8 @@
 }
 
 
-@media screen and (max-width: 433px) {
-    
+@media screen and (max-width: 310px) {
+    .landing {
+        height: 403px;
+    }
 }

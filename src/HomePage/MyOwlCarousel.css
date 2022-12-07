@@ -263,3 +263,22 @@ a.carousel-control-next {
 
 }
 
+@media screen and (max-width: 310px) {
+    .carousel-indicators {
+        top: 340px!important;
+    }
+    .carousel-caption > h3 {
+        top: 106px;
+        font-size: 25px;
+    }
+    .carousel-caption > p {
+        font-size: 11px;
+        top: 200px;
+    }
+    .carousel-caption > button {
+        top: 280px;
+        width: 80px;
+        height: 40px;
+    }
+
+}

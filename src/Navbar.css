@@ -346,6 +346,7 @@ svg.iconify {
         width: 120px;
         height: 100px;
         top: 10px;
+        border-radius: 5%;
     }
     .nav__top a:nth-child(1) > img {
         border-radius: 5%;
@@ -494,3 +495,47 @@ svg.iconify {
     }
 }
 
+
+@media screen and (max-width: 340px) {
+    .nav__container.active .nav__top .nav__links {
+        left: 20%;
+    }
+    .nav__container.active .nav__bottom > button {
+        left: 25%;
+    }
+    .nav__container.active .nav__bottom .nav__bottom__list {
+        left: 3%;
+        width: 295px;
+    }
+    
+    
+    .nav__bottom > .categoryBar {
+        left: 120px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .nav__container.active .nav__top .nav__links {
+        left: 15%;
+    }
+    .nav__container.active .nav__bottom > button {
+        left: 20%;
+    }
+    .nav__container.active .nav__bottom .nav__bottom__list {
+        left: 3%;
+        width: 250px;
+    }
+    .nav__bottom__list a {
+        width: 100px;
+    }
+    .dropdown_container {
+        width: 100px!important;
+    }
+    .dropdown_container > svg.iconify.iconify--teenyicons {
+        left: 0px!important;
+    }
+    .dropdown_container > button {
+        right: 10px!important;
+    }
+
+}
