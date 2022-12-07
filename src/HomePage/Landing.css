@@ -88,9 +88,13 @@
 }
 
 @media screen and (max-width: 600px) {
+    .landing {
+        height: 453px;
+    }
     .landing__right {
-        width: 95%;
-        left: 2%;
+        width: 80%;
+        left: 10%;
+        height: 100%;
     }
 }
 

@@ -87,6 +87,7 @@
     font-size: 20px;
     line-height: 24px;
     color: #FDFDFD;
+    cursor: pointer;
 }
 
 
@@ -148,6 +149,14 @@ a.carousel-control-next {
         width: 50%!important;
         height: 450px!important;
     }
+    a.carousel-control-prev {
+        display: none;
+    }
+    
+    
+    a.carousel-control-next {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -158,6 +167,42 @@ a.carousel-control-next {
     .carousel-indicators {
         padding-left: 15%;
     }
+    .carousel.slide {
+        position: relative;
+        width: 100%;
+        top: 0px;
+        height: 100%;
+    }
+    .carousel-inner {
+        top: -50px;
+    }
+
+    .carousel-caption > h3 {
+        font-size: 35px;
+        left: 20px;
+        top: 136px;
+        width: 50%;
+        height: 85px;
+        line-height: 40px;
+        text-align: start;
+    }
+    .carousel-caption > p {
+        font-size: 16px;
+        left: 20px;
+        top: 230px;
+        width: 40%;
+    }
+    .carousel-caption > button {
+        width: 120px;
+        height: 45px;
+        left: 20px;
+        top: 308px;
+        padding: 8px 5px;
+        font-size: 12px;
+    }
+    .carousel-indicators {
+        top: 380px!important;
+    }
 }
 
 @media screen and (max-width: 479px) {
@@ -165,13 +210,55 @@ a.carousel-control-next {
         display: none;
     }
     .carousel-item > .w-100 {
-        width: 90%!important;
-        height: 470px!important;
+        width: 100%!important;
+        height: 65%!important;
+        top: 60px;
     }
     
     
     a.carousel-control-next {
         display: none;
     }
+
+    .carousel-caption > h3 {
+        font-size: 30px;
+        left: 10px;
+        top: 116px;
+        width: 70%;
+        height: 85px;
+        line-height: 40px;
+        text-align: start;
+    }
+    .carousel-caption > p {
+        font-size: 14px;
+        left: 10px;
+        top: 210px;
+        width: 50%;
+    }
+    .carousel-caption > button {
+        width: 100px;
+        height: 45px;
+        left: 10px;
+        top: 288px;
+        padding: 8px 5px;
+        font-size: 12px;
+    }
+    .carousel-indicators {
+        top: 380px!important;
+    }
     
+}
+
+@media screen and (max-width: 340px) {
+    .carousel-caption > h3 {
+        top: 136px;
+    }
+    .carousel-caption > p {
+        font-size: 12px;
+        top: 230px;
+    }
+    .carousel-caption > button {
+        top: 300px;
+    }
+
 }

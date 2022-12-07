@@ -1,70 +1,68 @@
-import Carousel from 'react-bootstrap/Carousel';
+import React from "react";
+import Slider from "react-slick";
+import "./ProductsCarousel.css"
 
-function DarkVariantExample() {
-  return (
-    <Carousel variant="dark">
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=First slide&bg=f5f5f5"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h5>First slide label</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Second slide&bg=eee"
-          alt="Second slide"
-        />
-        <Carousel.Caption>
-          <h5>Second slide label</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=e5e5e5"
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-          <h5>Third slide label</h5>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-  );
+function ProductsCarousel () {
+ 
+    var settings = {
+      dots: true,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      initialSlide: 0,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    };
+    return (
+      <div className="products-carousel-container">
+        <h2> Responsive </h2>
+        <Slider {...settings}>
+          <div>
+            <h3>1</h3>
+          </div>
+          <div>
+            <h3>2</h3>
+          </div>
+          <div>
+            <h3>3</h3>
+          </div>
+          <div>
+            <h3>4</h3>
+          </div>
+          <div>
+            <h3>5</h3>
+          </div>
+         
+        </Slider>
+      </div>
+    );
+  
 }
 
-export default DarkVariantExample;
+export default ProductsCarousel
 
-{
-/*
-
-<div key={product.id}>
-                <button className=''>{product.btn}</button>
-                <div className="img">
-                  <img src={product.img} alt="placeholder"  /> 
-                </div>
-                <div className='product-text'>
-                <Link to="/productDetails" onClick={() => navigate(product.route)}>
-              
-               {product.pText}
-               </Link>
-               <div>
-                 <h5>{product.Hprice}</h5>
-                 <p style={{ textDecoration: "line-through" }}>{product.Pprice}</p>
-               </div>
-             </div>
-           </div>
-
-
-*/
-
-}

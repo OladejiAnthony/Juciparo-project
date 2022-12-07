@@ -1,0 +1,360 @@
+
+.products-carousel-container {
+    position: relative;
+    width: 80%;
+    height: 411px;
+    left: 10%;
+    margin: 36px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.slick-slider.slick-initialized {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.slick-list {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slick-track {
+    width: 100%!important;
+    height: 100%;
+    position: relative;
+    display: flex;
+    gap: 42px;
+    transition: all 250ms linear;
+    -ms-overflow-style: none;  /* hide scrollbar in IE and Edge */
+    scrollbar-width: none; 
+}
+
+.slick-slide.slick-active{
+    width: 490px;
+    height: 352px;
+    position: relative;
+    display: flex;
+    gap: 42px;
+    transition: all 250ms linear;
+    -ms-overflow-style: none;  /* hide scrollbar in IE and Edge */
+    scrollbar-width: none;
+    background: green;
+}
+
+
+
+
+
+
+
+
+.products-carousel-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+.wrappers-text {
+    width: 100%;
+    height: 34px;
+    position: absolute;
+    display: flex;
+}
+
+.wrappers-text h4 {
+    position: absolute;
+    width: 240px;
+    height: 34px;
+    left: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.wrappers-text h5 {
+    position: absolute;
+    width: 65px;
+    height: 18px;
+    right: 0px;
+    font-family: 'Montsearrat' sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+}
+
+
+.products-carousel-content-wrapper {
+    overflow: hidden;
+    width: 100%;
+    top: 40px;
+    height: 90%;
+    position: relative;
+}
+
+.products-carousel-content-wrapper > div {
+    width: 270px;
+    height: 352px;
+    position: relative;
+    display: flex;
+    gap: 42px;
+    transition: all 250ms linear;
+}
+
+
+/*
+.product-carousel-content {
+    width: 270px;
+    height: 352px;
+    position: relative;
+    display: flex;
+    gap: 42px;
+    transition: all 250ms linear;
+
+}
+
+
+.product-carousel-content> div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF; 
+    box-shadow: 3px 5px 15px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    top: 0px;
+}
+
+
+
+
+.product-carousel-content> div > button {
+    text-align: center;
+    background: var(--tertiary300);
+    color: var(--primary100);
+    border-color: var(--tertiary300);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 113px;
+    height: 52px;
+    border-radius: 5px;
+    font-family: 'Montserrat' sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    z-index: 1;
+}
+
+.product-carousel-content> div > button:nth-child(3) {
+    background: var(--primary100);
+}
+
+.product-carousel-content> div .img{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    top: 28px;
+    left: 15px;
+    border-radius: 30px;
+}
+
+
+.product-carousel-content> div .img > img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    left: 0px;
+}
+
+.product-carousel-content> div:nth-child(4) .img >img {
+    left: 0px;
+}
+
+
+.product-carousel-content> div > p {
+    position: absolute;
+    top: 214px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+}
+
+.product-text {
+    position: absolute;
+    width: 123px;
+    height: 76px;
+    top: 243px;
+    left: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-text > a {
+    position: absolute;
+    width: 119px;
+    height: 56px;
+    top: 0px;
+    font-family: 'Montserrat' sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #212121;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.product-text > a:hover {
+    color: var(--tertiary300);
+}
+
+.product-text > div {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 53px;
+    width: 100%;
+    height: 25px;
+}
+
+.product-text > div > h5 {
+    position: absolute;
+    position: absolute;
+    width: 35px;
+    height: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #EB0000;
+}
+
+.product-text > div > p {
+    position: absolute;
+    width: 27px;
+    height: 18px;
+    top: 0px;
+    right: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+}
+
+*/
+
+/* hide scrollbar in webkit browser */
+.product-carousel-content::-webkit-scrollbar, .carousel-content::-webkit-scrollbar {
+    display: none;
+}
+
+.product-carousel-content > * {
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+/* ... */
+.product-carousel-content.show-2 > * {
+    width: 50%;
+}
+
+.product-carousel-content.show-3 > * {
+    width: calc(100% / 3);
+}
+
+.product-carousel-content.show-4 > * {
+    width: calc(100% / 4);
+}
+
+/* ... */
+.product-left-arrow, .product-right-arrow {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    background: #E3E3E3;
+    border: 1px solid #ddd;
+    color: #FFFFFF;
+    font-size: 32px;
+}
+
+.product-left-arrow {
+    left: 24px;
+}
+
+.product-right-arrow {
+    right: 24px;
+}
+
+
+
+/* RESPONSIVENESS  */
+@media only screen and (min-width: 1440px)  {
+    .product-carousel-container {
+        width: 87%;
+    }
+}
+
+@media only screen and (max-width: 1200px)  {
+    .product-carousel-container {
+        width: 82%;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .product-carousel-container {
+        left: 5%;
+        width: 92%;
+    }
+
+   
+
+}
+
+@media screen and (max-width: 600px) {
+    .product-carousel-container {
+        margin-top: 30%;
+    }
+    .product-carousel-content { 
+        gap: 35px;
+        left: 5%;
+    }
+}
+
+
+
+@media screen and (max-width: 400px) {
+    .product-carousel-content { 
+        gap: 5px;
+        left: 5%;
+    }
+}

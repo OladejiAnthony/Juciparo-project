@@ -13,6 +13,7 @@ import Navbar from '../Navbar'
 import Footer from '../Footer'
 import Newsletter from "../Newsletter"
 import { Link, useNavigate } from 'react-router-dom'
+import ProductsCarousel from './ProductsCarousel'
 
 function Home() {
   const navigate = useNavigate();
@@ -72,6 +73,7 @@ function Home() {
           })}
       
         </ProductCarousel>
+        <ProductsCarousel />
 
         <RecommendCarousel 
           show={3} 

@@ -343,6 +343,12 @@ svg.iconify {
 
     .nav__top a:nth-child(1) {
         left: 10%;
+        width: 120px;
+        height: 100px;
+        top: 10px;
+    }
+    .nav__top a:nth-child(1) > img {
+        border-radius: 5%;
     }
 
     .nav__top .nav__links {
