@@ -3,7 +3,7 @@ import "./ProductCarousel.css"
 //import { firstCarousel } from '../util/Data'
 
 const ProductCarousel = (props) => {
-  const {children, show} = props;
+  const {children} = props;
   // ...
   const [currentIndex, setCurrentIndex] = useState(0)
   const [length, setLength] = useState(children.length)
@@ -43,7 +43,7 @@ const ProductCarousel = (props) => {
 
   // ...
   const next = () => {
-    if (currentIndex < (length - show)) {
+    if (currentIndex < (length - 1)) {
         setCurrentIndex(prevState => prevState + 1)
     }
   }
@@ -75,14 +75,14 @@ const ProductCarousel = (props) => {
               onTouchMove={handleTouchMove}
             >
                 <div
-                    className={`product-carousel-content div-${show}`}
-                    style={{ transform: `translateX(-${currentIndex * 100 / show }%)` }}
+                    className="product-carousel-content"
+                    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                 >
                     {children}
                 </div>
             </div>
             {
-              currentIndex < (length - show) &&
+              currentIndex < (length - 1) &&
               <button onClick={next} className="product-right-arrow">
                 &gt;
               </button>

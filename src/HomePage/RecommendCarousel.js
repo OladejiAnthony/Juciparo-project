@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import "./RecommendCarousel.css"
+import "./RecommendsCarousel.css"
 //import { firstCarousel } from '../util/Data'
 
-const RecommendCarousel = (props) => {
-  const {children, show} = props;
+const RecommendsCarousel = (props) => {
+  const {children} = props;
   // ...
   const [currentIndex, setCurrentIndex] = useState(0)
   const [length, setLength] = useState(children.length)
@@ -76,7 +76,7 @@ const RecommendCarousel = (props) => {
             >
                 <div
                     className="recommend-carousel-content"
-                    style={{ transform: `translateX(-${currentIndex * 100 /show}%)` }}
+                    style={{ transform: `translateX(-${currentIndex * 100 }%)` }}
                 >
                     {children}
                 </div>
@@ -93,4 +93,4 @@ const RecommendCarousel = (props) => {
   )
 }
 
-export default RecommendCarousel;
+export default RecommendsCarousel;
