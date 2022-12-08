@@ -254,8 +254,23 @@
     }
 }
 @media screen and (max-width: 470px) {
+    .about__container {
+        min-height: 350vh;
+    }
     .about__container > .discuss__container {
         left: 10%;
     }
 }
 
+@media screen and (max-width: 360px) {
+    .about__container {
+        min-height: 380vh;
+    }
+    .about__icon-section {
+        top: 1180px;
+    }
+    .about__container > .discuss__container {
+        top: 1000px;
+    }
+
+}
