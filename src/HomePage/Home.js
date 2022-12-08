@@ -130,30 +130,8 @@ function Home() {
 
         </Gadget>
 
-        <SellingCarousel 
-          show={3} 
-          style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
-        >
-          {SellingCarouselData.map((product) => {
-            return (
-              <div key={product.id}>
-                <button className=''>{product.btn}</button>
-                <div className="img">
-                  <img src={product.img} alt="placeholder"  /> 
-                </div>
-                <div className='selling-text'>
-                  <Link to="/productDetails" onClick={() => navigate(product.route)}>
-                    {product.pText}
-                  </Link>
-                  <div>
-                    <h5>{product.Hprice}</h5>
-                    <p style={{ textDecoration: "line-through" }}>{product.Pprice}</p>
-                  </div>
-                </div>
-              </div>
-            )
-          })}
-        </SellingCarousel>
+        <SellingCarousel />
+         
         <Discuss />
 
         <Brand />

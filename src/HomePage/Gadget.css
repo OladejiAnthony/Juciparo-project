@@ -64,8 +64,9 @@
     height: 313px;
     position: relative;
     display: flex;
-    gap: 42px;
+    gap: 82px;
     transition: all 250ms linear;
+
     -ms-overflow-style: none;  /* hide scrollbar in IE and Edge */
     scrollbar-width: none;  /* hide scrollbar in Firefox */
 }
@@ -228,7 +229,7 @@
 @media screen and (max-width: 960px) {
     .gadget-carousel-container {
         left: 5%;
-        min-height: 130vh;
+        height: 150vh;
         width: 90%;
     }
 
@@ -264,16 +265,38 @@
     }
     .gadget-carousel-content> div .img {
         width: 50%;
-        left: 55%;
+        right: 5%;
+    }
+    .gadget-text {
+        left: 10%;
+    }
+    .gadget-right > a {
+        left: 10%;
     }
 }
 
 @media screen and (max-width: 479px) {
-    .gadget-right > .gadget-text {
-        left: 30px;
+    .gadget-carousel-container {
+        height: 140vh;
+    }
+    .gadget-carousel-content> div {
+        width: 100%;
+    }
+    .gadget-text > h5 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .gadget-text > p {
+        font-size: 12px;
+        top: 72px;
     }
     .gadget-right > a {
-        left: 30px;
+        width: 100px;
+        font-size: 12px;
+    }
+    .gadget-carousel-content> div .img > img {
+        height: 60%;
+        top: 63px;
     }
 }
 

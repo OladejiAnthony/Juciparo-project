@@ -1,96 +1,119 @@
-import React, { useEffect, useState } from 'react'
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import Slider from "react-slick";
+import { SellingCarouselData } from "../Data/Data";
 import "./SellingCarousel.css"
-//import { firstCarousel } from '../util/Data'
-
-const SellingCarousel = (props) => {
-  const {children, show} = props;
-  // ...
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [length, setLength] = useState(children.length)
-  const [touchPosition, setTouchPosition] = useState(null)
-  // ...
-  const handleTouchStart = (e) => {
-      const touchDown = e.touches[0].clientX
-      setTouchPosition(touchDown)
-  }
-
-  const handleTouchMove = (e) => {
-    const touchDown = touchPosition
-
-    if(touchDown === null) {
-        return
-    }
-
-    const currentTouch = e.touches[0].clientX
-    const diff = touchDown - currentTouch
-
-    if (diff > 5) {
-        next()
-    }
-
-    if (diff < -5) {
-        prev()
-    }
-
-    setTouchPosition(null)
-  }
-
-  // Set the length to match current children from props
-  useEffect(() => {
-      setLength(children.length)
-  }, [children])
-  
-
-  // ...
-  const next = () => {
-    if (currentIndex < (length - 1)) {
-        setCurrentIndex(prevState => prevState + 1)
-    }
-  }
-
-  const prev = () => {
-    if (currentIndex > 0) {
-        setCurrentIndex(prevState => prevState - 1)
-    }
-  }
-  // ...
+import right from "../Images/right.svg"
+import left from "../Images/left.svg"
 
 
+function SampleNextArrow(props) {
+  const { className, onClick } = props;
   return (
-      <div className="selling-carousel-container">
-          <div className="selling-carousel-wrapper">
-            <div className='wrapper-text'>
-                <h4>Most Selling Products</h4>
-                <h5>See All</h5>
-            </div>
-            {
-              currentIndex > 0 &&
-              <button onClick={prev} className="selling-left-arrow">
-                &lt;
-              </button>
-            }
-            <div 
-              className="selling-carousel-content-wrapper"
-              onTouchStart={handleTouchStart}
-              onTouchMove={handleTouchMove}
-            >
-                <div
-                    className="selling-carousel-content"
-                    style={{ transform: `translateX(-${currentIndex * 100/show}%)` }}
-                >
-                    {children}
-                </div>
-            </div>
-            {
-              currentIndex < (length - 1) &&
-              <button onClick={next} className="selling-right-arrow">
-                &gt;
-              </button>
-            }
-
-        </div>
-      </div>
-  )
+    <div
+      className={className}
+      onClick={onClick}
+    >
+      <img src={right} alt="right" />
+    </div>
+  );
+}
+function SamplePrevArrow(props) {
+  const { className,  onClick } = props;
+  return (
+    <div
+      className={className}
+      onClick={onClick}
+    >
+      <img src={left} alt="left" />
+    </div>
+    
+  );
 }
 
-export default SellingCarousel;
+function SellingCarousel () {
+  const navigate = useNavigate();
+    var settings = {
+      dots: false,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      initialSlide: 0,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 960,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            initialSlide: 1
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            initialSlide: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 0,
+            infinite : true
+          }
+        }
+      ]
+    };
+    return (
+      <div className="selling-carousel-container">
+        <div className="selling-carousel-wrapper">
+          <div className='wrappers-text'>
+            <h4>Most Selling Products</h4>
+            <h5>See All</h5>
+          </div>
+          <Slider {...settings}>
+
+          {SellingCarouselData.map((product) => {
+            return (
+              <div key={product.id}>
+                <button className=''>{product.btn}</button>
+                <div className="img">
+                  <img src={product.img} alt="placeholder"  /> 
+                </div>
+                <div className='selling-text'>
+                <Link to="/productDetails" onClick={() => navigate(product.route)}>
+                    {product.pText}
+                  </Link>
+                  <div>
+                    <h5>{product.Hprice}</h5>
+                    <p style={{ textDecoration: "line-through" }}>{product.Pprice}</p>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+         
+          </Slider>
+        </div>
+      </div>
+    );
+  
+}
+
+export default SellingCarousel
+

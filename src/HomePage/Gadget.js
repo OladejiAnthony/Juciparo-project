@@ -3,7 +3,7 @@ import "./Gadget.css"
 //import { firstCarousel } from '../util/Data'
 
 const Gadget = (props) => {
-  const {children, show} = props;
+  const {children} = props;
   // ...
   const [currentIndex, setCurrentIndex] = useState(0)
   const [length, setLength] = useState(children.length)
@@ -24,7 +24,7 @@ const Gadget = (props) => {
     const currentTouch = e.touches[0].clientX
     const diff = touchDown - currentTouch
 
-    if (diff > 5) {
+    if (diff > 3) {
         next()
     }
 
@@ -73,7 +73,7 @@ const Gadget = (props) => {
             >
                 <div
                     className="gadget-carousel-content"
-                    style={{ transform: `translateX(-${currentIndex * 100/show}%)` }}
+                    style={{ transform: `translateX(-${currentIndex * 70}%)` }}
                 >
                     {children}
                 </div>

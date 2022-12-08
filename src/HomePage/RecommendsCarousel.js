@@ -31,7 +31,7 @@ function SamplePrevArrow(props) {
   );
 }
 
-function ProductsCarousel () {
+function RecommendsCarousel () {
   const navigate = useNavigate();
     var settings = {
       dots: false,
@@ -53,11 +53,19 @@ function ProductsCarousel () {
           }
         },
         {
+          breakpoint: 960,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            initialSlide: 1
+          }
+        },
+        {
           breakpoint: 600,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2,
-            initialSlide: 2
+            slidesToScroll: 1,
+            initialSlide: 1
           }
         },
         {
@@ -107,5 +115,5 @@ function ProductsCarousel () {
   
 }
 
-export default ProductsCarousel
+export default RecommendsCarousel
 

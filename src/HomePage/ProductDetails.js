@@ -4,11 +4,12 @@ import Navbar from '../Navbar'
 import Footer from '../Footer'
 import Newsletter from "../Newsletter"
 import ProductInfo from './ProductInfo'
-import { ProductImgCData, RecomCarouselData } from '../Data/Data'
+import { ProductImgCData } from '../Data/Data'
 import ProductImgC from './ProductImgC'
-import RecommendCarousel from './RecommendCarousel'
+//import RecommendCarousel from './RecommendCarousel'
 import { Link, useNavigate } from 'react-router-dom'
 import ProductDetailsTabs from './ProductSection'
+import RecommendsCarousel from './RecommendsCarousel'
 
 //use react-redux to get current product images, descriptions.
 
@@ -35,58 +36,8 @@ function ProductDetails() {
         <div className='storeName'>
           <h4>Sold by <Link to="/SellerProfile">Jmk Store</Link></h4>
         </div>
-        
-        <RecommendCarousel 
-          show={3} 
-          style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
-        >
-          {RecomCarouselData.map((product) => {
-            return (
-              <div  key={product.id}>
-                <button className=''>{product.btn}</button>
-                <div className="img">
-                  <img src={product.img} alt="placeholder"  /> 
-                </div>
-                <div className='product-text'>
-                  <Link to="/productDetails" onClick={() => navigate(product.route)}>
-                    {product.pText}
-                  </Link>
-                  <div>
-                    <h5>{product.Hprice}</h5>
-                    <p style={{ textDecoration: "line-through" }}>{product.Pprice}</p>
-                  </div>
-                </div>
-              </div>
-            )
-          })}
-
-
-        </RecommendCarousel>
-
-        <RecommendCarousel 
-          show={3} 
-          style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
-        >
-          {RecomCarouselData.map((product) => {
-            return (
-              <div  key={product.id}>
-                <button className=''>{product.btn}</button>
-                <div className="img">
-                  <img src={product.img} alt="placeholder"  /> 
-                </div>
-                <div className='product-text'>
-                  <Link to="/productDetails" onClick={() => navigate(product.route)}>
-                    {product.pText}
-                  </Link>
-                  <div>
-                    <h5>{product.Hprice}</h5>
-                    <p style={{ textDecoration: "line-through" }}>{product.Pprice}</p>
-                  </div>
-                </div>
-              </div>
-            )
-          })}
-        </RecommendCarousel>
+        <RecommendsCarousel />
+        <RecommendsCarousel />
       </div>
       <Newsletter />
       <Footer />

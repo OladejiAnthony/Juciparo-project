@@ -46,14 +46,12 @@ function Navbar() {
           </button>
           {
             showDiv ?
-            
               <div className='categoryBar'>
                 {SidebarData.map((item, index) => {
                     return (
                       <>
                         <div className = {index ? 'categoryItem active' : 'categoryItem'}
                           key={index}
-                         
                         >
                           <Icon icon={item.icon} />
                           <Link to={item.heading}>
@@ -69,7 +67,6 @@ function Navbar() {
             
              : null 
           }
-          
 
           <div className='nav__input'>
             <input
