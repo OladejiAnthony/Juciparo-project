@@ -2,7 +2,7 @@ import React from 'react'
 import "./Home.css"
 import Landing from './Landing'
 import FirstCarousel from './FirstCarousel'
-import { FirstCarouselData, GadgetData, RecomCarouselData, SellingCarouselData } from '../Data/Data'
+import { FirstCarouselData, GadgetData } from '../Data/Data'
 //import ProductCarousel from "../HomePage/ProductCarousel"
 import RecommendsCarousel from './RecommendsCarousel'
 import Gadget from './Gadget'

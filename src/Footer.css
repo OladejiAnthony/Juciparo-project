@@ -184,8 +184,8 @@
     }
 
     .footer__list > ul > a {
-        font-size: 20px;
-        width: 100%;
+        font-size: 12px;
+        width: 100%!important;
     }
     .footer__list > ul > a:nth-child(1) {
         font-size: 30px;
@@ -208,4 +208,24 @@
     .footer__list {
         left: 60%;
     }
+}
+
+@media screen and (max-width: 320px) {
+    .footer__container > img {
+        width: 157px;
+    }
+    .footer__container a {
+        width: 35px;
+        height: 40px;
+    }
+    .footer__container a:nth-child(3) {
+        width: 35px;
+        height: 40px;
+    }
+    .footer__container a:nth-child(2) {
+        width: 35px;
+        height: 40px;
+    }
+    
+
 }

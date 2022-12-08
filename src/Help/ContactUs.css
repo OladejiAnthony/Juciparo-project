@@ -107,8 +107,27 @@
 
 @media screen and (max-width: 479px) {
     .contact > div > img {
-        height: 35%;
+        height: 25%;
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .details {
+        height: 160px!important;
+        width: 85%;
+    }
+    .details > h2 {
+        font-size: 30px;
+        color: white;
+    }
+    .details > h4 {
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
+        color: white;
+        top: 5px;
+        position: relative;
     }
 }
 

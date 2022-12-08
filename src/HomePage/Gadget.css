@@ -229,7 +229,7 @@
 @media screen and (max-width: 960px) {
     .gadget-carousel-container {
         left: 5%;
-        height: 150vh;
+        height: 140vh!important;
         width: 90%;
     }
 
@@ -261,7 +261,7 @@
 
 @media screen and (max-width: 600px) {
     .gadget-carousel-container {
-        height: 150vh;
+        height: 145vh!important;
     }
     .gadget-carousel-content> div .img {
         width: 50%;
@@ -277,7 +277,7 @@
 
 @media screen and (max-width: 479px) {
     .gadget-carousel-container {
-        height: 190vh;
+        height: 140vh!important;
         width: 80%;
         left: 10%;
     }

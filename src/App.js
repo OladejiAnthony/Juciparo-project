@@ -23,6 +23,7 @@ import Privacy from './Help/Privacy';
 import Track from './Help/Track';
 import ContactUs from './Help/ContactUs';
 import Terms from './Help/Terms';
+import PlaceOrder from "./Help/PlaceOrder"
 
 function App() {
   return (
@@ -45,7 +46,7 @@ function App() {
           <Route path='/Track' exact element={<Track />}  />
           <Route path='/ContactUs' exact element={<ContactUs />}  />
           <Route path='/Terms' exact element={<Terms />}  />
-          
+          <Route path='/PlaceOrder' exact element={<PlaceOrder />}  />
         </Routes> 
       </Router>
     </div>

@@ -22,7 +22,7 @@ function Privacy() {
             />
             <HelpCard 
                 head = "Use of Demographic and Profile Data"
-                para = "We use personal information to market to you, we will provide you the ability to opt-out of such uses. We use your personal information to resolve disputes; troubleshoot problems; help promote a safe service; collect fees owed; measure consumer interest in our products and services, inform you about online and offline offers, products, services, and updates; customize your experience; detect and protect us against error, fraud and other criminal activity; and as otherwise described to you at the time of collection. In our efforts to continually improve our product and service offerings, we collect and analyse demographic and profile data about our users' activity on our website. We identify and use your IP address to help diagnose problems with our server, and to administer our website."
+                para = "We use personal information to market to you, we will provide you the ability to opt-out of such uses. We use your personal information to resolve disputes; troubleshoot problems; help promote a safe service; collect fees owed; measure consumer interest in our products and services, inform you about online and offline offers, products, services, and updates; customize your experience; detect and protect us against error, fraud and other criminal activity; and as otherwise described to you at the time of collection. In our efforts to continually improve our product and service offerings, we collect and analyse demographic and profile data about our users' activity on our website. "
             />
             <HelpCard 
                 head = "Your Privacy Rights"
