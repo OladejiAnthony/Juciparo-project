@@ -324,7 +324,7 @@ ul.slick-dots {
         height: 30px;
     }
     div.slick-arrow.slick-next {
-        right: 10%;
+        right: 2%;
         width: 30px;
         height: 30px;
     }
@@ -346,7 +346,7 @@ ul.slick-dots {
      .slick-slider.slick-initialized > 
      .slick-list > .slick-track {
         gap: 42px;
-        left: 25%;
+        left: 20%;
         width: 2600px!important;
     }
 

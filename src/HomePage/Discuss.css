@@ -105,10 +105,10 @@
     }
 
     div.discuss__card > h3 {
-        top: 280px;
+        top: 260px;
     }
     div.discuss__card > p {
-        top: 320px;
+        top: 305px;
         width: 100%;
     }
 }
@@ -117,6 +117,7 @@
     .discuss__container {
         margin-top: 20%;
         align-items: center;
+        min-height: 170vh;
     }
     div.discuss__card {
         width: 90%;
