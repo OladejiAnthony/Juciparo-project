@@ -97,5 +97,10 @@ button.newsletter__search:hover {
 }
 
 @media screen and (max-width: 479px) {
-
+    .newsletter__text>h3 {
+        font-size: 25px;
+    }
+    .newsletter__text > p {
+        font-size: 10px;
+    }
 }

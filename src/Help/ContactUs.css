@@ -116,6 +116,8 @@
     .details {
         height: 160px!important;
         width: 85%;
+        position: relative;
+        top: -50px;
     }
     .details > h2 {
         font-size: 30px;

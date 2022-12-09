@@ -463,6 +463,9 @@ svg.iconify {
         cursor: pointer;
         color: var(--tertiary300);
     }
+    .nav__bottom > .categoryBar {
+        left: 400px;
+    }
 
 }
 
@@ -476,7 +479,9 @@ svg.iconify {
         left: 29%;
     }
 
-    
+    .nav__bottom > .categoryBar {
+        left: 290px;
+    }
 }
 
 
@@ -491,7 +496,7 @@ svg.iconify {
         left: 10%;
     }
     .nav__bottom > .categoryBar {
-        left: 120px;
+        left: 170px;
     }
 }
 
@@ -510,7 +515,7 @@ svg.iconify {
     
     
     .nav__bottom > .categoryBar {
-        left: 120px;
+        left: 115px;
     }
 }
 

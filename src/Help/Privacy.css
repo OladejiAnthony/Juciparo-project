@@ -108,7 +108,7 @@
 
 @media screen and (max-width: 750px) {
     .privacy {
-        min-height: 260vh;
+        min-height: 400vh;
     }
     .privacy > .helpCard {
         height: 160px;
@@ -118,7 +118,7 @@
 
 @media screen and (max-width: 500px) {
     .privacy {
-        min-height: 380vh;
+        min-height: 550vh;
     }
     .privacy > h4 {
         height: 150px;
@@ -144,35 +144,3 @@
         height: 170px;
     }
 }
-/*
-
-@media screen and (max-width: 600px) {
-    .privacy {
-        min-height: 240vh;
-    }
-    .privacy > .helpCard {
-        height: 250px;
-    }
-    .privacy > .helpCard > h4 {
-        height: 50px;
-        width: 80%;
-    }
-    .privacy >.helpCard > p {
-        top: 100px;
-    }
-    
-}
-
-@media screen and (max-width: 479px) {
-    .helpCard {
-        height: 300px;
-    }
-    .helpCard > h4 {
-        width: 90%;
-    }
-}
-
-
-*/
-
-

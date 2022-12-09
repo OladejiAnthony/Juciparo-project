@@ -94,7 +94,7 @@
 
 @media screen and (max-width: 600px) {
     .sell {
-        height: 50vh;
+        height: 80vh;
         flex-direction: column;
     }
     .sell > div {
@@ -108,6 +108,9 @@
 }
 
 @media screen and (max-width: 479px) {
+    .sell {
+        top: -100px;
+    }
     .sell > div {
         left: 10%;
         height: 155px;

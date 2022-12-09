@@ -201,4 +201,35 @@
     }
 }
 
+@media screen and (max-width: 350px) { 
+    div.mainform-body {
+        width: 50%;
+        left: 25%;
+    }
+    .mainform-body > div {
+        width: 90%;
+    }
+    .mainform-body > div > label {
+        width: 90%;
+        padding-left: 5%;
+    }
+    .mainform-body > div > input {
+        width: 90%;
+        left: 5%;
+        position: relative;
+    }
+    .mainform-body > button {
+        width: 82%;
+        height: 40px;
+    }
+    .line {
+        width: 62%;
+    }
+    .social__login a, .social__login a:nth-child(2) {
+        width: 68%;
+    }
+    .social__login > h5 {
+        font-size: 12px;
+    }
 
+}

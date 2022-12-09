@@ -85,12 +85,14 @@
 
 @media screen and (max-width: 845px) {
     .why__container {
-        height: 100vh;
+        height: 160vh;
         flex-direction: column;
         gap: 0px;
     }
     .why__container > h3 {
-        left: 35%;
+        width: 100%;
+        text-align: center;
+        left: 0px;
     }
 
     .why__container > div {
@@ -98,7 +100,6 @@
         width: 60%;
         height: 400px;
         align-items: center;
-        left: 15%;
     }
     .why__container > div > img {
         width: 50%;
@@ -122,16 +123,30 @@
 
 @media screen and (max-width: 479px) {
     .why__container {
-        min-height: 120vh;
+        height: 190vh;
         margin-bottom: 100px;
         margin-top: 100px;
+        top: -50px;
     }
+   
+}
 
-    .why__container > h3 {
-        left: 10%;
+
+@media screen and (max-width: 380px) {
+    .why__container {
+        height: 170vh;
     }
-
     .why__container > div {
-        width: 80%;
+        top: 80px;
     }
+    .why__container > h3 {
+        font-size: 27px;
+    }
+    .why__container > div > h3 {
+        font-size: 20px;
+    }
+    .why__container > div > p {
+        font-size: 16px;
+    }
+   
 }

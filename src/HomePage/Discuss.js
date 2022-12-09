@@ -15,7 +15,7 @@ function Discuss() {
       <div className='discuss__card'>
         <img src={disc} alt='customer' />
         <h3>Easy Delivery</h3>
-        <p>Delivery agaent is available in all loacations, making delivery easier</p>
+        <p>Delivery agent is available in all loacations, making delivery easier</p>
       </div>
       <div className='discuss__card'>
         <img src={discu} alt='customer' />

@@ -1,9 +1,9 @@
 
 .gadget-carousel-container {
     position: relative;
-    width: 1172px;
+    width: 84%;
     height: 411px;
-    left: 133px;
+    left: 7%;
     margin: 36px 0px;
     display: flex;
     flex-direction: column;
@@ -216,11 +216,6 @@
 
 
 /* RESPONSIVENESS  */
-@media only screen and (min-width: 1440px)  {
-    .gadget-carousel-container {
-        width: 86%;
-    }
-}
 
 @media only screen and (max-width: 1200px)  {
     
@@ -229,7 +224,7 @@
 @media screen and (max-width: 960px) {
     .gadget-carousel-container {
         left: 5%;
-        height: 140vh!important;
+        height: 190vh!important;
         width: 90%;
     }
 
@@ -261,7 +256,7 @@
 
 @media screen and (max-width: 600px) {
     .gadget-carousel-container {
-        height: 145vh!important;
+        height: 190vh!important;
     }
     .gadget-carousel-content> div .img {
         width: 50%;
@@ -277,9 +272,9 @@
 
 @media screen and (max-width: 479px) {
     .gadget-carousel-container {
-        height: 140vh!important;
         width: 80%;
         left: 10%;
+        height: 205vh!important;
     }
     .gadget-carousel-content> div {
         width: 100%;

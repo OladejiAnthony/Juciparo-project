@@ -1,9 +1,9 @@
 
 .carousel-container {
     position: relative;
-    width: 1174px;
+    width: 84%;
     height: 293px;
-    left: 133px;
+    left: 7%;
     margin: 36px 0px;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@
     top: 34px;
     position: absolute;
     display: flex;
-    gap: 42px;
+    gap: 92px;
     transition: all 250ms linear;
     -ms-overflow-style: none;  /* hide scrollbar in IE and Edge */
     scrollbar-width: none;  /* hide scrollbar in Firefox */
@@ -144,17 +144,8 @@
 
 
 /* RESPONSIVENESS  */
-@media only screen and (min-width: 1440px)  {
-    .carousel-container {
-        width: 86%;
-    }
-}
 
-@media only screen and (max-width: 1200px)  {
-    .carousel-container {
-        width: 82%;
-    }
-}
+
 
 @media only screen and (max-width: 960px) {
     .carousel-container {
@@ -178,7 +169,8 @@
 
 @media screen and (max-width: 470px) {
     .carousel-content { 
-        gap: 10px;
+        gap: 5px;
+        width: 220px;
     }
 }
 

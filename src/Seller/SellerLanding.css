@@ -151,17 +151,35 @@
     }
     .sellerLanding > div > h3 {
         width: 100%;
-        font-size: 35px;
+        font-size: 25px;
         height: 100px;
         text-align: center;
     }
     .sellerLanding > div > h5 {
         width: 100%;
         height: 50px;
-        top: 100px;
+        top: 60px;
+        font-size: 16px;
+        text-align: center;
     }
     .sellerLanding > div > a {
-       top: 160px;
-       left: 15%;
+       top: 120px;
+       left: 20%;
+       width: 150px;
+       font-size: 16px;
     }
 }
+
+@media screen and (max-width: 335px) {
+    .sellerLanding > div > h3 {
+        line-height: 22px;
+        font-size: 27px;
+    }
+    .sellerLanding > div > h5 {
+        font-size: 15px;
+    }
+    .sellerLanding > div > a {
+        left: 10%;
+     }
+}
+

@@ -11,7 +11,7 @@ import imgOne from "../Images/recom1.jpg"
 import imgTwo from "../Images/recom2.jpg"
 import imgThree from "../Images/recom3.jpg"
 import imgFour from "../Images/recom4.jpg"
-import Gad from "../Images/gadget1.jpg"
+import Gad from "../Images/aj.png"
 import GadTwo from "../Images/gadget2.png"
 
 

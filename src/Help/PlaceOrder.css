@@ -1,6 +1,6 @@
 .order {
     max-width: 100vw;
-    min-height: 140vh;
+    min-height: 200vh;
     align-items: center;
     background: #ffffff;
     position: relative;
@@ -93,7 +93,10 @@
    
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 770px) {
+    .order {
+        min-height: 200vh;
+    }
     .order > .helpCard > p {
         font-size: 25px;
         line-height: 25px;
@@ -102,7 +105,7 @@
 
 @media screen and (max-width: 400px) {
     .order {
-        min-height: 120vh;
+        min-height: 170vh;
     }
     .order > h2 {
         height: 80px;

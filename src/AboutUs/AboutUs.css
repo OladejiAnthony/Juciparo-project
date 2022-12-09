@@ -1,6 +1,6 @@
 .about__container {
     max-width: 100vw;
-    min-height: 220vh;
+    min-height: 255vh;
     align-items: center;
     background: #ffffff;
     position: relative;
@@ -160,7 +160,7 @@
 
 @media screen and (max-width: 960px) {
     .about__container {
-        min-height: 190vh;
+        min-height: 280vh;
     }
     .about__frame {
         height: 450px;
@@ -179,7 +179,7 @@
 
 @media only screen and (max-width: 720px)  {
     .about__container {
-        min-height: 220vh;
+        min-height: 320vh;
     }
     .about__container > h2 {
         left: 30%;
@@ -216,61 +216,90 @@
     }
     .about__card > h4 {
         top: 180px;
+        width: 100%;
+        left: 0px;
+        text-align: center;
     }
     .about__card > p {
         top: 220px;
     }
-    .about__container > .discuss__container {
-        top: 490px;
-        min-height: 120vh;
+    .about__container > 
+    .discuss__container {
+        top: 550px;
     }
 }
 
 @media screen and (max-width: 600px) {
     .about__container {
-        min-height: 260vh;
+        min-height: 450vh;
     }
-    .about__container > .discuss__container {
-        top: 480px;
+    .about__container >
+     .discuss__container {
+        top: 650px;
         min-height: 200vh;
-        left: 18%;
+    }
+    .about__icon-section {
+        top: 750px;
+    }
+    .about__container > 
+    .discuss__container >
+     div.discuss__card {
+        width: 100%;
+    }
+    .about__container > 
+    .discuss__container >
+     div.discuss__card > h3 {
+        top: 270px;
+    }
+    .about__container > 
+    .discuss__container >
+     div.discuss__card > p {
+        top: 290px;
     }
 }
 
-@media screen and (max-width: 530px) {
-    .about__frame  {
-        height: 95vh;
-        align-items: center;
-    }
-    .about__frame > div {
-        top: 350px;
-    }
-    .about__icon-section {
-        top: 970px;
-    }
-    .about__container > .discuss__container {
-        top: 750px;
-        min-height: 240vh;
-    }
-}
+
 @media screen and (max-width: 470px) {
     .about__container {
-        min-height: 350vh;
+        min-height: 400vh;
     }
-    .about__container > .discuss__container {
+    .about__icon-section {
+        top: 830px;
+    }
+    .about__container > 
+    .discuss__container {
         left: 10%;
+        top: 670px;
+        min-height: 280vh;
+    }
+    .about__container >
+     .discuss__container
+      > div.discuss__card > h3 {
+        top: 200px;
+    }
+    .about__container >
+     .discuss__container
+      > div.discuss__card > p {
+        top: 230px!important;
+        font-size: 14px;
     }
 }
 
 @media screen and (max-width: 360px) {
     .about__container {
-        min-height: 380vh;
+        min-height: 450vh;
     }
     .about__icon-section {
-        top: 1180px;
+        top: 1090px;
     }
     .about__container > .discuss__container {
         top: 1000px;
+        min-height: 300vh;
+    }
+    div.discuss__card > h3 {
+        top: 200px;
+        line-height: 20px;
     }
 
 }
+

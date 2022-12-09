@@ -94,7 +94,7 @@
     color: #EF0000;
 }
 
-.terms > div {
+.terms > .div {
     position: relative;
     width: 100%;
     height: 85.79px;
@@ -105,7 +105,7 @@
     top: 55px;
 }
 
-.terms > div > p {
+.terms > .div > p {
     position: absolute;
     top: 0px;
     width: 294px;
@@ -119,7 +119,7 @@
     color: #8C8C8C;
 }
 
-.terms > div > a {
+.terms > .div > a {
     position: absolute;
     width: 509px;
     height: 59.79px;
@@ -147,8 +147,9 @@
     .form-body > button {
         width: 90%;
     }
-    .terms > div > a {
+    .terms > .div > a {
         width: 90%;
+        top: 40px;
     }
 
 }
@@ -178,3 +179,9 @@
 }
 
 
+@media screen and (max-width: 479px) { 
+    .terms > h5 {
+        font-size: 13px;
+        width: 90%;
+    }
+}

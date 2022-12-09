@@ -63,7 +63,7 @@ function RegistrationForm() {
             </div>
             <div className='terms'>
                 <h5>By signing Up you accept our <span>terms and conditions & privacy policy</span></h5>
-                <div>
+                <div className='div'>
                     <p>ALready have an Account ?</p>
                     <Link to="/AccountLogin" >Sign In</Link>
                 </div>
