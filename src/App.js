@@ -24,6 +24,9 @@ import Track from './Help/Track';
 import ContactUs from './Help/ContactUs';
 import Terms from './Help/Terms';
 import PlaceOrder from "./Help/PlaceOrder"
+import DeliveryMethod from './Cart/DeliveryMethod';
+import PaymentMethod from './Cart/PaymentMethod';
+
 
 function App() {
   return (
@@ -47,6 +50,8 @@ function App() {
           <Route path='/ContactUs' exact element={<ContactUs />}  />
           <Route path='/Terms' exact element={<Terms />}  />
           <Route path='/PlaceOrder' exact element={<PlaceOrder />}  />
+          <Route path='/DeliveryMethod' exact element={<DeliveryMethod />}  />
+          <Route path='/PaymentMethod' exact element={<PaymentMethod />}  />
         </Routes> 
       </Router>
     </div>

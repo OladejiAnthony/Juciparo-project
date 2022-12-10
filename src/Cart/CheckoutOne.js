@@ -20,8 +20,8 @@ function CheckoutOne() {
           productPrice = "100000"
         />
         <Summary 
-          head = "Cart Summary"
-          subTotal = "SubTotal"
+          head = "Order Summary"
+          subTotal = "SubTotal:"
           price = "100000"
           delivery = "Delivery Fee"
           status = "Add your delivery address to  check out, in order to see delivery fee"
