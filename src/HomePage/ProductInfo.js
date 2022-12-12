@@ -2,6 +2,7 @@ import React from 'react'
 import "./ProductInfo.css"
 import { Icon } from '@iconify/react';
 import { ProductImgCData } from '../Data/Data';
+import { Link } from 'react-router-dom';
 
 const handleClick = (event, key) => {
   console.log(event.target);
@@ -52,11 +53,11 @@ function ProductInfo() {
                 </div>
                 <button>
                   <Icon icon="ant-design:shopping-cart-outlined" />
-                  Add to Cart
+                  <Link to="/Cart">Add to Cart</Link>
                 </button>
                 <div className='prod__menuWish'>
                   <Icon icon="icon-park-outline:like" />
-                  WishList
+                  <Link to="/wishList">WishList</Link>
                 </div>
             </div>
             <div className='product__socialIcons'>

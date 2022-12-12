@@ -247,6 +247,12 @@
     padding-top: 0px;
 }
 
+.prod__menu > button > a {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
 .prod__menu > .prod__menuWish {
     width: 30%;
     height: 60px;
@@ -261,6 +267,11 @@
     display: block;
     padding-left: 50px;
     padding-top: 18px;
+}
+.prod__menu > .prod__menuWish > a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #000000;
 }
 
 .product__socialIcons {
