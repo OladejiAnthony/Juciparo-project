@@ -7,14 +7,14 @@ import ProductInfo from './ProductInfo'
 import { ProductImgCData } from '../Data/Data'
 import ProductImgC from './ProductImgC'
 //import RecommendCarousel from './RecommendCarousel'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import ProductDetailsTabs from './ProductSection'
 import RecommendsCarousel from './RecommendsCarousel'
 
 //use react-redux to get current product images, descriptions.
 
 function ProductDetails() {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   return (
     <>
       <Navbar /> 

@@ -22,8 +22,9 @@ function CheckoutOne() {
         <Summary 
           head = "Order Summary"
           subTotal = "SubTotal:"
+          total = "Total "
+          delivery = "DeliveryFee"
           price = "100000"
-          delivery = "Delivery Fee"
           status = "Add your delivery address to  check out, in order to see delivery fee"
         />
         <Link>

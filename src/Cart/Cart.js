@@ -12,6 +12,7 @@ import Summary from './Summary'
 //use react-redux for cart
 
 function Cart() {
+
   return (
     <>
       <Navbar />

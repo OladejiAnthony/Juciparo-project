@@ -230,6 +230,11 @@
     height: 26px;
 }
 
+.prod__menuIcon > button {
+    border-color: #8C8C8C;
+    border-width: 0px;
+}
+
 .prod__menu > button {
     width: 49%;
     height: 60px;

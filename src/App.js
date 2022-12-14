@@ -41,7 +41,7 @@ function App() {
           <Route path='SellerCreate/' element={<SellerCreateAccount  />} />
           <Route path='SellerCreateTwo/' element={<SellerCreateTwo />} />
           <Route path='SellerProfile/' element={<SellerProfile />} />
-          <Route path='productDetails' element={<ProductsDetails />} />
+          <Route path='productDetails/:id' element={<ProductsDetails />} />
           <Route path='Cart/' element={<Cart />}  />
           <Route path='CheckoutOne' element={<CheckoutOne />} />
           <Route path='Help/' element={<Help />} />

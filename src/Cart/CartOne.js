@@ -1,32 +1,69 @@
 import { Icon } from '@iconify/react'
 import React from 'react'
-import imgB from "../Images/product2.jpg"
+import { useDispatch, useSelector } from 'react-redux';
+import { addCart, delCart } from "../redux/action";
+//import imgB from "../Images/product2.jpg"
 import "./CartOne.css"
 
-function CartOne(props) {
+function CartOne() {
+  const state = useSelector((state) => state.handleCart);
+  const dispatch = useDispatch();
+
+  const addItem = (product) => {
+    dispatch(addCart(product));
+  };
+  const removeItem = (product) => {
+    dispatch(delCart(product));
+  };
+ 
+
   return (
     <div className='cartOne__container'>
       <h4>Cart (1)</h4>
-      <div className='cartBox'>
+      {state.map((item) => {
+        return (
+      <div className='cartBox' key={item.id}>
         <div className='cart__left'>
-          <img src={imgB} alt="products" />
-          <h5>{props.productName}</h5>
+          <img src={item.image} alt={item.title} />
+          <h5>{item.title}</h5>
         </div>
         <div className='cart__right'>
           <div>
             <div className='cart__menuIcon'>
-              <Icon icon="ep:arrow-up" />
-              <Icon icon="ep:arrow-down" />
+              <button
+                onClick={() => {
+                  addItem(item);
+                }}
+              >
+                <Icon icon="ep:arrow-up" />
+              </button>
+              <button
+                onClick={() => {
+                  removeItem(item);
+                }}
+              >
+                <Icon icon="ep:arrow-down" />
+              </button>
             </div>
-            1
+            {item.qty}
           </div>
-          <h4>#{props.productPrice}</h4>
-          <Icon icon="iconoir:cancel" />
+          <h4>#{item.price}</h4>
+          <button
+                onClick={() => {
+                  removeItem(item);
+                }}
+              >
+                <Icon icon="iconoir:cancel" />
+              </button>
+          
         </div>
 
       </div>
+      )})}
     </div>
   )
 }
 
 export default CartOne
+
+

@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import "./Navbar.css"
+import { useSelector } from "react-redux";
 import logo from "../src/Images/logoOne.jpg"
 import { Link } from 'react-router-dom'
 import { Icon } from '@iconify/react';
@@ -13,6 +14,7 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const [showDiv, setShowDiv] = useState(false);
   const onClick = () => setShowDiv(!showDiv);
+  const state = useSelector(state => state.handleCart)
   
   const handleChange = (e) => {
     e.preventDefault();
@@ -85,6 +87,9 @@ function Navbar() {
             </Link>
             <Link to="/Cart">
               <Icon icon="ant-design:shopping-cart-outlined" />
+              <p>
+                {state.length}
+              </p>
               Cart
             </Link>
             <Link to="/Help">
@@ -103,3 +108,5 @@ function Navbar() {
 }
 
 export default Navbar
+
+

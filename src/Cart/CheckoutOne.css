@@ -1,6 +1,6 @@
 .checkoutOne {
     width: 85%;
-    min-height: 270vh;
+    min-height: 290vh;
     position: relative;
     left: 136px;
     display: flex;
@@ -221,7 +221,7 @@
 .cartSummary > div > 
 .cartSummary__row > div > h5 {
     height: 22px;
-    width: 30%;
+    width: 50%;
     font-family: 'Lato';
     font-style: normal;
     font-weight: 500;
@@ -258,15 +258,28 @@
 .checkoutOne > .cart__container > .cartSummary >
  div > .cartSummary__row > div:nth-child(2) {
     width: 100%;
-    height: 50px;
+    height: 50px!important;
  }
 
  .checkoutOne > .cart__container > .cartSummary >
  div > .cartSummary__row > div:nth-child(2) > h5 {
-    width: 90%;
+    width: 100%!important;
     height: 50px;
+    font-size: 18px;
  }
 
+ .checkoutOne > .cart__container > .cartSummary >
+  div > .cartSummary__row > div:nth-child(3) {
+    height: 50px;
+  }
+
+  .checkoutOne > .cart__container > .cartSummary >
+  div > .cartSummary__row > div:nth-child(3) > h5 {
+    height: 50px!important;
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+  }
 
 
 .checkoutOne > .cart__container > a  {
@@ -395,11 +408,12 @@ div#simple-tabpanel-2 {
     .checkoutOne > .cart__container > .cartSummary > 
     div > .cartSummary__row > div:nth-child(2) {
         width: 100%;
-        height: 100px;
+        height: 50px;
     }
     .checkoutOne > .cart__container > .cartSummary >
      div > .cartSummary__row > div > h5:nth-child(2) {
-        font-size: 10px;
+        font-size: 18px;
+        font-weight: 600;
     }
     .checkoutOne > .cart__container > a {
         right: 7%;
@@ -547,11 +561,24 @@ div#simple-tabpanel-2 {
      .cartSummary > div {
         height: 280px;
     }
-    .checkoutOne > .cart__container > .cartSummary > div > .cartSummary__row > div:nth-child(2) {
+    .checkoutOne > .cart__container >
+     .cartSummary > div > .cartSummary__row > 
+     div:nth-child(2) {
         width: 100%;
         top: 10px!important;
         position: relative;
         height: 100px;
+    }
+    .checkoutOne > .cart__container >
+     .cartSummary > div > .cartSummary__row > 
+     div > h5 {
+        font-size: 14px!important;
+    }
+    .checkoutOne > .cart__container >
+     .cartSummary > div > .cartSummary__row >
+      div > h5:nth-child(2) {
+        font-size: 14px;
+        width: 100%;
     }
     .checkoutOne > .cart__container > a {
         top: 390px;
@@ -577,6 +604,24 @@ div#simple-tabpanel-2 {
     button#simple-tab-0, button#simple-tab-1, button#simple-tab-2 {
         width: 5%!important;
         font-size: 8px;
+    }
+    .MuiTabs-flexContainer.css-heg063-MuiTabs-flexContainer >
+     button#simple-tab-0, button#simple-tab-2, button#simple-tab-3, button#simple-tab-4 {
+        width: 90%!important;
+        font-size: 12px!important;
+        height: 50%;
+    }
+    .MuiTabs-flexContainer.css-heg063-MuiTabs-flexContainer >
+     button#simple-tab-1 {
+        width: 90%!important;
+        font-size: 12px!important;
+        height: 50%;
+    }
+    .MuiTabs-flexContainer.css-heg063-MuiTabs-flexContainer > 
+    button#simple-tab-2 {
+        width: 90%!important;
+        font-size: 12px!important;
+        height: 50%;
     }
 }
 

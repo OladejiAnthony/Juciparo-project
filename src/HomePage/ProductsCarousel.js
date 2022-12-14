@@ -1,10 +1,18 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Slider from "react-slick";
-import { ProductCarouselData } from "../Data/Data";
+//import { ProductCarouselData } from "../Data/Data";
 import "./ProductsCarousel.css"
 import right from "../Images/right.svg"
 import left from "../Images/left.svg"
+
+//import { useDispatch } from "react-redux";
+//import { addCart } from "../redux/action";
+
+//import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+import { useState } from "react";
+import { useEffect } from "react";
 
 
 function SampleNextArrow(props) {
@@ -31,9 +39,45 @@ function SamplePrevArrow(props) {
   );
 }
 
-function ProductsCarousel () {
+function ProductsCarousel (props) {
   const navigate = useNavigate();
-    var settings = {
+  const [data, setData] = useState([]);
+  const [filter, setFilter] = useState(data);
+  //const [loading, setLoading] = useState(false);
+  let componentMounted = true;
+
+  //const dispatch = useDispatch();
+
+  //const addProduct = (product) => {
+    //dispatch(addCart(product))
+  //}
+
+  useEffect(() => {
+    const getProducts = async () => {
+      //setLoading(true);
+      const response = await fetch("https://fakestoreapi.com/products?limit=5");
+      if (componentMounted) {
+        setData(await response.clone().json());
+        setFilter(await response.json());
+        //setLoading(false);
+      }
+
+      return () => {
+        componentMounted = false;
+      };
+    };
+
+    getProducts();
+  }, []);
+
+  
+
+  const filterProduct = (cat) => {
+    const updatedList = data.filter((item) => item.category === cat);
+    setFilter(updatedList);
+  }
+
+  var settings = {
       dots: false,
       infinite: false,
       speed: 700,
@@ -79,6 +123,7 @@ function ProductsCarousel () {
         }
       ]
     };
+
     return (
       <div className="products-carousel-container">
         <div className="products-carousel-wrapper">
@@ -88,20 +133,20 @@ function ProductsCarousel () {
           </div>
           <Slider {...settings}>
 
-          {ProductCarouselData.map((product) => {
+          {filter.map((product) => {
             return (
               <div key={product.id}>
                 <button className=''>{product.btn}</button>
                 <div className="img">
-                  <img src={product.img} alt="placeholder"  /> 
+                  <img src={product.image} alt="placeholder"  /> 
                 </div>
                 <div className='products-text'>
-                <Link to="/productDetails" onClick={() => navigate(product.route)}>
-                    {product.pText}
+                  <Link to={"/productDetails/" + product.id} onClick={() => navigate(product.route)}>
+                    {product.title.substring(0, 12)}...
                   </Link>
                   <div>
-                    <h5>{product.Hprice}</h5>
-                    <p style={{ textDecoration: "line-through" }}>{product.Pprice}</p>
+                      <h5>{product.price}</h5>
+                      <p style={{ textDecoration: "line-through" }}>{product.price}</p>
                   </div>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 .cartOne__container {
     position: relative;
     width: 55%;
-    height: 209px;
+    min-height: 80vh;
     left: 0px;
     background: #F4F4F4;
     border-radius: 5px;
@@ -88,6 +88,14 @@
     height: 26px;
 }
 
+.cart__menuIcon > button {
+    border-color: transparent;
+}
+.cart__menuIcon > button:focus {
+    border-color: transparent;
+    border-width: 0;
+}
+
 .cart__right > h4 {
     position: absolute;
     right: 25%;
@@ -101,12 +109,16 @@
     color: #000000;
 }
 
-.cart__right > svg.iconify.iconify--iconoir {
+.cart__right > button {
     position: absolute;
     right: 5%;
     width: 24px;
     height: 24px;
+    border-width: 1px;
+    border-color: black;
 }
+
+
 
 /* RESPONSIVENESS  */
 
