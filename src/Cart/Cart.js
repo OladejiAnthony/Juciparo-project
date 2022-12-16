@@ -24,6 +24,7 @@ function Cart() {
         <Summary 
           head = "Cart Summary"
           subTotal = "SubTotal"
+          total = "Total"
           price = "100000"
           delivery = "Delivery"
           status = "Not yet added"

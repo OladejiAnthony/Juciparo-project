@@ -8,6 +8,7 @@ const ProductImgC = (props) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [length, setLength] = useState(children.length)
   const [touchPosition, setTouchPosition] = useState(null)
+
   // ...
   const handleTouchStart = (e) => {
       const touchDown = e.touches[0].clientX
@@ -39,6 +40,8 @@ const ProductImgC = (props) => {
   useEffect(() => {
       setLength(children.length)
   }, [children])
+
+
   
 
   // ...

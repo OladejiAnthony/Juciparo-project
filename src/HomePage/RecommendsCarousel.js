@@ -5,6 +5,8 @@ import { RecomCarouselData } from "../Data/Data";
 import "./RecommendsCarousel.css"
 import right from "../Images/right.svg"
 import left from "../Images/left.svg"
+import { useState } from "react";
+import { useEffect } from "react";
 
 
 function SampleNextArrow(props) {
@@ -33,6 +35,34 @@ function SamplePrevArrow(props) {
 
 function RecommendsCarousel () {
   const navigate = useNavigate();
+  const [data, setData] = useState([]);
+  const [filter, setFilter] = useState(data);
+  let componentMounted = true;
+
+  useEffect(() => {
+    const getProducts = async () => {
+      //setLoading(true);
+      const response = await fetch("https://fakestoreapi.com/products/category/jewelery"); //https://api.escuelajs.co/api/v1/categories/2/products?limit=5
+      if (componentMounted) {
+        setData(await response.clone().json());
+        setFilter(await response.json());
+        //setLoading(false);
+      }
+
+      return () => {
+        componentMounted = false;
+      };
+    };
+
+    getProducts();
+  }, []);
+
+  
+  const filterProduct = (cat) => {
+    const updatedList = data.filter((item) => item.category === cat);
+    setFilter(updatedList);
+  }
+
     var settings = {
       dots: false,
       infinite: false,
@@ -88,20 +118,20 @@ function RecommendsCarousel () {
           </div>
           <Slider {...settings}>
 
-          {RecomCarouselData.map((product) => {
+          {filter.map((product) => {
             return (
               <div key={product.id}>
                 <button className=''>{product.btn}</button>
                 <div className="img">
-                  <img src={product.img} alt="placeholder"  /> 
+                  <img src={product.image} alt="placeholder"  /> 
                 </div>
                 <div className='recommends-text'>
-                <Link to="/productDetails" onClick={() => navigate(product.route)}>
-                    {product.pText}
+                  <Link to={"/productDetails/" + product.id} onClick={() => navigate(product.route)}>
+                    {product.title.substring(0, 12)}...
                   </Link>
                   <div>
-                    <h5>{product.Hprice}</h5>
-                    <p style={{ textDecoration: "line-through" }}>{product.Pprice}</p>
+                      <h5>{product.price}</h5>
+                      <p style={{ textDecoration: "line-through" }}>{product.price}</p>
                   </div>
                 </div>
               </div>

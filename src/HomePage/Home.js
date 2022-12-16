@@ -17,14 +17,7 @@ import ProductsCarousel from './ProductsCarousel'
 
 function Home() {
   const navigate = useNavigate();
-  //const { id, name, color, gender, images, final_price, reviews, rating } = item;  
-  //const [img, setImg] = useState(images[0]);
-/*
-  const handleDes = () => {
-    navigate(`/productDetails`);
-    //navigate(`/productDetails/${id}`);
-  };
-*/
+
 
   return (
     <>
@@ -47,61 +40,9 @@ function Home() {
           })}
           
         </FirstCarousel>
-       {/* <ProductCarousel 
-          show={2} 
-          style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
-        >
-          {ProductCarouselData.map((product) => {
-            return (
-              <div key={product.id}>
-                <button className=''>{product.btn}</button>
-                <div className="img">
-                  <img src={product.img} alt="placeholder"  /> 
-                </div>
-                <div className='product-text'>
-                <Link to="/productDetails" onClick={() => navigate(product.route)}>
-                  <Link onClick={handleDes}>  
-                    {product.pText}
-                  </Link>
-                  <div>
-                    <h5>{product.Hprice}</h5>
-                    <p style={{ textDecoration: "line-through" }}>{product.Pprice}</p>
-                  </div>
-                </div>
-              </div>
-            )
-          })}
       
-        </ProductCarousel>
-        */}
         <ProductsCarousel />
         <RecommendsCarousel />
-
-     {/*   <RecommendCarousel 
-          show={3} 
-          style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
-        >
-          {RecomCarouselData.map((product) => {
-            return (
-              <div  key={product.id}>
-                <button className=''>{product.btn}</button>
-                <div className="img">
-                  <img src={product.img} alt="placeholder"  /> 
-                </div>
-                <div className='product-text'>
-                <Link to="/productDetails" onClick={() => navigate(product.route)}>
-                    {product.pText}
-                  </Link>
-                  <div>
-                    <h5>{product.Hprice}</h5>
-                    <p style={{ textDecoration: "line-through" }}>{product.Pprice}</p>
-                  </div>
-                </div>
-              </div>
-            )
-          })}
-        </RecommendCarousel>
-        */}
         <Gadget
             show={3} 
             style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}

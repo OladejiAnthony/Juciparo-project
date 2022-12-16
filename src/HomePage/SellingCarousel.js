@@ -5,6 +5,8 @@ import { SellingCarouselData } from "../Data/Data";
 import "./SellingCarousel.css"
 import right from "../Images/right.svg"
 import left from "../Images/left.svg"
+import { useState } from "react";
+import { useEffect } from "react";
 
 
 function SampleNextArrow(props) {
@@ -33,6 +35,35 @@ function SamplePrevArrow(props) {
 
 function SellingCarousel () {
   const navigate = useNavigate();
+  const [data, setData] = useState([]);
+  const [filter, setFilter] = useState(data);
+  let componentMounted = true;
+
+  useEffect(() => {
+    const getProducts = async () => {
+      //setLoading(true);
+      const response = await fetch("https://fakestoreapi.com/products/category/electronics?limit=5");
+      if (componentMounted) {
+        setData(await response.clone().json());
+        setFilter(await response.json());
+        //setLoading(false);
+      }
+
+      return () => {
+        componentMounted = false;
+      };
+    };
+
+    getProducts();
+  }, []);
+
+  
+
+  const filterProduct = (cat) => {
+    const updatedList = data.filter((item) => item.category === cat);
+    setFilter(updatedList);
+  }
+
     var settings = {
       dots: false,
       infinite: false,
@@ -87,26 +118,25 @@ function SellingCarousel () {
             <h5>See All</h5>
           </div>
           <Slider {...settings}>
-
-          {SellingCarouselData.map((product) => {
-            return (
-              <div key={product.id}>
-                <button className=''>{product.btn}</button>
-                <div className="img">
-                  <img src={product.img} alt="placeholder"  /> 
-                </div>
-                <div className='selling-text'>
-                <Link to="/productDetails" onClick={() => navigate(product.route)}>
-                    {product.pText}
-                  </Link>
-                  <div>
-                    <h5>{product.Hprice}</h5>
-                    <p style={{ textDecoration: "line-through" }}>{product.Pprice}</p>
+            {filter.map((product) => {
+              return (
+                <div key={product.id}>
+                  <button className=''>{product.btn}</button>
+                  <div className="img">
+                    <img src={product.image} alt="placeholder"  /> 
+                  </div>
+                  <div className='products-text'>
+                    <Link to={"/productDetails/" + product.id} onClick={() => navigate(product.route)}>
+                      {product.title.substring(0, 12)}...
+                    </Link>
+                    <div>
+                        <h5>{product.price}</h5>
+                        <p style={{ textDecoration: "line-through" }}>{product.price}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )
-          })}
+              )
+            })}
          
           </Slider>
         </div>

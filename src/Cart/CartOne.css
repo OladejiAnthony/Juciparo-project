@@ -90,6 +90,7 @@
 
 .cart__menuIcon > button {
     border-color: transparent;
+    background: transparent;
 }
 .cart__menuIcon > button:focus {
     border-color: transparent;
@@ -188,5 +189,11 @@
 }
 
 @media screen and (max-width: 530px) {
-
+    .cart__right > button {
+        right: 0%;
+    }
+    .cart__right > div {
+        width: 50px;
+        right: 40%;
+    }
 }

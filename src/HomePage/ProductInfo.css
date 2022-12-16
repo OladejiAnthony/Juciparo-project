@@ -233,6 +233,7 @@
 .prod__menuIcon > button {
     border-color: #8C8C8C;
     border-width: 0px;
+    background: transparent;
 }
 
 .prod__menu > button {
@@ -297,6 +298,7 @@
     font-size: 18px;
     line-height: 22px;
     color: #212121;
+    width: 160px;
 }
 
 .product__socialIcons > .product__social {
@@ -419,7 +421,7 @@ svg.iconify.iconify--brandico {
         width: 100%;
     }
     .product__socialIcons > h4 {
-        width: 100%;
+        width: 160px;
         font-size: 16px;
     }
     .prod__amount {
