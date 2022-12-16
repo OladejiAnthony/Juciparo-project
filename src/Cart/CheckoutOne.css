@@ -316,7 +316,7 @@
     height: 1040px;
     width: 774px;
     position: relative;
-    top: 110px;
+    top: 150px;
 }
 
 .MuiBox-root.css-1gsv261 {
@@ -324,7 +324,12 @@
 }
 
 
-button#simple-tab-0, button#simple-tab-1, button#simple-tab-2 {
+button#simple-tab-0,
+ button#simple-tab-1,
+  button#simple-tab-2,
+  button#simple-tab-3,
+  button#simple-tab-4
+   {
     width: 200px !important;
     font-family: 'Lato';
     font-style: normal;
@@ -423,6 +428,13 @@ div#simple-tabpanel-2 {
     .MuiBox-root.css-8atqhb {
         top: 170px;
         width: 92%;
+    }
+    .css-1ujnqem-MuiTabs-root {
+        overflow: scroll;
+    }
+    .css-jpln7h-MuiTabs-scroller {
+        overflow-x: scroll!important;
+        overflow: unset;
     }
     button#simple-tab-0, button#simple-tab-1, button#simple-tab-2 {
         width: 180px!important;

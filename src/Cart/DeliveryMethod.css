@@ -148,6 +148,7 @@
     .haed > div > p {
         left: 10%;
         font-size: 15px;
+        top: 37px;
     }
     .haed > p {
         font-size: 10px;
@@ -166,10 +167,14 @@
 
 @media screen and (max-width: 375px) {
     .delivery__container > .center  {
-        height: 370px;
+        height: 420px;
+    }
+    .delivery__container > .center > p {
+        margin-bottom: 0.4rem;
     }
     .delivery__container > a {
-        top: 525px;
+        top: 575px;
         font-size: 16px;
     }
 }
+

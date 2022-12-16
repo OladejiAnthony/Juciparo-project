@@ -52,7 +52,7 @@ export default function ProductDetailsTabs() {
           <Tab label="Product Details" {...a11yProps(0)} />
           <Tab label="Description" {...a11yProps(1)} />
           <Tab label="Payment Method" {...a11yProps(2)} />
-          <Tab label="Shipping &bReturn Policy" {...a11yProps(3)} />
+          <Tab label="Shipping & Return Policy" {...a11yProps(3)} />
           <Tab label="Reviews" {...a11yProps(4)} />
         </Tabs>
       </Box>

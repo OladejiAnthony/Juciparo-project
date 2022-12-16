@@ -1,7 +1,8 @@
 nav.nav__container {
     height: 170px;
     width: 100vw;
-    /*position: fixed; */
+    position: sticky;
+    top: 0;
 }
 
 .nav__contain {

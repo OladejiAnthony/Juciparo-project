@@ -16,13 +16,15 @@ function Navbar() {
   const onClick = () => setShowDiv(!showDiv);
   const state = useSelector(state => state.handleCart)
   
+  
   const handleChange = (e) => {
     e.preventDefault();
     setSearchInput(e.target.value);
   };
+  
 
   return (
-    <nav className={click ? "nav__container active" : "nav__container"}>
+    <nav className={click ? "nav__container active " : "nav__container"}>
       <div className='nav__contain' >
         <div className="nav__top">
           <Link to="/">
