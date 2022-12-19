@@ -27,6 +27,7 @@ import PlaceOrder from "./Help/PlaceOrder"
 import DeliveryMethod from './Cart/DeliveryMethod';
 import PaymentMethod from './Cart/PaymentMethod';
 import ScrollToTop from './ScrollToTop';
+import AccountSeller from './Seller/AccountSeller';
 
 
 function App() {
@@ -45,15 +46,16 @@ function App() {
           <Route path='SellerProfile/' element={<SellerProfile />} />
           <Route path='productDetails/:id' element={<ProductsDetails />} />
           <Route path='Cart/' element={<Cart />}  />
-          <Route path='CheckoutOne' element={<CheckoutOne />} />
+          <Route path='CheckoutOne/' element={<CheckoutOne />} />
           <Route path='Help/' element={<Help />} />
-          <Route path='/Privacy' exact element={<Privacy />}  />
-          <Route path='/Track' exact element={<Track />}  />
-          <Route path='/ContactUs' exact element={<ContactUs />}  />
-          <Route path='/Terms' exact element={<Terms />}  />
-          <Route path='/PlaceOrder' exact element={<PlaceOrder />}  />
-          <Route path='/DeliveryMethod' exact element={<DeliveryMethod />}  />
-          <Route path='/PaymentMethod' exact element={<PaymentMethod />}  />
+          <Route path='Privacy/' exact element={<Privacy />}  />
+          <Route path='Track/' exact element={<Track />}  />
+          <Route path='ContactUs/' exact element={<ContactUs />}  />
+          <Route path='Terms' exact element={<Terms />}  />
+          <Route path='PlaceOrder/' exact element={<PlaceOrder />}  />
+          <Route path='DeliveryMethod/' exact element={<DeliveryMethod />}  />
+          <Route path='PaymentMethod/' exact element={<PaymentMethod />}  />
+          <Route path='AccountSeller/'  element={<AccountSeller />} />
         </Routes> 
         </ScrollToTop>
       </Router>
@@ -62,3 +64,5 @@ function App() {
 }
 
 export default App;
+
+

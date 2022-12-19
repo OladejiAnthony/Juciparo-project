@@ -39,7 +39,7 @@ function Navbar() {
             </Link>
           </div>
           
-          <Link className='nav__notification' to="">
+          <Link className='nav__notification' to="/AccountSeller">
             <Icon icon="clarity:notification-line" />
             Notification
           </Link>

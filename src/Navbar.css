@@ -1,8 +1,6 @@
 nav.nav__container {
     height: 170px;
     width: 100vw;
-    position: sticky;
-    top: 0;
 }
 
 .nav__contain {
@@ -346,6 +344,9 @@ svg.iconify {
 @media screen and (max-width: 960px) {
     nav.nav__container {
         background-color: transparent;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
     }
 
     .nav__top {
