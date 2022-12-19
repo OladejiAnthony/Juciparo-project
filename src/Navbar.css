@@ -514,6 +514,9 @@ svg.iconify {
 
 
 @media screen and (max-width: 340px) {
+    nav.nav__container {
+        height: 130px;
+    }
     .nav__container.active .nav__top .nav__links {
         left: 20%;
     }

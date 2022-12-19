@@ -212,11 +212,15 @@ div#simple-tabpanel-4 {
 
     */
     .storeName {
-        left: 2%;
+        left: 0%;
         margin-top: 0px;
     }
     .storeName > h4  {
         width: 90%;
+    }
+
+    .recommends-carousel-container {
+        left: 0%;
     }
     
 }

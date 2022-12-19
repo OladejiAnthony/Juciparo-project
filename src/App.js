@@ -26,12 +26,14 @@ import Terms from './Help/Terms';
 import PlaceOrder from "./Help/PlaceOrder"
 import DeliveryMethod from './Cart/DeliveryMethod';
 import PaymentMethod from './Cart/PaymentMethod';
+import ScrollToTop from './ScrollToTop';
 
 
 function App() {
   return (
     <div className="app">
       <Router>
+        <ScrollToTop>
         <Routes> 
           <Route path='/' exact element={<Home />}  />
           <Route path='AboutUs/' element={<AboutUs />} />
@@ -53,6 +55,7 @@ function App() {
           <Route path='/DeliveryMethod' exact element={<DeliveryMethod />}  />
           <Route path='/PaymentMethod' exact element={<PaymentMethod />}  />
         </Routes> 
+        </ScrollToTop>
       </Router>
     </div>
   );
