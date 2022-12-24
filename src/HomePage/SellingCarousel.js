@@ -1,13 +1,12 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Slider from "react-slick";
-import { SellingCarouselData } from "../Data/Data";
 import "./SellingCarousel.css"
 import right from "../Images/right.svg"
 import left from "../Images/left.svg"
 import { useState } from "react";
 import { useEffect } from "react";
-
+import axios from "axios";
 
 function SampleNextArrow(props) {
   const { className, onClick } = props;
@@ -39,24 +38,25 @@ function SellingCarousel () {
   const [filter, setFilter] = useState(data);
   let componentMounted = true;
 
+  const getProducts = async () => {
+    //setLoading(true);
+   
+    const response = await axios.get("https://admin.juciparo.com/api/v1/products")
+    .then(function(response) {
+      console.log(response?.data?.data);
+      setData(response?.data?.data)
+    })
+    //https://fakestoreapi.com/products?limit=5
+    if (componentMounted) {
+      setData(await response.clone().json());
+      setFilter(await response.json());
+      //console.log(filter);
+    }
+  };
+
   useEffect(() => {
-    const getProducts = async () => {
-      //setLoading(true);
-      const response = await fetch("https://fakestoreapi.com/products/category/electronics?limit=5");
-      if (componentMounted) {
-        setData(await response.clone().json());
-        setFilter(await response.json());
-        //setLoading(false);
-      }
-
-      return () => {
-        componentMounted = false;
-      };
-    };
-
     getProducts();
   }, []);
-
   
 
   const filterProduct = (cat) => {
@@ -118,26 +118,25 @@ function SellingCarousel () {
             <h5>See All</h5>
           </div>
           <Slider {...settings}>
-            {filter.map((product) => {
-              return (
-                <div key={product.id}>
-                  <button className=''>{product.btn}</button>
-                  <div className="img">
-                    <img src={product.image} alt="placeholder"  /> 
-                  </div>
-                  <div className='products-text'>
-                    <Link to={"/productDetails/" + product.id} onClick={() => navigate(product.route)}>
-                      {product.title.substring(0, 12)}...
-                    </Link>
-                    <div>
-                        <h5>{product.price}</h5>
-                        <p style={{ textDecoration: "line-through" }}>{product.price}</p>
-                    </div>
+          {data?.map((product) => {
+            return (
+              <div key={product.id}>
+                <button className=''>{product.condition}</button>
+                <div className="img">
+                  <img src={` https://admin.juciparo.com${product.photo}`} alt="placeholder"  /> 
+                </div>
+                <div className='selling-text'>
+                  <Link to={"/productDetails/" + product.id} onClick={() => navigate(product.route)}>
+                    {product.title.substring(0, 12)}...
+                  </Link>
+                  <div>
+                      <h5>{product.price}</h5>
+                      <p style={{ textDecoration: "line-through" }}>{product.discount}</p>
                   </div>
                 </div>
-              )
-            })}
-         
+              </div>
+            )
+          })}
           </Slider>
         </div>
       </div>

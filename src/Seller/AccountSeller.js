@@ -6,6 +6,7 @@ import "./AccountSeller.css"
 import { Link } from 'react-router-dom'
 import SavedItem from './SavedItem'
 import AccountTab from './AccountTab'
+import AccountTabOne from './AccountTabOne'
 
 function AccountSeller() {
   return (
@@ -30,7 +31,7 @@ function AccountSeller() {
                     </div>
                 </div>
                 <AccountTab />
-                <AccountTab />
+                <AccountTabOne />
                 <div className='pend'>
                     <h4>Pending Review</h4>
                 </div>

@@ -26,6 +26,7 @@
     cursor: pointer;
     background: var(--tertiary300);
     color: white;
+    height: 68px;
 }
 
 .menuItem > a:hover {

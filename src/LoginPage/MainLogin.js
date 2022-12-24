@@ -39,7 +39,11 @@ function MainLogin() {
                     <label className="mainform__label" for="password">Password </label>
                     <input className="mainform__input" type="password"  id="password" value={password} onChange = {(e) => handleInputChange(e)} placeholder="Email Address or Phone Number"/>
                 </div>
-                <button onClick={()=>handleSubmit()} type="submit">Sign In</button>
+                <Link to="/AccountSeller">
+                    <button onClick={()=>handleSubmit()} type="submit">
+                        Sign In
+                    </button>
+                </Link>
             </div>
             <div className='social__login'>
                 <div className='line'>

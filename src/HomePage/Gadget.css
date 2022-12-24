@@ -224,7 +224,7 @@
 @media screen and (max-width: 960px) {
     .gadget-carousel-container {
         left: 5%;
-        height: 190vh!important;
+        height: 200vh!important;
         width: 90%;
     }
 

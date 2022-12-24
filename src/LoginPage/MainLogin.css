@@ -50,7 +50,7 @@
     padding-top: auto;
 }
 
-.mainform-body > button {
+.mainform-body > a {
     position: relative;
     width: 509px;
     height: 59.79px;
@@ -64,6 +64,17 @@
     line-height: 18px;
     color: #FDFDFD;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.mainform-body > a > button{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #FDFDFD;
+    background: #EF0000;
+    border: 1px solid #EF0000;
 }
 
 .social__login {
@@ -160,7 +171,7 @@
     .mainform-body > div {
         width: 90%;
     }
-    .mainform-body > button {
+    .mainform-body > a {
         width: 90%;
     }
 
@@ -185,7 +196,7 @@
     .mainform-body > div {
         width: 90%;
     }
-    .mainform-body > button {
+    .mainform-body > a {
         width: 90%;
     }
 
@@ -218,7 +229,7 @@
         left: 5%;
         position: relative;
     }
-    .mainform-body > button {
+    .mainform-body > a {
         width: 82%;
         height: 40px;
     }

@@ -1,8 +1,9 @@
 import React from 'react'
+import "./SavedItem.css"
 
 function SavedItem() {
   return (
-    <div>
+    <div className='saved'>
       saved item
     </div>
   )

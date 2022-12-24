@@ -1,0 +1,11 @@
+.saved {
+    position: relative;
+    width: 80%;
+    min-height: 70vh;
+    left: 9%;
+    background: #F4F4F4;
+    border-radius: 5px;
+    padding-left: 70px;
+    margin-bottom: 50px;
+}
+

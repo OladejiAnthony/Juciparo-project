@@ -144,7 +144,7 @@ nav.nav__container {
     position: relative;
     align-items: center;
     height: 38px;
-    width: 130px;
+    width: 180px;
     transition: all 300ms ease-in-out;
     border-radius: 5px;   
     display: flex;
@@ -161,7 +161,7 @@ nav.nav__container {
     height: 60px;
 }
 
-.categoryItem > a:hover {
+.categoryItem > p:hover {
     color: white;
 }
 
@@ -170,7 +170,7 @@ nav.nav__container {
     padding-top: 0px!important;
 }
 
-.categoryItem > a {
+.categoryItem > p {
     text-decoration: none;
     padding-top: 0px;
     cursor: pointer;

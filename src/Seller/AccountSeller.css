@@ -60,7 +60,7 @@
 
 .accountSeller__top > .left > a {
     width: 264px;
-    height: 24px;
+    height: 34px;
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
@@ -94,7 +94,7 @@
 
 .accountSeller__top > .right > a {
     width: 264px;
-    height: 24px;
+    height: 34px;
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
@@ -115,9 +115,7 @@
     color: #212121;
 }
 
-.accountSeller__bottom {
-    
-}
+
 
 .pend {
     position: relative;

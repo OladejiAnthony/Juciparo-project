@@ -2,19 +2,23 @@ import React, {useState} from 'react'
 import "./Navbar.css"
 import { useSelector } from "react-redux";
 import logo from "../src/Images/logoOne.jpg"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Icon } from '@iconify/react';
 import AccountDropDown from './AccountDropDown';
 import { SidebarData } from './Data/Data';
+import axios from 'axios';
+import { useEffect } from 'react';
 
 
 function Navbar() {
   const [searchInput, setSearchInput] = useState("");
   const [click, setClick] = useState(false);
+  const [data, setData] = useState([]);
   const handleClick = () => setClick(!click);
   const [showDiv, setShowDiv] = useState(false);
   const onClick = () => setShowDiv(!showDiv);
   const state = useSelector(state => state.handleCart)
+  const navigate = useNavigate();
   
   
   const handleChange = (e) => {
@@ -22,6 +26,20 @@ function Navbar() {
     setSearchInput(e.target.value);
   };
   
+  const getProducts = async () => {
+    //setLoading(true);
+   
+    const response = await axios.get("https://admin.juciparo.com/api/v1/categories")
+    .then(function(response) {
+      console.log(response?.data?.data);
+      setData(response?.data?.data)
+    })
+    
+  };
+
+  useEffect(() => {
+    getProducts();
+  }, []);
 
   return (
     <nav className={click ? "nav__container active " : "nav__container"}>
@@ -39,7 +57,7 @@ function Navbar() {
             </Link>
           </div>
           
-          <Link className='nav__notification' to="/AccountSeller">
+          <Link className='nav__notification'>
             <Icon icon="clarity:notification-line" />
             Notification
           </Link>
@@ -51,16 +69,16 @@ function Navbar() {
           {
             showDiv ?
               <div className='categoryBar'>
-                {SidebarData.map((item, index) => {
+                {data?.map((item, index) => {
                     return (
                       <>
                         <div className = {index ? 'categoryItem active' : 'categoryItem'}
                           key={index}
                         >
                           <Icon icon={item.icon} />
-                          <Link to={item.heading}>
-                            {item.heading}
-                          </Link>
+                          <p onClick={() => navigate(`/testPage/${item.slug}`)}>
+                            {item.title}
+                          </p>
               
                         </div>
                       </>

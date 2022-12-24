@@ -1,12 +1,12 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Slider from "react-slick";
-import { RecomCarouselData } from "../Data/Data";
 import "./RecommendsCarousel.css"
 import right from "../Images/right.svg"
 import left from "../Images/left.svg"
 import { useState } from "react";
 import { useEffect } from "react";
+import axios from "axios";
 
 
 function SampleNextArrow(props) {
@@ -39,24 +39,26 @@ function RecommendsCarousel () {
   const [filter, setFilter] = useState(data);
   let componentMounted = true;
 
+  
+  const getProducts = async () => {
+    //setLoading(true);
+   
+    const response = await axios.get("https://admin.juciparo.com/api/v1/products")
+    .then(function(response) {
+      console.log(response?.data?.data);
+      setData(response?.data?.data)
+    })
+    //https://fakestoreapi.com/products?limit=5
+    if (componentMounted) {
+      setData(await response.clone().json());
+      setFilter(await response.json());
+      //console.log(filter);
+    }
+  };
+
   useEffect(() => {
-    const getProducts = async () => {
-      //setLoading(true);
-      const response = await fetch("https://fakestoreapi.com/products/category/jewelery"); //https://api.escuelajs.co/api/v1/categories/2/products?limit=5
-      if (componentMounted) {
-        setData(await response.clone().json());
-        setFilter(await response.json());
-        //setLoading(false);
-      }
-
-      return () => {
-        componentMounted = false;
-      };
-    };
-
     getProducts();
   }, []);
-
   
   const filterProduct = (cat) => {
     const updatedList = data.filter((item) => item.category === cat);
@@ -118,12 +120,12 @@ function RecommendsCarousel () {
           </div>
           <Slider {...settings}>
 
-          {filter.map((product) => {
+          {data?.map((product) => {
             return (
               <div key={product.id}>
-                <button className=''>{product.btn}</button>
+                <button className=''>{product.condition}</button>
                 <div className="img">
-                  <img src={product.image} alt="placeholder"  /> 
+                  <img src={` https://admin.juciparo.com${product.photo}`} alt="placeholder"  /> 
                 </div>
                 <div className='recommends-text'>
                   <Link to={"/productDetails/" + product.id} onClick={() => navigate(product.route)}>
@@ -131,12 +133,13 @@ function RecommendsCarousel () {
                   </Link>
                   <div>
                       <h5>{product.price}</h5>
-                      <p style={{ textDecoration: "line-through" }}>{product.price}</p>
+                      <p style={{ textDecoration: "line-through" }}>{product.discount}</p>
                   </div>
                 </div>
               </div>
             )
           })}
+
          
           </Slider>
         </div>

@@ -77,7 +77,7 @@
 
 
 
-.carousel-content> div > a {
+.carousel-content> div > p {
     position: absolute;
     top: 214px;
     font-family: 'Montserrat', sans-serif;
@@ -88,9 +88,10 @@
     text-align: center;
     color: #000000;
     text-decoration: none;
+    cursor: pointer;
 }
 
-.carousel-content> div > a:hover {
+.carousel-content> div > p:hover {
     color: red;
     text-decoration: underline;
 }

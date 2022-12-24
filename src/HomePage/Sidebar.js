@@ -22,7 +22,7 @@ function Sidebar() {
             onClick={onClick}
           >
             <Icon icon={item.icon} />
-            <Link>{item.heading}
+            <Link>{item.title}
             </Link>
             {/* 
               <Link to={item.route} onClick={() => navigate(item.route)}>{item.heading}

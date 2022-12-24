@@ -28,6 +28,7 @@ import DeliveryMethod from './Cart/DeliveryMethod';
 import PaymentMethod from './Cart/PaymentMethod';
 import ScrollToTop from './ScrollToTop';
 import AccountSeller from './Seller/AccountSeller';
+import TestPage from './HomePage/TestPage';
 
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
           <Route path='DeliveryMethod/' exact element={<DeliveryMethod />}  />
           <Route path='PaymentMethod/' exact element={<PaymentMethod />}  />
           <Route path='AccountSeller/'  element={<AccountSeller />} />
+          <Route path='testPage/:test'  element={<TestPage />} />
         </Routes> 
         </ScrollToTop>
       </Router>

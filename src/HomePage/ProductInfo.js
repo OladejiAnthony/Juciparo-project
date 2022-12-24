@@ -5,6 +5,7 @@ import { Icon } from '@iconify/react';
 //import { ProductImgCData } from '../Data/Data';
 import { Link, useParams } from 'react-router-dom';
 import { addCart, delCart } from "../redux/action";
+import axios from "axios";
 //import Skeleton from "react-loading-skeleton";
 
 const handleClick = (event, key) => {
@@ -31,15 +32,21 @@ function ProductInfo() {
     dispatch(delCart(product));
   };
 
+  const getProducts = async () => {
+    //setLoading(true);
+    const response = await axios.get(`https://admin.juciparo.com/api/v1/products${id}`)
+    .then(function(response) {
+      console.log(response?.data?.data);
+      setProduct(response?.data?.data)
+    })
+   
+  };
+
   useEffect(() => {
-    const getProduct = async () => {
-      const response = await fetch(`https://fakestoreapi.com/products/${id}`);
-      const data = await response.json();
-      setProduct(data);
-      //setLoading(false);
-    };
-    getProduct();
+    getProducts();
   }, [id]);
+
+ 
 
 
   return (
@@ -47,17 +54,17 @@ function ProductInfo() {
       <h5>Product Information</h5>
       <div className='productInfo'>
         <div className='prod_img' onClick={event => handleClick(event)}>
-          <img src={product.image} alt={product.title} />
+          <img src={`https://admin.juciparo.com${product.photo}`} alt={product.title} />
         </div>
             
         <div className='productInfo__right'>
             <div className='prod__header'>
                 <h3>{product.title}</h3>
-                <h5>In Stock</h5>
+                <h5>{product.stock}</h5>
             </div>
             <div className='prod__amount'>
                 <h4>{product.price}</h4>
-                <h5>{product.price}</h5>
+                <h5>{product.discount}</h5>
             </div>
             <div className='prod__colors'>
                 <h5>Color</h5>
@@ -69,7 +76,7 @@ function ProductInfo() {
             <div className='prod__size'>
                 <h5>Size</h5>
                 {/*implement dropdown here */}
-                <button>Not Specified</button>
+                <button>{product.size}</button>
             </div>
             <div className='prod__menu'>
             {state.map((item) => {

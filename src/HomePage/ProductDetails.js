@@ -11,6 +11,7 @@ import { Link} from 'react-router-dom'
 import ProductDetailsTabs from './ProductSection'
 import RecommendsCarousel from './RecommendsCarousel'
 import { useParams } from 'react-router-dom';
+import axios from 'axios'
 
 //use react-redux to get current product images, descriptions.
 
@@ -19,15 +20,21 @@ function ProductDetails() {
   const { id } = useParams();
   const [product, setProduct] = useState([]);
 
-  useEffect(() => {
-    const getProduct = async () => {
-      const response = await fetch(`https://fakestoreapi.com/products/${id}`);
-      const data = await response.json();
-      setProduct(data);
-      //setLoading(false);
+  const getProducts = async () => {
+    //setLoading(true);
+    const response = await axios.get(`https://admin.juciparo.com/api/v1/products${id}`)
+    .then(function(response) {
+      console.log(response?.data?.data);
+      setProduct(response?.data?.data)
+    })
+    
     };
-    getProduct();
-  }, [id]);
+
+    useEffect(() => {
+      getProducts();
+    }, [id]);
+
+  
   
   return (
     <>
@@ -38,9 +45,9 @@ function ProductDetails() {
           show={3} 
           style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
         >
-          <img  src={product.image} alt={product.title} />
-          <img  src={product.image} alt={product.title} />
-          <img  src={product.image} alt={product.title} />
+          <img src={`https://admin.juciparo.com${product.photo}`} alt={product.title} />
+          <img src={`https://admin.juciparo.com${product.photo}`} alt={product.title} />
+          <img src={`https://admin.juciparo.com${product.photo}`} alt={product.title} />
         </ProductImgC>
 
         <ProductDetailsTabs />
