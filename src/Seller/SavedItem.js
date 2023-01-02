@@ -4,7 +4,7 @@ import "./SavedItem.css"
 function SavedItem() {
   return (
     <div className='saved'>
-      saved item
+      <h4>Saved Items</h4>
     </div>
   )
 }

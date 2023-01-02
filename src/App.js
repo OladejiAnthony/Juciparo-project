@@ -29,6 +29,8 @@ import PaymentMethod from './Cart/PaymentMethod';
 import ScrollToTop from './ScrollToTop';
 import AccountSeller from './Seller/AccountSeller';
 import TestPage from './HomePage/TestPage';
+import AccountManagement from './LoginPage/AccountManagement';
+import AddressBook from './LoginPage/AddressBook';
 
 
 function App() {
@@ -41,6 +43,8 @@ function App() {
           <Route path='AboutUs/' element={<AboutUs />} />
           <Route path='AccountLogin/' element={<AccountLogin />  } />
           <Route path='CreateAccount/' element={<CreateAccount />} />
+          <Route path='AddressBook/'  element={<AddressBook />} />
+          <Route path='AccountManagement/'  element={<AccountManagement />} />
           <Route path='IntroPage/' element={<IntroPage /> } />
           <Route path='SellerCreate/' element={<SellerCreateAccount  />} />
           <Route path='SellerCreateTwo/' element={<SellerCreateTwo />} />

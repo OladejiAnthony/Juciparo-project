@@ -15,8 +15,8 @@ function AccountSeller() {
             <div className='accountSeller'>
                 <h3>Account Information</h3>
                 <div className='head'>
-                    <Link>Account Management</Link>
-                    <Link>Address Book</Link>
+                    <Link to="/AccountManagement">Account Management</Link>
+                    <Link to="/AddressBook">Address Book</Link>
                 </div>
                 <div className='accountSeller__top'>
                     <div className='left'>
