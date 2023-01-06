@@ -44,12 +44,14 @@ const FirstCarousel = (props) => {
   const next = () => {
     if (currentIndex < (length - 1)) {
         setCurrentIndex(prevState => prevState + 1)
+        console.log("next clicked");
     }
   }
 
   const prev = () => {
     if (currentIndex > 0) {
         setCurrentIndex(prevState => prevState - 1)
+        console.log("prev clicked");
     }
   }
   // ...
@@ -72,6 +74,7 @@ const FirstCarousel = (props) => {
                 <div
                     className="carousel-content"
                     style={{ transform: `translateX(-${currentIndex * 100 }%)` }}
+                    onClick={() => console.log("div clicked")}
                 >
                     {children}
                 </div>

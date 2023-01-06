@@ -12,6 +12,8 @@ import axios from "axios";
 
 function SampleNextArrow(props) {
   const { className, onClick } = props;
+  
+  //console.log("next arrow");
   return (
     <div
       className={className}
@@ -23,6 +25,7 @@ function SampleNextArrow(props) {
 }
 function SamplePrevArrow(props) {
   const { className,  onClick } = props;
+  //console.log("left arrow");
   return (
     <div
       className={className}
@@ -45,7 +48,7 @@ function ProductsCarousel (props) {
    
     const response = await axios.get("https://admin.juciparo.com/api/v1/products")
     .then(function(response) {
-      console.log(response?.data?.data);
+      console.log(response?.data?.data)
       setData(response?.data?.data)
     })
     //https://fakestoreapi.com/products?limit=5
@@ -89,7 +92,9 @@ function ProductsCarousel (props) {
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,
-            initialSlide: 1
+            initialSlide: 1,
+            nextArrow: <SampleNextArrow />,
+            prevArrow: <SamplePrevArrow />,
           }
         },
         {
@@ -97,7 +102,9 @@ function ProductsCarousel (props) {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
-            initialSlide: 1
+            initialSlide: 1,
+            nextArrow: <SampleNextArrow />,
+            prevArrow: <SamplePrevArrow />,
           }
         },
         {
@@ -111,6 +118,7 @@ function ProductsCarousel (props) {
         }
       ]
     };
+    
 
     return (
       <div className="products-carousel-container">

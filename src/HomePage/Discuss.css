@@ -71,6 +71,7 @@
 @media screen and (max-width: 960px) {
     .discuss__container {
         margin-bottom: 10%;
+        height: 540px;
     }
     div.discuss__card > h3 {
         width: 100%;

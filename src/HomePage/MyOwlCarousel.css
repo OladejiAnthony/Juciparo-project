@@ -28,6 +28,7 @@
     display: block;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
 .carousel-item > .w-100 {

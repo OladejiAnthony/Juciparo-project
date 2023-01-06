@@ -1,5 +1,5 @@
-.form {
-    height: 940px;
+.adformMan {
+    height: 1100px;
     width: 600px;
     position: relative;
     align-self: center;
@@ -7,17 +7,17 @@
     flex-direction: column;
 }
 
-.form-body {
+.adform-bodyMan {
     position: absolute;
     width: 100%;
-    height: 87%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
 
-.form-body > div {
+.adform-bodyMan > div {
     position: relative;
     width: 509px;
     height: 102px;
@@ -26,7 +26,7 @@
     margin-top: 22px;
 }
 
-.form-body > div > label {
+.adform-bodyMan > div > label {
     height: 42px;
     width: 100%;
     font-family: 'Lato';
@@ -37,7 +37,7 @@
     color: #000000;
 }
 
-.form-body > div > input {
+.adform-bodyMan > div > input {
     height: 60px;
     width: 100%;
     font-family: 'Lato';
@@ -50,7 +50,7 @@
     padding-top: auto;
 }
 
-.form-body > button {
+.adform-bodyMan > button {
     position: relative;
     width: 509px;
     height: 59.79px;
@@ -63,8 +63,8 @@
     font-size: 15px;
     line-height: 18px;
     color: #FDFDFD;
+    cursor: pointer;
 }
-
 
 .terms {
     position: absolute;
@@ -90,9 +90,8 @@
     color: #8C8C8C;
 }
 
-.terms > h5 > a {
+.terms > h5 > span {
     color: #EF0000;
-    cursor: pointer;
 }
 
 .terms > .div {
@@ -136,16 +135,16 @@
 /** Responsiveness **/
 
 @media screen and (max-width: 600px) {
-    .form {
+    .adformMan {
         width: 80%;
     }
-    .form-body {
+    .adform-bodyMan {
         width: 100%;
     }
-    .form-body > div {
+    .adform-bodyMan > div {
         width: 90%;
     }
-    .form-body > button {
+    .adform-bodyMan > button {
         width: 90%;
     }
     .terms > .div > a {

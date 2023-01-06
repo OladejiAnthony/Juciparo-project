@@ -1,5 +1,5 @@
 .shopping {
-    height: 30vh;
+    min-height: 80vh;
     width: 100%;
     position: relative;
     left: 136px;
@@ -21,7 +21,9 @@
 }
 
 @media screen and (max-width: 600px) {
-
+    .shopping {
+        margin-top: 120px;
+    }
 }
 
 @media screen and (max-width: 479px) {

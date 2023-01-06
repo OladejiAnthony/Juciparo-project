@@ -1,9 +1,10 @@
 .sellerProfile {
     position: relative;
-    min-height: 150vh;
+    min-height: 250vh;
     max-width: 100vw;
     align-items: center;
     background: #ffffff;
+    top: 200px;
 }
 
 .sellerProfile__products {
@@ -15,8 +16,11 @@
     background: #F4F4F4;
 }
 
-@media screen and (max-width: 840px) {
-    
+@media screen and (max-width: 960px) {
+    .sellerProfile {
+        min-height: 300vh;
+        top: 80px;
+    }
 }
 
 @media screen and (max-width: 770px) { 

@@ -456,6 +456,7 @@ div#simple-tabpanel-2 {
 }
 
 @media screen and (max-width: 860px) {
+    
     .checkoutOne > .cart__container {
         min-height: 70vh;
         flex-direction: column;

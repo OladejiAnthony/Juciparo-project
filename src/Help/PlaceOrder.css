@@ -1,6 +1,6 @@
 .order {
     max-width: 100vw;
-    min-height: 200vh;
+    min-height: 240vh;
     align-items: center;
     background: #ffffff;
     position: relative;
@@ -8,6 +8,7 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    top: 180px;
 }
 
 .order > h2 {
@@ -90,12 +91,15 @@
 }
 
 @media screen and (max-width: 960px) {
-   
+   .order {
+        top: 100px;
+        min-height: 240vh;
+   }
 }
 
 @media screen and (max-width: 770px) {
     .order {
-        min-height: 200vh;
+        min-height: 230vh;
     }
     .order > .helpCard > p {
         font-size: 25px;
@@ -105,7 +109,7 @@
 
 @media screen and (max-width: 400px) {
     .order {
-        min-height: 170vh;
+        min-height: 210vh;
     }
     .order > h2 {
         height: 80px;

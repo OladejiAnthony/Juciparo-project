@@ -1,6 +1,6 @@
 .privacy {
     max-width: 100vw;
-    min-height: 240vh;
+    min-height: 320vh;
     align-items: center;
     background: #ffffff;
     position: relative;
@@ -8,6 +8,7 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    top: 180px;
 }
 
 .privacy > h2 {
@@ -92,7 +93,8 @@
 
 @media screen and (max-width: 960px) {
     .privacy {
-        min-height: 200vh;
+        min-height: 400vh;
+        top: 100px;
     }
     .privacy > .helpCard {
         height: 160px;
@@ -108,7 +110,7 @@
 
 @media screen and (max-width: 750px) {
     .privacy {
-        min-height: 400vh;
+        min-height: 420vh;
     }
     .privacy > .helpCard {
         height: 160px;
@@ -118,7 +120,7 @@
 
 @media screen and (max-width: 500px) {
     .privacy {
-        min-height: 550vh;
+        min-height: 580vh;
     }
     .privacy > h4 {
         height: 150px;

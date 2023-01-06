@@ -217,39 +217,33 @@
     line-height: 18px;
     color: #000000;
 }
-
+.products-carousel-wrapper > .slick-slider.slick-initialized >
 div.slick-arrow.slick-next {
     position: absolute;
     z-index: 1;
     top: 50%;
     transform: translateY(-50%);
-    /* width: 48px; */
-    /* height: 48px; */
-    /* border-radius: 24px; */
-    /* background: #E3E3E3; */
-    /* border: 1px solid #ddd; */
-    /* color: #FFFFFF; */
-    /* font-size: 32px; */
     right: 24px;
+    cursor: pointer;
 }
+
+.products-carousel-wrapper > .slick-slider.slick-initialized >
 div.slick-arrow.slick-next > img { 
     width: 100%;
     height: 100%;
 }
+
+.products-carousel-wrapper > .slick-slider.slick-initialized >
 div.slick-arrow.slick-prev {
     position: absolute;
     z-index: 1;
     top: 50%;
     transform: translateY(-50%);
-    /* width: 48px; */
-    /* height: 48px; */
-    /* border-radius: 24px; */
-    /* background: #E3E3E3; */
-    /* border: 1px solid #ddd; */
-    /* color: #FFFFFF; */
-    /* font-size: 32px; */
     left: 2px;
+    cursor: pointer;
 }
+
+.products-carousel-wrapper > .slick-slider.slick-initialized >
 div.slick-arrow.slick-prev > img { 
     width: 100%;
     height: 100%;
@@ -294,6 +288,9 @@ ul.slick-dots {
 
 }
 @media screen and (max-width: 960px) {
+    .products-carousel-container {
+        left: 1%;
+    }
     .products-carousel-wrapper >
     .slick-slider.slick-initialized > 
     .slick-list > .slick-track {
@@ -318,11 +315,14 @@ ul.slick-dots {
     .products-text > div {
         top: 73px;
     }
+    .products-carousel-wrapper > .slick-slider.slick-initialized >
     div.slick-arrow.slick-prev {
         left: 0%;
         width: 30px;
         height: 30px;
     }
+
+    .products-carousel-wrapper > .slick-slider.slick-initialized >
     div.slick-arrow.slick-next {
         right: 2%;
         width: 30px;
@@ -331,6 +331,9 @@ ul.slick-dots {
 }
 
 @media screen and (max-width: 479px) {
+    .products-carousel-wrapper > .slick-slider.slick-initialized {
+        overflow: visible;
+    }
     .products-carousel-wrapper >
      .slick-slider.slick-initialized > 
      .slick-list > .slick-track {

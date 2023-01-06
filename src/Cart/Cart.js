@@ -16,21 +16,23 @@ function Cart() {
   return (
     <>
       <Navbar />
-      <div className='cart__container'>
-        <CartOne 
-          productName = "HP LAPTOP: 12INCHES WITH 1TB AND 64BITS OS "
-          productPrice = "100000"
-        />
-        <Summary 
-          head = "Cart Summary"
-          subTotal = "SubTotal"
-          total = "Total"
-          price = "100000"
-          delivery = "Delivery"
-          status = "Not yet added"
-        />
+      <div className='cart__section'>
+        <div className='cart__container'>
+          <CartOne 
+            productName = "HP LAPTOP: 12INCHES WITH 1TB AND 64BITS OS "
+            productPrice = "100000"
+          />
+          <Summary 
+            head = "Cart Summary"
+            subTotal = "SubTotal"
+            total = "Total"
+            price = "100000"
+            delivery = "Delivery"
+            status = "Not yet added"
+          />
+        </div>
+        <Shopping />
       </div>
-      <Shopping />
       <Newsletter />
       <Footer />
     </>

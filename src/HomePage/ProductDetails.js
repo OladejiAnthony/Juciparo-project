@@ -27,7 +27,7 @@ function ProductDetails() {
       console.log(response?.data?.data);
       setProduct(response?.data?.data)
     })
-    
+  
     };
 
     useEffect(() => {

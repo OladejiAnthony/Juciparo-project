@@ -1,11 +1,11 @@
 .accountSeller {
     max-width: 80%;
-    min-height: 200vh;
+    min-height: 230vh;
     align-items: center;
     background: #ffffff;
     position: relative;
     left: 9%;
-    top: 10px;
+    top: 190px;
 }
 
 .accountSeller > h3 {
@@ -161,7 +161,9 @@
 }
 
 @media screen and (max-width: 600px) {
-
+    .accountSeller {
+        top: 120px;
+    }
 }
 
 @media screen and (max-width: 479px) {

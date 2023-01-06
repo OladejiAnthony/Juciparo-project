@@ -22,6 +22,7 @@ nav.nav__container {
     width: 169px;
     height: 113px;
     left: 133px;
+    margin-top: -30px;
 }
 
 .nav__top > a:nth-child(1) > img {
@@ -347,6 +348,7 @@ svg.iconify {
         position: sticky;
         position: -webkit-sticky;
         top: 0;
+        height: 100px;
     }
 
     .nav__top {
@@ -469,7 +471,7 @@ svg.iconify {
     .nav-icon {
         display: block;
         position: absolute;
-        top: 20px;
+        top: 0px;
         right: 3%;
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
@@ -511,12 +513,20 @@ svg.iconify {
     .nav__bottom > .categoryBar {
         left: 170px;
     }
+    .nav__top a:nth-child(1) {
+        left: 10%;
+        width: 120px;
+        height: 80px;
+         top: 20px; 
+        border-radius: 5%;
+    }
+ 
 }
 
 
 @media screen and (max-width: 340px) {
     nav.nav__container {
-        height: 130px;
+        height: 100px;
     }
     .nav__container.active .nav__top .nav__links {
         left: 20%;

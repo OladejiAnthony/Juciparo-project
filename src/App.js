@@ -56,7 +56,7 @@ function App() {
           <Route path='Privacy/' exact element={<Privacy />}  />
           <Route path='Track/' exact element={<Track />}  />
           <Route path='ContactUs/' exact element={<ContactUs />}  />
-          <Route path='Terms' exact element={<Terms />}  />
+          <Route path='Terms/' exact element={<Terms />}  />
           <Route path='PlaceOrder/' exact element={<PlaceOrder />}  />
           <Route path='DeliveryMethod/' exact element={<DeliveryMethod />}  />
           <Route path='PaymentMethod/' exact element={<PaymentMethod />}  />

@@ -107,7 +107,7 @@
     height: 1px;
 }
 
-.social__login a {
+.social__login > a {
     width: 509px;
     height: 59.79px;
     display: flex;
@@ -122,7 +122,7 @@
     padding-top: 20px;
 }
 
-.social__login a:nth-child(2) {
+.social__login > a:nth-child(2) {
     width: 509px;
     height: 59.79px;
     display: flex;
@@ -137,7 +137,7 @@
     padding-top: 20px;
 }
 
-.social__login a:nth-child(2) > svg.iconify.iconify--akar-icons {
+.social__login > a:nth-child(2) > svg.iconify.iconify--akar-icons {
     color: blue;
 }
 
@@ -146,7 +146,7 @@
     top: 269px;
 }
 
-.social__login > h5 > span {
+.social__login > h5 > a {
     color: #EF0000;
 }
 
@@ -183,7 +183,7 @@
     .line {
         width: 90%;
     }
-    .social__login  a, .social__login  a:nth-child(2){
+    .social__login >  a, .social__login >  a:nth-child(2){
         width: 90%;
     }
 
@@ -208,7 +208,7 @@
     .line {
         width: 90%;
     }
-    .social__login  a, .social__login  a:nth-child(2){
+    .social__login >  a, .social__login > a:nth-child(2){
         width: 90%;
     }
 }
@@ -237,7 +237,7 @@
     .line {
         width: 62%;
     }
-    .social__login a, .social__login a:nth-child(2) {
+    .social__login > a, .social__login > a:nth-child(2) {
         width: 68%;
     }
     .social__login > h5 {

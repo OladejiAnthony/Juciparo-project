@@ -1,14 +1,19 @@
 import React from 'react'
-import DropdownExampleSearchSelectionTwo from './AccountSelect'
-//import AccountSelect from './AccountSelect'
+import "./AddressBook.css"
+import abc from "../Images/logoOne.jpg"
+import CreateHead from './CreateHead'
+import AddressBookReg from './AddressBookReg'
 
-function AddressBook() {
+function AccountManagement() {
   return (
-    <div>
-      AddressBook
-      <DropdownExampleSearchSelectionTwo />
+    <div className='addressBook'>
+        <CreateHead 
+          img = {abc}
+          head = "Address Book"
+        />
+        <AddressBookReg />
     </div>
   )
 }
 
-export default AddressBook
+export default AccountManagement

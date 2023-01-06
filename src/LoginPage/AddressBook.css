@@ -1,15 +1,15 @@
-.accountLogin {
+.addressBook {
     width: 100vw;
-    height: 170vh;
+    min-height: 100vh;
     background: #ffffff;
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 36px;
+    gap: 0px;
+    margin-bottom: 100px;
 }
 
-
-.accountLogin .account_head {
+.addressBook .create__head {
     position: relative;
     width: 400px;
     height: 213px;
@@ -18,7 +18,7 @@
     flex-direction: column;
 }
 
-.accountLogin .account_head > a {
+.addressBook .create__head > a {
     position: absolute;
     width: 169px;
     height: 113px;
@@ -27,16 +27,16 @@
     text-decoration: none;
 }
 
-.accountLogin .account_head > img {
+.addressBook .create__head > img {
     position: absolute;
     width: 169px;
     height: 113px;
     top: 29px;
 }
 
-.accountLogin .account_head > h3 {
+.addressBook .create__head > h3 {
     position: absolute;
-    font-family: 'Montserrat, sans-serif';
+    font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
@@ -45,7 +45,7 @@
     top: 125.34px;
 }
 
-.accountLogin .account_head > h5 {
+.addressBook .create__head > h5 {
     position: absolute;
     font-family: 'Lato';
     font-style: normal;
@@ -75,12 +75,12 @@
 
 }
 
-@media screen and (max-width: 350px) {
-    .accountLogin {
-        height: 170vh;
+@media screen and (max-width: 370px) {
+    .addressBook .create__head > h3 {
+        font-size: 25px;
     }
-    .accountLogin .account_head > h5 {
-        font-size: 13px;
+    .addressBook .create__head > h5 {
+        font-size: 10px;
     }
 }
 

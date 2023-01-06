@@ -42,6 +42,8 @@ function Navbar() {
   }, []);
 
   return (
+    <div className='sticky__nav'>
+
     <nav className={click ? "nav__container active " : "nav__container"}>
       <div className='nav__contain' >
         <div className="nav__top">
@@ -124,6 +126,7 @@ function Navbar() {
       </div>
       
     </nav>
+    </div>
   )
 }
 

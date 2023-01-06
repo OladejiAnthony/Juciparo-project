@@ -15,16 +15,16 @@ import Newsletter from "../Newsletter"
 import { Link, useNavigate } from 'react-router-dom'
 import ProductsCarousel from './ProductsCarousel'
 import axios from 'axios'
+import UserService from "../services/user.service";
 
 function Home() {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
+  const [content, setContent] = useState("")
   let componentMounted = true;
 
   const getProducts = async () => {
-    //setLoading(true);
-   
     const response = await axios.get("https://admin.juciparo.com/api/v1/categories")
     .then(function(response) {
       console.log(response?.data?.data);
@@ -42,83 +42,98 @@ function Home() {
     getProducts();
   }, []);
 
-  
-
   const filterProduct = (cat) => {
     const updatedList = data.filter((item) => item.category === cat);
     setFilter(updatedList);
   }
 
+  useEffect(() => {
+    UserService.getPublicContent().then(
+      (response) => {
+        setContent(response.data);
+      },
+      (error) => {
+        const _content =
+          (error.response && error.response.data) ||
+          error.message ||
+          error.toString();
 
+        setContent(_content);
+      }
+    );
+  }, []);
 
   return (
     <>
-      <Navbar /> 
-      <div className='home__container'>
-        <Landing />
-        <FirstCarousel 
-          show={3} 
-          style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
-        >
-          {data?.map((product) => {
-          // console.log(product.slug)
-            return (
-              <div>
-                <div className="img">
-                  <img src={`https://admin.juciparo.com${product.photo}`} alt="placeholder"  /> 
-                </div>
-                <p
-                  // to={('/testPage/${product.slug}')}
-
-                  onClick={() => navigate(`/testPage/${product.slug}`)}
-                >
-                  {product.title}
-                </p>
-              </div>
-            )
-          })}
-          
-        </FirstCarousel>
-      
-        <ProductsCarousel />
-        <RecommendsCarousel />
-        <Gadget
+      <div className='chief__container'>
+        <Navbar /> 
+        <div className='home__container'>
+          <Landing />
+          <FirstCarousel 
             show={3} 
             style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
-        >
-          {
-              GadgetData.map((product) => {
-                return (
-                  <div>
-                    <div className='gadget-right'>
-                      <div className='gadget-text'>
-                          <h5>{product.header}</h5>
-                          <p>{product.para}</p>
-                      </div>
-                      <Link to="/productDetails" onClick={() => navigate(product.route)}>
-                 {/*     <Link onClick={handleDes}>  */}
-                        {product.btn}
-                      </Link>
-                    </div>
-                    <div className="img">
-                      <img src={product.img} alt="placeholder"  /> 
-                    </div>
+          >
+            {data?.map((product) => {
+            // console.log(product.slug)
+              return (
+                <div>
+                  <div className="img">
+                    <img src={`https://admin.juciparo.com${product.photo}`} alt="placeholder"  /> 
                   </div>
-                )
-              })
-          }
+                  <p
+                    // to={('/testPage/${product.slug}')}
 
-        </Gadget>
+                    onClick={() => navigate(`/testPage/${product.slug}`)}
+                  >
+                    {product.title}
+                  </p>
+                </div>
+              )
+            })}
+            
+          </FirstCarousel>
+        
+          <ProductsCarousel />
+          <RecommendsCarousel />
+          <Gadget
+              show={3} 
+              style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
+          >
+            {
+                GadgetData.map((product) => {
+                  return (
+                    <div>
+                      <div className='gadget-right'>
+                        <div className='gadget-text'>
+                            <h5>{product.header}</h5>
+                            <p>{product.para}</p>
+                        </div>
+                        <Link to="/productDetails" onClick={() => navigate(product.route)}>
+                  {/*     <Link onClick={handleDes}>  */}
+                          {product.btn}
+                        </Link>
+                      </div>
+                      <div className="img">
+                        <img src={product.img} alt="placeholder"  /> 
+                      </div>
+                    </div>
+                  )
+                })
+            }
 
-        <SellingCarousel />
-         
-        <Discuss />
+          </Gadget>
 
-        <Brand />
+          <SellingCarousel />
+          
+          <Discuss />
 
+          <Brand />
+
+        </div>
+        <Newsletter />
+        <Footer />
       </div>
-      <Newsletter />
-      <Footer />
+      
     </>
   )
 }

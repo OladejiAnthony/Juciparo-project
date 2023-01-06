@@ -7,8 +7,16 @@ import { Link } from 'react-router-dom'
 import SavedItem from './SavedItem'
 import AccountTab from './AccountTab'
 import AccountTabOne from './AccountTabOne'
+//import { Navigate } from 'react-router-dom';
+//import { useSelector } from "react-redux";
 
 function AccountSeller() {
+    //const { user: currentUser } = useSelector((state) => state.auth);
+    //if (!currentUser) {
+    //    return <Navigate to="/AccountLogin" />;
+    //}
+    //UNCOMMENT THESE CODES
+
   return (
     <>
         <Navbar />
@@ -21,8 +29,8 @@ function AccountSeller() {
                 <div className='accountSeller__top'>
                     <div className='left'>
                         <Link>Account Details</Link>
-                        <h5>Olaniyi Abiodun</h5>
-                        <h5>abiodunolaniyi7@gmail.com</h5>
+                        <h5> Olaniyi Abiodun</h5> {/* {currentUser.firstName} */}
+                        <h5> abiodunolaniyi7@gmail.com</h5> {/* {currentUser.email}  */}
                     </div>
                     <div className='right'>
                         <Link>Address Book</Link>

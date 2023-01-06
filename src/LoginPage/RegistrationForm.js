@@ -1,15 +1,26 @@
-import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import "./RegistrationForm.css"
+import { useDispatch, useSelector } from "react-redux";
+import { register } from "../redux/auth";
+import { clearMessage } from "../redux/message";
 
 
 function RegistrationForm() {
-    const [firstName, setFirstName] = useState(null);
-    const [lastName, setLastName] = useState(null);
+    const [firstname, setFirstName] = useState(null);
+    const [lastname, setLastName] = useState(null);
     const [email, setEmail] = useState(null);
     const [phone, setPhone] = useState(null);
     const [password,setPassword] = useState(null);
-    
+    const [successful, setSuccessful] = useState(false);
+    let navigate = useNavigate();
+
+    const { message } = useSelector((state) => state.message);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(clearMessage());
+      }, [dispatch]);
 
     const handleInputChange = (e) => {
         const {id , value} = e.target;
@@ -33,19 +44,32 @@ function RegistrationForm() {
     }
 
     const handleSubmit  = () => {
-        console.log(firstName,lastName,email,password);
+        console.log(firstname, lastname, email, phone, password);
+        setSuccessful(false);
+
+        dispatch(register({firstname,lastname, email, phone, password }))
+        .unwrap()
+        .then(() => {
+            setSuccessful(true);
+            navigate("/AccountLogin");
+            window.location.reload();
+        })
+        .catch(() => {
+            setSuccessful(false);
+        });
     }
+
 
     return(
         <div className="form">
             <div className="form-body">
                 <div>
-                    <label className="form__label" for="firstName">First Name </label>
-                    <input className="form__input" type="text" value={firstName} onChange = {(e) => handleInputChange(e)} id="firstName" placeholder="First Name"/>
+                    <label className="form__label" for="firstname">First Name </label>
+                    <input className="form__input" type="text" value={firstname} onChange = {(e) => handleInputChange(e)} id="firstName" placeholder="First Name"/>
                 </div>
                 <div>
-                    <label className="form__label" for="lastName">Last Name </label>
-                    <input  type="text" name="" id="lastName" value={lastName}  className="form__input" onChange = {(e) => handleInputChange(e)} placeholder="LastName"/>
+                    <label className="form__label" for="lastname">Last Name </label>
+                    <input  type="text" name="" id="lastName" value={lastname}  className="form__input" onChange = {(e) => handleInputChange(e)} placeholder="last Name"/>
                 </div>
                 <div>
                     <label className="form__label" for="email">Email Address</label>
@@ -61,13 +85,27 @@ function RegistrationForm() {
                 </div>
                 <button onClick={()=>handleSubmit()} type="submit">Create An Account</button>
             </div>
+
             <div className='terms'>
-                <h5>By signing Up you accept our <span>terms and conditions & privacy policy</span></h5>
+                <h5>By signing Up you accept our 
+                    <Link to="/Terms">terms and conditions & privacy policy</Link>
+                </h5>
                 <div className='div'>
                     <p>ALready have an Account ?</p>
                     <Link to="/AccountLogin" >Sign In</Link>
                 </div>
             </div>
+
+            {message && (
+                <div className="orm-body">
+                    <div
+                        className={successful ? "alert alert-success" : "alert alert-danger"}
+                        role="alert"
+                    >
+                        {message}
+                    </div>
+                </div>
+            )}
         </div>
     )       
 }
