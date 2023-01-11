@@ -5,41 +5,69 @@ import logo from "../src/Images/logoOne.jpg"
 import { Link, useNavigate } from 'react-router-dom'
 import { Icon } from '@iconify/react';
 import AccountDropDown from './AccountDropDown';
-import { SidebarData } from './Data/Data';
+//import { SidebarData } from './Data/Data';
 import axios from 'axios';
 import { useEffect } from 'react';
 
 
-function Navbar() {
-  const [searchInput, setSearchInput] = useState("");
-  const [click, setClick] = useState(false);
-  const [data, setData] = useState([]);
-  const handleClick = () => setClick(!click);
-  const [showDiv, setShowDiv] = useState(false);
-  const onClick = () => setShowDiv(!showDiv);
-  const state = useSelector(state => state.handleCart)
-  const navigate = useNavigate();
-  
-  
-  const handleChange = (e) => {
-    e.preventDefault();
-    setSearchInput(e.target.value);
-  };
-  
-  const getProducts = async () => {
-    //setLoading(true);
-   
-    const response = await axios.get("https://admin.juciparo.com/api/v1/categories")
-    .then(function(response) {
-      console.log(response?.data?.data);
-      setData(response?.data?.data)
-    })
-    
-  };
 
+function Navbar() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [data, setData] = useState([]);
+  //Products
+  const [products, setProducts] = useState([]);
+  const [showProductDiv, setShowProductDiv] = useState(false);
+  //Prouct Categories
+  const [click, setClick] = useState(false);
+  const onClick = () => setShowDiv(!showDiv);
+  const [showDiv, setShowDiv] = useState(false);
+
+  const navigate = useNavigate();
+  const handleClick = () => setClick(!click);
+  const state = useSelector(state => state.handleCart)
+
+
+  //Product Categories API Call
+  const getProducts = async () => {
+    const response = await axios.get("https://admin.juciparo.com/api/v1/categories")
+    .then(
+        function(response) {
+          console.log(response?.data?.data);
+          setData(response?.data?.data);
+    })
+  };
   useEffect(() => {
     getProducts();
   }, []);
+
+
+  //Product Lists API Call
+  const filterProducts = async () => {
+    const response = await axios.get("https://admin.juciparo.com/api/v1/products")
+    .then(function(response) {
+      console.log(response?.data?.data)
+      setProducts(response?.data?.data)
+    })
+  };
+  useEffect(() => {
+    filterProducts();
+  }, []);
+
+  const handleChange = (event) => {
+    setSearchQuery(event.target.value);
+    console.log(searchQuery);
+  }
+
+  const handleClicked = () => {
+    const filteredProducts = products.filter((product) => {
+      return product.title.toLowerCase().includes(searchQuery.toLowerCase());
+    });
+    setProducts(filteredProducts);
+    setShowProductDiv(!showProductDiv);
+  }
+
+
+ 
 
   return (
     <div className='sticky__nav'>
@@ -64,6 +92,7 @@ function Navbar() {
             Notification
           </Link>
         </div>
+
         <div className='nav__bottom'>
           <button onClick={onClick}>
             Categories
@@ -88,7 +117,6 @@ function Navbar() {
                   }
                 )}
               </div>
-            
              : null 
           }
 
@@ -96,12 +124,54 @@ function Navbar() {
             <input
                 type="text"
                 placeholder="Search for anything"
+                value={searchQuery}
                 onChange={handleChange}
-                value={searchInput} 
+                
             />
-            <button className='nav__search'>
+            <button className='nav__search' onClick={handleClicked}>
               <Icon icon="ion:search-outline" />
             </button>
+            {
+              showProductDiv ?
+                <ul
+                  style={{
+                    listStyleType : "none",
+                    position : "absolute",
+                    backgroundColor : "white",
+                    left : 0,
+                    top : 70,
+                    className : "ul-filter",
+                    padding : "10px",
+                    zIndex : 999,
+                    width : 180,
+                    height : "50vh",
+                    border: "1px solid black",
+                    overflow : "hidden"
+                  }}
+                >
+                  {products.map((product) => (
+                    <li key={product.id}>
+                      <Link to={"/productDetails/" + product.id} onClick={() => navigate(product.route)}
+                        style={{
+                          textDecoration : "none",
+                          cursor: "pointer",
+                          color: "var(--secondary400)",
+                          fontFamily: 'Montserrat', 
+                          fontstyle: "normal",
+                          fontWeight: "400",
+                          fontSize: "15px",
+                          lineHeight: "18px"
+                        }}
+                      >
+                        {product.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              : null 
+            }
+            
+            
           </div>
           <div className='nav__bottom__list'>
             <Link to="">

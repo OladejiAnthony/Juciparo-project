@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import "./SellerRegisterTwo.css"
+import UploadButtons from './UploadButtons';
 
 
 function SellerRegisterTwo() {
@@ -69,6 +70,7 @@ function SellerRegisterTwo() {
                 </div>
                 <div>
                     <h5>Add Your Profile Picture</h5>
+                     <UploadButtons  />  
                 </div>
 
 
@@ -80,5 +82,4 @@ function SellerRegisterTwo() {
 }
 
 export default SellerRegisterTwo;
-
 

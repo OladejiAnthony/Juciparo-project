@@ -18,7 +18,7 @@
 
 .home__container {
     max-width: 100vw;
-    min-height: 640vh;
+    min-height: 660vh;
     align-items: center;
     background: #ffffff;
     position: relative;
@@ -29,6 +29,20 @@
     max-height: 100vh;
     max-width: 100vw;
     position: relative;
+}
+
+@media screen and (max-width: 1440px) {
+    .home__container {
+        min-height: 660vh;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    .home__container {
+        min-height: 660vh;
+    }
+
 }
 
 @media screen and (max-width: 960px) {
@@ -64,3 +78,8 @@
 
 }
 
+@media screen and (max-width: 320px) {
+    .sticky__nav {
+        height: 90px;
+    }
+}

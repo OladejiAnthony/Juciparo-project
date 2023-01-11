@@ -1,10 +1,29 @@
 //import React, { Component } from 'react';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./MyOwlCarousel.css"
 import Carousel from 'react-bootstrap/Carousel';
 import bcg from "../Images/woman.png"
+import axios from 'axios';
 
 function IndividualIntervalsExample() {
+
+  const [products, setProducts] = useState([]);
+
+  const getProducts = async () => {
+    const response = await axios.get("https://admin.juciparo.com/api/v1/")
+    .then(function(response) {
+      console.log(response?.data?.data)
+      setProducts(response?.data?.data)
+    })
+  };
+  useEffect(() => {
+    getProducts();
+  }, []);
+
+
+
+
+
   return (
     <Carousel>
       <Carousel.Item interval={3000}>

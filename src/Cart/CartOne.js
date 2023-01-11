@@ -1,5 +1,6 @@
 import { Icon } from '@iconify/react'
-import React from 'react'
+import { title } from 'faker/lib/locales/az';
+import React, {useState, useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { addCart, delCart } from "../redux/action";
 //import imgB from "../Images/product2.jpg"
@@ -16,6 +17,7 @@ function CartOne() {
     dispatch(delCart(product));
   };
  
+//
 
   return (
     <div className='cartOne__container'>
@@ -24,7 +26,8 @@ function CartOne() {
         return (
       <div className='cartBox' key={item.id}>
         <div className='cart__left'>
-          <img src={item.image} alt={item.title} />
+         {/* <img src={item.image} alt={item.title} /> */}
+          <img src={`https://admin.juciparo.com${item?.photo}`} alt={item.title} />
           <h5>{item.title}</h5>
         </div>
         <div className='cart__right'>

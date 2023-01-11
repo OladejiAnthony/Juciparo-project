@@ -6,7 +6,7 @@ const ProductImgC = (props) => {
   const {children, show} = props;
   // ...
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [length, setLength] = useState(children.length)
+  const [length, setLength] = useState(children?.length)
   const [touchPosition, setTouchPosition] = useState(null)
 
   // ...
@@ -38,7 +38,7 @@ const ProductImgC = (props) => {
 
   // Set the length to match current children from props
   useEffect(() => {
-      setLength(children.length)
+      setLength(children?.length)
   }, [children])
 
 

@@ -1,14 +1,18 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Slider from "react-slick";
-import { ProductCarouselData } from "../Data/Data";
-import "./SellerNext.css"
+import "../Seller/SellerNext.css"
 import right from "../Images/right.svg"
 import left from "../Images/left.svg"
+import "react-loading-skeleton/dist/skeleton.css";
+import { useState } from "react";
+import { useEffect } from "react";
+import axios from "axios";
 
 
 function SampleNextArrow(props) {
   const { className, onClick } = props;
+  //console.log("next arrow");
   return (
     <div
       className={className}
@@ -20,6 +24,7 @@ function SampleNextArrow(props) {
 }
 function SamplePrevArrow(props) {
   const { className,  onClick } = props;
+  //console.log("left arrow");
   return (
     <div
       className={className}
@@ -31,9 +36,36 @@ function SamplePrevArrow(props) {
   );
 }
 
-function SellerNext () {
+function ProductsCarousel (props) {
   const navigate = useNavigate();
-    var settings = {
+  const [data, setData] = useState([]);
+  const [filter, setFilter] = useState(data);
+  let componentMounted = true;
+
+  const getProducts = async () => {
+    const response = await axios.get("https://admin.juciparo.com/api/v1/products")
+    .then(function(response) {
+      console.log(response?.data?.data)
+      setData(response?.data?.data)
+    })
+    //https://fakestoreapi.com/products?limit=5
+    if (componentMounted) {
+      setData(await response.clone().json());
+      setFilter(await response.json());
+      //console.log(filter);
+    }
+  };
+
+  useEffect(() => {
+    getProducts();
+  }, []);
+  
+  const filterProduct = (cat) => {
+    const updatedList = data.filter((item) => item.category === cat);
+    setFilter(updatedList);
+  }
+
+  var settings = {
       dots: false,
       infinite: false,
       speed: 700,
@@ -57,7 +89,9 @@ function SellerNext () {
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,
-            initialSlide: 1
+            initialSlide: 1,
+            nextArrow: <SampleNextArrow />,
+            prevArrow: <SamplePrevArrow />,
           }
         },
         {
@@ -65,7 +99,9 @@ function SellerNext () {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
-            initialSlide: 1
+            initialSlide: 1,
+            nextArrow: <SampleNextArrow />,
+            prevArrow: <SamplePrevArrow />,
           }
         },
         {
@@ -79,29 +115,31 @@ function SellerNext () {
         }
       ]
     };
+    
+
     return (
       <div className="seller-carousel-container">
         <div className="seller-carousel-wrapper">
           <div className='wrappers-text'>
-            <h4>Products</h4>
-            <h5>Sort By : Size</h5>
+            <h4> Products</h4>
+            <h5>See All</h5>
           </div>
           <Slider {...settings}>
 
-          {ProductCarouselData.map((product) => {
+          {data?.map((product) => {
             return (
               <div key={product.id}>
-                <button className=''>{product.btn}</button>
+                <button className=''>{product.condition}</button>
                 <div className="img">
-                  <img src={product.img} alt="placeholder"  /> 
+                  <img src={`https://admin.juciparo.com${product.photo}`} alt="placeholder"  /> 
                 </div>
-                <div className='seller-text'>
-                <Link to="/productDetails" onClick={() => navigate(product.route)}>
-                    {product.pText}
+                <div className='products-text'>
+                  <Link to={"/productDetails/" + product.id} onClick={() => navigate(product.route)}>
+                    {product.title}
                   </Link>
                   <div>
-                    <h5>{product.Hprice}</h5>
-                    <p style={{ textDecoration: "line-through" }}>{product.Pprice}</p>
+                      <h5>{product.price}</h5>
+                      <p style={{ textDecoration: "line-through" }}>{product.discount}</p>
                   </div>
                 </div>
               </div>
@@ -115,5 +153,5 @@ function SellerNext () {
   
 }
 
-export default SellerNext
+export default ProductsCarousel
 

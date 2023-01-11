@@ -50,7 +50,7 @@ function App() {
           <Route path='SellerCreateTwo/' element={<SellerCreateTwo />} />
           <Route path='SellerProfile/' element={<SellerProfile />} />
           <Route path='productDetails/:id' element={<ProductsDetails />} />
-          <Route path='Cart/' element={<Cart />}  />
+          <Route path='Cart/:id' element={<Cart />}  />
           <Route path='CheckoutOne/' element={<CheckoutOne />} />
           <Route path='Help/' element={<Help />} />
           <Route path='Privacy/' exact element={<Privacy />}  />

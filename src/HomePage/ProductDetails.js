@@ -4,38 +4,33 @@ import Navbar from '../Navbar'
 import Footer from '../Footer'
 import Newsletter from "../Newsletter"
 import ProductInfo from './ProductInfo'
-//import { ProductImgCData } from '../Data/Data'
 import ProductImgC from './ProductImgC'
-//import RecommendCarousel from './RecommendCarousel'
 import { Link} from 'react-router-dom'
 import ProductDetailsTabs from './ProductSection'
 import RecommendsCarousel from './RecommendsCarousel'
 import { useParams } from 'react-router-dom';
 import axios from 'axios'
 
-//use react-redux to get current product images, descriptions.
-
 function ProductDetails() {
-  //const navigate = useNavigate();
   const { id } = useParams();
+  //console.log(id);
   const [product, setProduct] = useState([]);
 
   const getProducts = async () => {
-    //setLoading(true);
-    const response = await axios.get(`https://admin.juciparo.com/api/v1/products${id}`)
+    //console.log("ajhskahkahk")  //console.log(id);
+    const response = await axios.get(`https://admin.juciparo.com/api/v1/product/${id}`)
     .then(function(response) {
+      //console.log(response);
       console.log(response?.data?.data);
-      setProduct(response?.data?.data)
+      setProduct(response?.data?.data);
     })
-  
     };
-
     useEffect(() => {
       getProducts();
     }, [id]);
 
-  
-  
+   // console.log(product);
+    
   return (
     <>
       <Navbar /> 
@@ -45,9 +40,9 @@ function ProductDetails() {
           show={3} 
           style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
         >
-          <img src={`https://admin.juciparo.com${product.photo}`} alt={product.title} />
-          <img src={`https://admin.juciparo.com${product.photo}`} alt={product.title} />
-          <img src={`https://admin.juciparo.com${product.photo}`} alt={product.title} />
+          <div>
+            <img src={`https://admin.juciparo.com${product?.photo}`} alt={product.title} />
+          </div>
         </ProductImgC>
 
         <ProductDetailsTabs />
@@ -65,3 +60,13 @@ function ProductDetails() {
 }
 
 export default ProductDetails
+
+
+{/*  
+{product?.map((prod) => {
+            console.log(prod )
+            return (
+            
+             )
+          })}
+*/}

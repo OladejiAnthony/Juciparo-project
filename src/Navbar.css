@@ -1,10 +1,10 @@
 nav.nav__container {
-    height: 170px;
+    height: 150px;
     width: 100vw;
 }
 
 .nav__contain {
-    height: 170px;
+    height: 150px;
     width: 100vw;
 }
 
@@ -22,7 +22,8 @@ nav.nav__container {
     width: 169px;
     height: 113px;
     left: 133px;
-    margin-top: -30px;
+    margin-top: 0px;
+    top: -20px;
 }
 
 .nav__top > a:nth-child(1) > img {
@@ -44,7 +45,7 @@ nav.nav__container {
     left: 116px;
     width: 105px;
     height: 24px;
-    top: 41px;
+    top: 21px;
     font-family: 'Lato';
     font-style: normal;
     font-weight: 500;
@@ -60,7 +61,7 @@ nav.nav__container {
     left: 276px;
     width: 83px;
     height: 24px;
-    top: 41px;
+    top: 21px;
     font-family: 'Lato';
     font-style: normal;
     font-weight: 500;
@@ -77,7 +78,7 @@ nav.nav__container {
     width: 100px;
     height: 18px;
     right: 133px;
-    top: 46px;
+    top: 21px;
     display: flex;
     gap: 5px;
     padding-top: 0px;
@@ -96,7 +97,7 @@ nav.nav__container {
     height: 70px;
     width: 100vw;
     position: absolute;
-    top: 91px;
+    top: 65px;
 }
 
 .nav__bottom > button {
@@ -361,6 +362,7 @@ svg.iconify {
         height: 100px;
         top: 10px;
         border-radius: 5%;
+        margin-top: -30px;
     }
     .nav__top a:nth-child(1) > img {
         border-radius: 5%;
@@ -394,7 +396,7 @@ svg.iconify {
         justify-content: space-evenly;
         background: white;
         transition: all 2s ease;
-        height: 375px;
+        height: 335px;
         border-bottom: 1px solid black;
     }
 
@@ -422,7 +424,7 @@ svg.iconify {
 
     .nav__container.active .nav__top .nav__links a.navLinkOne {
         left: 10px;
-        top: 15px;
+        top: 55px;
         width: 185px;
         font-size: 35px;
     }
@@ -436,10 +438,10 @@ svg.iconify {
 
 
     .nav__container.active .nav__bottom {
-        height: 250px;
+        height: 200px;
         position: absolute;
         z-index: unset;
-        top: 145px;
+        top: 120px;
         display: unset;
     }
 

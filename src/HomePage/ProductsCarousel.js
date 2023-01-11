@@ -12,7 +12,6 @@ import axios from "axios";
 
 function SampleNextArrow(props) {
   const { className, onClick } = props;
-  
   //console.log("next arrow");
   return (
     <div
@@ -44,8 +43,6 @@ function ProductsCarousel (props) {
   let componentMounted = true;
 
   const getProducts = async () => {
-    //setLoading(true);
-   
     const response = await axios.get("https://admin.juciparo.com/api/v1/products")
     .then(function(response) {
       console.log(response?.data?.data)
@@ -137,8 +134,8 @@ function ProductsCarousel (props) {
                   <img src={`https://admin.juciparo.com${product.photo}`} alt="placeholder"  /> 
                 </div>
                 <div className='products-text'>
-                  <Link to={"/productDetails/" + product.id} onClick={() => navigate(product.route)}>
-                    {product.title.substring(0, 12)}...
+                  <Link to={"/productDetails/" + product.slug}>
+                    {product.title}
                   </Link>
                   <div>
                       <h5>{product.price}</h5>
