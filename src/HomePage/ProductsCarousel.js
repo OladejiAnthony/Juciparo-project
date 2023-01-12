@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import Slider from "react-slick";
 import "./ProductsCarousel.css"
 import right from "../Images/right.svg"
@@ -37,7 +37,6 @@ function SamplePrevArrow(props) {
 }
 
 function ProductsCarousel (props) {
-  const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
   let componentMounted = true;
@@ -52,7 +51,6 @@ function ProductsCarousel (props) {
     if (componentMounted) {
       setData(await response.clone().json());
       setFilter(await response.json());
-      //console.log(filter);
     }
   };
 

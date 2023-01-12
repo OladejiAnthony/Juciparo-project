@@ -81,9 +81,7 @@ function Home() {
                     <img src={`https://admin.juciparo.com${product.photo}`} alt="placeholder"  /> 
                   </div>
                   <p
-                    // to={('/testPage/${product.slug}')}
-
-                    onClick={() => navigate(`/testPage/${product.slug}`)}
+                    onClick={() => navigate(`/CategoriesProd/${product.slug}`)}
                   >
                     {product.title}
                   </p>

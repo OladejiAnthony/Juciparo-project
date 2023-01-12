@@ -15,6 +15,7 @@ function ProfileHead() {
         <Stack>
           <Avatar sx={{ bgcolor: "white" }}>
             <Icon icon="fontisto:picture" />
+            
           </Avatar>
         </Stack>
         <h4>JMK STORES</h4>

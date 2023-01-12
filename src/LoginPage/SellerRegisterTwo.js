@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import "./SellerRegisterTwo.css"
-import UploadButtons from './UploadButtons';
+import ImageUpload from './UploadButton/FileUpload';
 
 
 function SellerRegisterTwo() {
@@ -70,9 +70,9 @@ function SellerRegisterTwo() {
                 </div>
                 <div>
                     <h5>Add Your Profile Picture</h5>
-                     <UploadButtons  />  
+                 
                 </div>
-
+                <ImageUpload />
 
                 <Link to="/SellerProfile" onClick={()=>handleSubmit()} type="submit">Create An Account</Link>
             </div>

@@ -46,8 +46,6 @@ function ProductInfo() {
 
    // console.log(product);
 
- 
-
   
   return (
     <div className='productInfo__container'>

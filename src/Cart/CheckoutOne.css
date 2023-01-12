@@ -1,6 +1,6 @@
 .checkoutOne {
     width: 85%;
-    min-height: 290vh;
+    min-height: 330vh;
     position: relative;
     left: 136px;
     display: flex;
@@ -472,9 +472,9 @@ div#simple-tabpanel-2 {
         width: 56%;
     }
     .checkoutOne > .cart__container > a {
-        right: 10%;
+        right: 15%;
         width: 26%;
-        top: 300px;
+        top: 550px;
     }
     .MuiBox-root.css-8atqhb {
         height: 1340px;
@@ -508,6 +508,7 @@ div#simple-tabpanel-2 {
     .checkoutOne > .cart__container > .cartOne__container > 
     .cartBox > .cart__right > h4 {
         top: 0px;
+        right: 22%;
     }
     .checkoutOne > .cart__container > .cartOne__container > 
     .cartBox > .cart__right > svg.iconify.iconify--iconoir {

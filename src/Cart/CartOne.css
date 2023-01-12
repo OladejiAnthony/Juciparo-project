@@ -5,6 +5,7 @@
     left: 0px;
     background: #F4F4F4;
     border-radius: 5px;
+    overflow-y: hidden;
 }
 
 .cartOne__container > h4 {
@@ -139,6 +140,8 @@
     }
     .cart__left > img {
         width: 50%;
+        position: absolute;
+        left: 5%;
     }
     .cart__left > h5 {
         width: 40%;

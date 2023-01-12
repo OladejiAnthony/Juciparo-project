@@ -235,7 +235,6 @@
     border-width: 0px;
     background: transparent;
 }
-
 .prod__menu > button {
     width: 49%;
     height: 60px;
@@ -249,14 +248,21 @@
     font-size: 20px;
     line-height: 24px;
     color: #FDFDFD;
-    padding-left: 0px;
-    padding-top: 0px;
+    padding-left: 7%;
+    padding-top: 18px;
+    position: relative;
+    /* align-items: center; */
+    display: flex;
+    flex-direction: row;
 }
+
 
 .prod__menu > button > a {
     cursor: pointer;
     text-decoration: none;
     color: white;
+    position: absolute;
+    right: 20%;
 }
 
 .prod__menu > .prod__menuWish {
@@ -365,6 +371,7 @@ svg.iconify.iconify--brandico {
     .prod__menu > button {
         font-size: 16px;
         height: 50px;
+        padding-left: 2%;
     }
     .prod__menu > .prod__menuWish {
         font-size: 10px;
@@ -445,6 +452,14 @@ svg.iconify.iconify--brandico {
     .prod__menu > button {
         font-size: 14px;
         height: 40px;
+        padding-top: 10px;
+    }
+    .prod__menu > button > a {
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+        position: absolute;
+        right: 20%;
     }
     .prod__menu > .prod__menuWish {
         font-size: 10px;

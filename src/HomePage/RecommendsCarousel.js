@@ -128,8 +128,8 @@ function RecommendsCarousel () {
                   <img src={` https://admin.juciparo.com${product.photo}`} alt="placeholder"  /> 
                 </div>
                 <div className='recommends-text'>
-                  <Link to={"/productDetails/" + product.id} onClick={() => navigate(product.route)}>
-                    {product.title.substring(0, 12)}...
+                  <Link to={"/productDetails/" + product.slug}>
+                      {product.title}
                   </Link>
                   <div>
                       <h5>{product.price}</h5>

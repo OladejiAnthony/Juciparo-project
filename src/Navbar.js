@@ -107,7 +107,7 @@ function Navbar() {
                           key={index}
                         >
                           <Icon icon={item.icon} />
-                          <p onClick={() => navigate(`/testPage/${item.slug}`)}>
+                          <p onClick={() => navigate(`/CategoriesProd/${item.slug}`)}>
                             {item.title}
                           </p>
               
@@ -151,7 +151,7 @@ function Navbar() {
                 >
                   {products.map((product) => (
                     <li key={product.id}>
-                      <Link to={"/productDetails/" + product.id} onClick={() => navigate(product.route)}
+                      <Link to={"/productDetails/" + product.slug} 
                         style={{
                           textDecoration : "none",
                           cursor: "pointer",
@@ -177,7 +177,7 @@ function Navbar() {
             <Link to="">
               <AccountDropDown />
             </Link>
-            <Link to="/Cart">
+            <Link to="/Cart/:id">
               <Icon icon="ant-design:shopping-cart-outlined" />
               <p>
                 {state.length}
