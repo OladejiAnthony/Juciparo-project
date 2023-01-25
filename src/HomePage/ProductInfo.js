@@ -17,6 +17,7 @@ function ProductInfo() {
   const { id } = useParams();
   const [product, setProduct] = useState([]);
   const [data, setData] = useState([]);
+  const [cart, setCart] = useState([]);
   const dispatch = useDispatch();
 
   const state = useSelector((state) => state.handleCart);
@@ -35,16 +36,23 @@ function ProductInfo() {
     //console.log("ajhskahkahk")  //console.log(id);
     const response = await axios.get(`https://admin.juciparo.com/api/v1/product/${id}`)
     .then(function(response) {
-      //console.log(response);
-      console.log(response?.data?.data);
+      //console.log(response?.data?.data);
       setProduct(response?.data?.data);
     })
-    };
-    useEffect(() => {
-      getProducts();
-    }, [id]);
+  };
+  useEffect(() => {
+    getProducts();
+  }, [id]);
 
    // console.log(product);
+
+   const CartAPI = async () => {
+    //console.log("ajhskahkahk")  //console.log(id);
+    
+  };
+  useEffect(() => {
+    CartAPI();
+  }, [id]);
 
   
   return (
@@ -77,7 +85,7 @@ function ProductInfo() {
 
               </div>
               <div className='prod__menu'>
-              {state.map((item) => {
+              {cart.map((item) => {
                 return (
                   <div>
                     <div className='prod__menuIcon'>

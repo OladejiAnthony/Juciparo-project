@@ -2,12 +2,19 @@
     position: relative;
     width: 140px;
     height: 43px;
-    display: flex;
-    gap: 5px;
+    
     z-index: 1;
 }
 
-.dropdown_container > button {
+.dropdown_container > div {
+    width: 140px;
+    height: 43px;
+    position: relative;
+    display: flex;
+    gap: 5px;
+}
+
+.dropdown_container > div > button {
     position: absolute;
     text-decoration: none;
     border-color: var(--primary100);
@@ -21,14 +28,15 @@
     cursor: pointer;
 }
 
-.dropdown_container > button:focus {
+.dropdown_container > div > button:focus {
     border-color: var(--primary100);
     border-width: 0px;
-    outline: 0px;
+    outline: unset;
     cursor: pointer;
+
 }
 
-.dropdown_container > svg.iconify.iconify--teenyicons {
+.dropdown_container > div > svg.iconify.iconify--teenyicons {
     left: 15px;
     width: 30px;
     height: 25px;

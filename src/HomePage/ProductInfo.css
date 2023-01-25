@@ -284,6 +284,8 @@
     cursor: pointer;
     text-decoration: none;
     color: #000000;
+    position: relative;
+    left: 5%;
 }
 
 .product__socialIcons {

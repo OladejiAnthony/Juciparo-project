@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    top: 180px;
+    top: 130px;
 }
 
 .termsC > h2 {
@@ -31,8 +31,8 @@
     height: 96px;
     font-family: 'Lato';
     font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 15px;
     line-height: 24px;
     text-align: center;
     color: #212121;
@@ -52,7 +52,7 @@
 .terms--card {
     position: relative;
     width: 100%;
-    height: 37vh;
+    min-height: 80vh;
     background: #F4F4F4;
     border-radius: 5px;
 }
@@ -74,17 +74,139 @@
 
 .terms--card > p {
     position: absolute;
-    top: 55px;
+    top: 50px;
     left: 5%;
     width: 90%;
-    height: 179px;
+    height: 39px;
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
-    line-height: 18px;
+    font-size: 12px;
+    line-height: 14px;
     color: #212121;
 }
+
+.terms--card > .subText {
+    position: absolute;
+    top: 135px;
+    left: 5%;
+    width: 90%;
+    height: 39px;
+}
+
+.terms--card > .subTextOne {
+    position: absolute;
+    top: 215px;
+    left: 5%;
+    width: 90%;
+    height: 39px;
+}
+
+.terms--card > .subTextTwo {
+    position: absolute;
+    top: 265px;
+    left: 5%;
+    width: 90%;
+    height: 39px;
+}
+
+.terms--card > .subTextThree {
+    position: absolute;
+    top: 345px;
+    left: 5%;
+    width: 90%;
+    height: 39px;
+}
+
+.terms--card > .subTextFour {
+    position: absolute;
+    top: 385px;
+    left: 5%;
+    width: 90%;
+    height: 39px;
+}
+
+.terms--card > .subTextFive {
+    position: absolute;
+    top: 420px;
+    left: 5%;
+    width: 90%;
+    height: 39px;
+}
+
+.terms--card:nth-child(3) > .subText {
+    position: absolute;
+    top: 95px;
+    left: 5%;
+    width: 90%;
+    height: 39px;
+}
+.terms--card:nth-child(3) > .subTextOne {
+    position: absolute;
+    top: 160px;
+    left: 5%;
+    width: 90%;
+    height: 39px;
+}
+.terms--card:nth-child(3) > .subTextThree {
+    position: absolute;
+    top: 215px;
+    left: 5%;
+    width: 90%;
+    height: 39px;
+}
+.terms--card:nth-child(3) > .subTextFour {
+    position: absolute;
+    top: 265px;
+    left: 5%;
+    width: 90%;
+    height: 39px;
+}
+.terms--card:nth-child(3) > .subTextFive {
+    position: absolute;
+    top: 310px;
+    left: 5%;
+    width: 90%;
+    height: 39px;
+}
+
+
+.terms--card:nth-child(4) > .subText {
+    position: absolute;
+    top: 95px;
+    left: 5%;
+    width: 90%;
+    height: 39px;
+}
+.terms--card:nth-child(4) > .subTextOne {
+    position: absolute;
+    top: 130px;
+    left: 5%;
+    width: 90%;
+    height: 39px;
+}
+.terms--card:nth-child(4) > .subTextThree {
+    position: absolute;
+    top: 185px;
+    left: 5%;
+    width: 90%;
+    height: 39px;
+}
+.terms--card:nth-child(4) > .subTextFour {
+    position: absolute;
+    top: 265px;
+    left: 5%;
+    width: 90%;
+    height: 39px;
+}
+.terms--card:nth-child(4) > .subTextFive {
+    position: absolute;
+    top: 310px;
+    left: 5%;
+    width: 90%;
+    height: 39px;
+}
+
 
 .termsUse--section {
     width: 100%;
@@ -252,11 +374,52 @@
         min-height: 225vh;
     }
     .terms--card {
-        height: 55vh;
+        height: 100vh;
     }
     .terms--card > p {
-        line-height: 18px;
+        height: 45px;
     }
+    
+    .terms--card > .subText {
+        top: 160px;
+    }
+    .terms--card > .subTextOne {
+        position: absolute;
+        top: 265px;
+    }
+    .terms--card > .subTextTwo {
+        top: 340px;
+    }
+    .terms--card > .subTextThree {
+        top: 450px;
+    }
+    .terms--card > .subTextFour {
+        top: 485px;
+    }
+    .terms--card > .subTextFive {
+        top: 530px;
+    }
+    .terms--card:nth-child(3) > .subText {
+        top: 120px;
+    }
+    .terms--card:nth-child(3) > .subTextOne {
+        position: absolute;
+        top: 225px;
+    }
+    .terms--card:nth-child(3) > .subTextThree {
+        top: 320px;
+    }
+    .terms--card:nth-child(3) > .subTextFour {
+        top: 390px;
+    }
+    .terms--card:nth-child(3) > .subTextFive {
+        top: 450px;
+    }
+    .termsUse > ol {
+        position: absolute;
+        top: 100px;
+    }
+
     .termsUse > ol > li {
         line-height: 12px;
         height: 3.2%;
@@ -281,16 +444,7 @@
     .termsC > .term--top {
         min-height: 245vh;
     }
-    .terms--card {
-        height: 65vh;
-    }
-    .terms--card > h4 {
-        height: 50px;
-    }
-    .terms--card > p {
-        line-height: 15px;
-        top: 80px;
-    }
+   
     .termsUse--section {
         display: none;
     }
@@ -310,6 +464,68 @@
     .termsC > .middle > .terms--card--two > p {
         font-size: 13px;
     }
+
+    .terms--card {
+        height: 210vh;
+    }
+    .terms--card:nth-child(1) {
+        height: 85vh;
+    }
+    .terms--card > p {
+        height: 45px;
+    }
+    
+    .terms--card > .subText {
+        top: 240px;
+    }
+    .terms--card > .subTextOne {
+        position: absolute;
+        top: 495px;
+    }
+    .terms--card > .subTextTwo {
+        top: 650px;
+    }
+    .terms--card > .subTextThree {
+        top: 898px;
+    }
+    .terms--card > .subTextFour {
+        top: 995px;
+    }
+    .terms--card > .subTextFive {
+        top: 1100px;
+    }
+    .terms--card:nth-child(3) > .subText {
+        top: 120px;
+    }
+    .terms--card:nth-child(3) > .subTextOne {
+        position: absolute;
+        top: 225px;
+    }
+    .terms--card:nth-child(3) > .subTextThree {
+        top: 320px;
+    }
+    .terms--card:nth-child(3) > .subTextFour {
+        top: 390px;
+    }
+    .terms--card:nth-child(3) > .subTextFive {
+        top: 450px;
+    }
+    .terms--card:nth-child(4) {
+        height: 160vh;
+    }
+    .terms--card:nth-child(4) > .subText {
+        top: 120px;
+    }
+    .terms--card:nth-child(4) > .subTextOne {
+        position: absolute;
+        top: 185px;
+    }
+    .terms--card:nth-child(4) > .subTextThree {
+        top: 310px;
+    }
+    .terms--card:nth-child(4) > .subTextFour {
+        top: 500px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -326,16 +542,7 @@
     .termsC > .term--top {
         min-height: 300vh;
     }
-    .terms--card {
-        height: 75vh;
-    }
-    .terms--card > h4 {
-        margin-bottom: 20px;
-    }
-    .terms--card > p {
-        top: 74px;
-        line-height: 15px;
-    }
+    
     .termsC > .middle {
         margin-top: 0px;
         height: 180vh;
@@ -346,6 +553,7 @@
     .termsC > .middle > .terms--card--two > p {
         font-size: 10px;
     }
+
    
 }
 
@@ -357,9 +565,7 @@
     .terms > div {
         min-height: 340vh;
     }
-    .terms--card {
-        height: 105vh;
-    }
+
     .termsUse--section {
         width: 100%;
         height: 450vh;
@@ -379,13 +585,37 @@
     .termsC > .middle > .terms--card--two {
         height: 60vh!important;
     }
+    .terms--card > .subText {
+        top: 290px;
+    }
+    .terms--card > .subText {
+        top: 240px;
+    }
+    .terms--card:nth-child(3) {
+        height: 150vh;
+    }
+    .terms--card:nth-child(3) > .subText {
+        top: 145px;
+    }
+    .terms--card:nth-child(3) > .subTextOne {
+        position: absolute;
+        top: 340px;
+    }
+    .terms--card:nth-child(3) > .subTextThree {
+        top: 480px;
+    }
+    .terms--card:nth-child(3) > .subTextFour {
+        top: 595px;
+    }
+    .terms--card:nth-child(3) > .subTextFive {
+        top: 695px;
+    }
+
 }
 
 @media screen and (max-width: 330px) {
     
-    .terms--card {
-        height: 97vh;
-    }
+
     .termsC > .term--top {
         top: 130px;
     }
@@ -404,5 +634,28 @@
     .termsC > .middle > .terms--card--two > p {
         font-size: 10px;
     }
-
+    .terms--card:nth-child(1) {
+        height: 105vh;
+    }
+    .terms--card > .subText {
+        top: 285px;
+    }
+    .terms--card > .subTextOne {
+        position: absolute;
+        top: 535px;
+    }
+    .terms--card > .subTextTwo {
+        top: 690px;
+    }
+    .terms--card > .subTextThree {
+        top: 930px;
+    }
+    .terms--card > .subTextFour {
+        top: 1020px;
+    }
+    .terms--card > .subTextFive {
+        top: 1130px;
+    }
+   
 }
+

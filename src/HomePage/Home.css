@@ -22,7 +22,7 @@
     align-items: center;
     background: #ffffff;
     position: relative;
-    top: 180px;
+    top: 130px;
 }
 
 .foot {
@@ -67,19 +67,26 @@
 }
 
 
-
-
 @media only screen and (max-width: 600px) {
     .home__container {
         z-index: 0;
-        top: 100px;
+        top: 90px;
         min-height: 760vh;
     }
+}
 
+
+@media only screen and (max-width: 440px) {
+    .sticky__nav {
+        height: 80px;
+    }
 }
 
 @media screen and (max-width: 320px) {
+    .home__container {
+        top: 80px;
+    }
     .sticky__nav {
-        height: 90px;
+        height: 75px;
     }
 }

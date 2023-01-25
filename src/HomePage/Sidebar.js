@@ -22,14 +22,11 @@ function Sidebar() {
             onClick={onClick}
           >
             <Icon icon={item.icon} />
-            <Link>{item.title}
+            <Link>
+              {item.title}
             </Link>
-            {/* 
-              <Link to={item.route} onClick={() => navigate(item.route)}>{item.heading}
-              </Link> 
-            */}
           </div>
-          {showDiv ? (
+          {/* {showDiv ? (
             <div 
               className='categoryList'
             >
@@ -72,7 +69,7 @@ function Sidebar() {
             </div>
           )
           : null
-        }
+        } */}
           </>
         )
       })}

@@ -33,14 +33,13 @@
     color: white;
 }
 
-
 .menuItem > svg.iconify {
     padding-top: 0px!important;
 }
 
 .menuItem > a {
     text-decoration: none;
-    padding-top: 0px;
+    padding-top: 10px;
     cursor: pointer;
     color: var(--secondary400);
     font-family: 'Montserrat', sans-serif;
@@ -49,7 +48,7 @@
     font-size: 15px;
     line-height: 18px;
     width: 90%;
-    height: 18px;
+    height: 38px;
 }
 
 .categoryList {

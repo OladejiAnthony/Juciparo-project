@@ -37,7 +37,6 @@ function Home() {
       //console.log(filter);
     }
   };
-
   useEffect(() => {
     getProducts();
   }, []);

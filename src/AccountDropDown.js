@@ -15,21 +15,24 @@ function AccountDropDown() {
 
   return (
     <div className='dropdown_container'>
-      <Icon icon="teenyicons:user-outline" />
-      <button onClick={handleOpen}>Account</button>
-      {open ? 
-        <div className='dropdown__list'>
-            <Link to="/AccountLogin">Sign In</Link>
-            <Link to="/CreateAccount">Create an account</Link>
-            <Link>
-                <Icon icon="teenyicons:user-outline" />
-                Saved Items
-            </Link>
-        </div> 
-        
-        : 
-        <div></div>
-      }
+      <div onClick={handleOpen}>
+        <Icon icon="teenyicons:user-outline" />
+        <button >Account</button>
+        {open ? 
+          <div className='dropdown__list'>
+              <Link to="/AccountLogin">Sign In</Link>
+              <Link to="/CreateAccount">Create an account</Link>
+              <Link>
+                  <Icon icon="teenyicons:user-outline" />
+                  Saved Items
+              </Link>
+          </div> 
+          
+          : 
+          <div></div>
+        }
+      </div>
+      
     </div>
   )
 }

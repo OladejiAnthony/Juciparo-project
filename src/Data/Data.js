@@ -20,7 +20,7 @@ import GadTwo from "../Images/gadget2.png"
 export const SidebarData = [
     {
         icon: "icon-park-solid:lipstick",
-        "title": "Job (vacancies/apllicants)",
+        "title": "Job",
         "slug": "job-vacanciesapllicants",
         "summary": null,
         "photo": null,
@@ -31,7 +31,7 @@ export const SidebarData = [
     },
     {
         icon: "charm:home",
-        "title": "Services/artisans",
+        "title": "Services/Artisans",
         "slug": "servicesartisans",
         "summary": null,
         "photo": null,
@@ -53,7 +53,7 @@ export const SidebarData = [
     },
     {
         icon: "gridicons:computer" ,
-        "title": "Repair/construction",
+        "title": "Repair/Construction",
         "slug": "repairconstruction",
         "summary": null,
         "photo": null,
@@ -75,7 +75,7 @@ export const SidebarData = [
     },
     {
         icon: "fluent-mdl2:game",
-        "title": "Vehicle and automobile",
+        "title": "Vehicles and Auto",
         "slug": "vehicle-and-automobile",
         "summary": null,
         "photo": null,
@@ -108,7 +108,7 @@ export const SidebarData = [
     },
     {
         icon: "bx:help-circle",
-        "title": "Babies/kiddies",
+        "title": "Babies/Kiddies",
         "slug": "babieskiddies",
         "summary": null,
         "photo": null,

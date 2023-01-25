@@ -1,16 +1,17 @@
 nav.nav__container {
-    height: 150px;
+    height: 120px;
     width: 100vw;
 }
 
 .nav__contain {
-    height: 150px;
+    height: 120px;
     width: 100vw;
 }
 
 .nav__top {
-    height: 113px;
+    height: 83px;
     width: 100vw;
+    top: -10px;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -97,13 +98,13 @@ nav.nav__container {
     height: 70px;
     width: 100vw;
     position: absolute;
-    top: 65px;
+    top: 45px;
 }
 
 .nav__bottom > button {
     position: absolute;
     width: 201px;
-    height: 65px;
+    height: 54px;
     left: 134px;
     background: var(--tertiary300);
     border-radius: 5px 5px 0px 0px;
@@ -191,7 +192,7 @@ nav.nav__container {
 .nav__input {
     position: absolute;
     width: 531px;
-    height: 68px;
+    height: 54px;
     left: 28%;
     display: flex;
 }
@@ -211,7 +212,7 @@ nav.nav__container {
 
 button.nav__search {
     width: 88px;
-    height: 68px;
+    height: 54px;
     background: var(--tertiary300);
     border-radius: 0px 5px 5px 0px;
     padding: 25px 20px;
@@ -234,7 +235,7 @@ button.nav__search svg.iconify.iconify--ion {
     align-items: center;
     position: absolute;
     width: 393px;
-    height: 68px;
+    height: 54px;
     right: 7%;
     background: var(--primary200);
     border-radius: 5px;
@@ -353,7 +354,7 @@ svg.iconify {
     }
 
     .nav__top {
-        top: 15px;
+        top: 5px;
     }
 
     .nav__top a:nth-child(1) {
@@ -519,8 +520,11 @@ svg.iconify {
         left: 10%;
         width: 120px;
         height: 80px;
-         top: 20px; 
+         top: 10px; 
         border-radius: 5%;
+    }
+    .nav-icon {
+        top: -20px;
     }
  
 }
