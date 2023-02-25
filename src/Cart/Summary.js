@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom'
 import "./Summary.css"
 
 function Summary(props) {
+  //const { id } = useParams();
+  //const [product, setProduct] = useState([]);
+
   const state = useSelector((state) => state.handleCart);
   let subtotal = 0;
     let deliveryFee = 30.0;
@@ -15,6 +18,7 @@ function Summary(props) {
     state.map((item) => {
       return (totalItems += item.qty);
     });
+
   return (
     <div className='cartSummary'>
       <div>
@@ -34,7 +38,7 @@ function Summary(props) {
           </div>
         </div>
       </div>
-      <Link to="/CheckoutOne">
+      <Link to="/CheckoutOne" >
         Checkout
       </Link>
     </div>
@@ -42,4 +46,3 @@ function Summary(props) {
 }
 
 export default Summary
-

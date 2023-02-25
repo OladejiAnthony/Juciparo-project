@@ -7,3 +7,9 @@ export default function authHeader() {
       return {};
     }
 }
+
+// The code above checks Local Storage for user item. 
+// If there is a logged in user with accessToken (JWT),
+//  return HTTP Authorization header. Otherwise, return an empty object
+//Note - For Node.js Express back-end, please use x-access-token.
+

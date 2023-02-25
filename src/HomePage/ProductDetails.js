@@ -21,7 +21,7 @@ function ProductDetails() {
     const response = await axios.get(`https://admin.juciparo.com/api/v1/product/${id}`)
     .then(function(response) {
       //console.log(response);
-      console.log(response?.data?.data);
+      //console.log(response?.data?.data);
       setProduct(response?.data?.data);
     })
     };
@@ -70,3 +70,5 @@ export default ProductDetails
              )
           })}
 */}
+
+

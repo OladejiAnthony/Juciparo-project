@@ -7,6 +7,7 @@ import "./CartOne.css"
 
 function CartOne() {
   const state = useSelector((state) => state.handleCart);
+  
   const dispatch = useDispatch();
 
   const addItem = (product) => {
@@ -18,6 +19,8 @@ function CartOne() {
  
 //
 
+
+
   return (
     <div className='cartOne__container'>
       <h4>Cart (1)</h4>
@@ -27,6 +30,7 @@ function CartOne() {
         <div className='cart__left'>
           <img src={`https://admin.juciparo.com${item?.photo}`} alt={item.title} />
           <h5>{item.title}</h5>
+          <div>{console.log(item.title)}</div>
         </div>
         <div className='cart__right'>
           <div>

@@ -10,9 +10,10 @@ import { clearMessage } from "../redux/message";
 function MainLogin() {
     let navigate = useNavigate();
     const [email, setEmail] = useState(null);
-    const [password,setPassword] = useState(null);
+    const [password, setPassword] = useState(null);
     const { isLoggedIn } = useSelector((state) => state.auth);
     const { message } = useSelector((state) => state.message);
+    const [successful, setSuccessful] = useState(false);
 
     const dispatch = useDispatch();
 
@@ -28,14 +29,18 @@ function MainLogin() {
 
 
     const handleSubmit  = () => {
-        console.log(email,password);
-        
+       // console.log(email,password);
+       setSuccessful(false);
+
         dispatch(login({ email, password }))
         .unwrap()
         .then(() => {
             navigate("/AccountSeller");
             window.location.reload();
         })
+        .catch(() => {
+            setSuccessful(false);
+        });
     }
 
     useEffect(() => {
@@ -67,7 +72,9 @@ function MainLogin() {
 
             {message && (
                 <div className="orm-body">
-                    <div className="alert alert-danger" role="alert">
+                    <div className={successful ? "alert alert-success" : "alert alert-danger"}
+                     role="alert"
+                    >
                         {message}
                     </div>
                 </div>
@@ -95,3 +102,12 @@ function MainLogin() {
 }
 
 export default MainLogin
+
+
+// This page has a Form with email & password.
+// – We’re gonna verify them as required field.
+// – If the verification is ok, we dispatch login action, then direct user to Profile page: navigate("/profile");, or show message with response error.
+
+// For getting the application state and dispatching actions, we use React Redux Hooks useSelector and useDispatch.
+// – by checking isLoggedIn, we can redirect user to Profile page.
+// – message gives us response message.

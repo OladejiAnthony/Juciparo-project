@@ -44,10 +44,10 @@ function RegistrationForm() {
     }
 
     const handleSubmit  = () => {
-        console.log(firstname, lastname, email, phone, password);
+        //console.log(firstname, lastname, email, phone, password);
         setSuccessful(false);
 
-        dispatch(register({firstname,lastname, email, phone, password }))
+        dispatch(register({firstname, lastname, email, phone, password }))
         .unwrap()
         .then(() => {
             setSuccessful(true);

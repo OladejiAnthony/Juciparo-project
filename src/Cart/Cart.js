@@ -19,8 +19,8 @@ function Cart() {
       <div className='cart__section'>
         <div className='cart__container'>
           <CartOne 
-            productName = "HP LAPTOP: 12INCHES WITH 1TB AND 64BITS OS "
-            productPrice = "100000"
+            // productName = "HP LAPTOP: 12INCHES WITH 1TB AND 64BITS OS "
+            // productPrice = "100000"
           />
           <Summary 
             head = "Cart Summary"

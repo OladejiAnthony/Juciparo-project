@@ -1,7 +1,7 @@
 import axios from "axios";
 import authHeader from "./auth-header";
 
-const API_URL = "https://admin.juciparo.com/api/v1/user/test";
+const API_URL = "https://admin.juciparo.com/api/v1/user/";
 
 const getPublicContent = () => {
   return axios.get(API_URL + "all");
@@ -31,4 +31,7 @@ const userService = {
 };
 
 export default userService
+
+//You can see that we add a HTTP header with the help of 
+//authHeader() function when requesting authorized resource.
 

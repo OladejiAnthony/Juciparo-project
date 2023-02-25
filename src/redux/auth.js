@@ -50,6 +50,7 @@ export const logout = createAsyncThunk("auth/logout", async () => {
   await AuthService.logout();
 });
 
+
 const initialState = user
   ? { isLoggedIn: true, user }
   : { isLoggedIn: false, user: null };
@@ -82,3 +83,12 @@ const authSlice = createSlice({
 const { reducer } = authSlice;
 export default reducer;
 
+
+// We’re gonna import AuthService to make asynchronous HTTP requests 
+// with trigger one or more dispatch in the result.
+
+// We also need to use Redux Toolkit createAsyncThunk which provides a thunk 
+// that will take care of the action types and dispatching the right actions
+//  based on the returned promise.
+
+//There are 3 async Thunks to be exported: register,login,logout!

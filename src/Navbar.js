@@ -1,15 +1,12 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from "react"
 import "./Navbar.css"
-import { useSelector } from "react-redux";
 import logo from "../src/Images/logoOne.jpg"
 import { Link, useNavigate } from 'react-router-dom'
 import { Icon } from '@iconify/react';
 import AccountDropDown from './AccountDropDown';
 //import { SidebarData } from './Data/Data';
 import axios from 'axios';
-import { useEffect } from 'react';
-
-
+import { useSelector } from "react-redux";
 
 function Navbar() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -24,9 +21,9 @@ function Navbar() {
 
   const navigate = useNavigate();
   const handleClick = () => setClick(!click);
-  const state = useSelector(state => state.handleCart)
+  const state = useSelector(state => state.handleCart);
 
-
+ 
   //Product Categories API Call
   const getProducts = async () => {
     const response = await axios.get("https://admin.juciparo.com/api/v1/categories")

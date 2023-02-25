@@ -16,15 +16,25 @@ const handleClick = (event, key) => {
 function ProductInfo() {
   const { id } = useParams();
   const [product, setProduct] = useState([]);
-  const [data, setData] = useState([]);
   const [cart, setCart] = useState([]);
+  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
 
   const state = useSelector((state) => state.handleCart);
 
-  const addProduct = (product) => {
-    dispatch(addCart(product))
+  const addProduct = async () => {
+    setLoading(true);
+    const response = await axios.get(`https://admin.juciparo.com/api/v1/cart/add/${id}`)
+    .then(function() {
+        console.log(response?.message);
+        console.log(response?.status);
+        //setProduct(response?.data?.data);
+      })
+
+    dispatch(addCart(product));
+    
   }
+  
   const addItem = (product) => {
     dispatch(addCart(product));
   };
@@ -33,10 +43,12 @@ function ProductInfo() {
   };
 
   const getProducts = async () => {
-    //console.log("ajhskahkahk")  //console.log(id);
+    //console.log("ajhskahkahk")  
+    //console.log(id);
     const response = await axios.get(`https://admin.juciparo.com/api/v1/product/${id}`)
     .then(function(response) {
       //console.log(response?.data?.data);
+      console.log(response?.status);
       setProduct(response?.data?.data);
     })
   };
@@ -46,15 +58,8 @@ function ProductInfo() {
 
    // console.log(product);
 
-   const CartAPI = async () => {
-    //console.log("ajhskahkahk")  //console.log(id);
-    
-  };
-  useEffect(() => {
-    CartAPI();
-  }, [id]);
 
-  
+
   return (
     <div className='productInfo__container'>
       <h5>Product Information</h5>
@@ -98,7 +103,7 @@ function ProductInfo() {
                       </button>
                       <button
                         onClick={() => {
-                          removeItem(item);
+                          removeItem(item.id);
                         }}
                       >
                         <Icon icon="ep:arrow-down" />
@@ -108,11 +113,12 @@ function ProductInfo() {
                   </div>
               )})}
 
-                  <button onClick={() => addProduct(product)}>
+                  <button onClick={addProduct}>
                     <Icon icon="ant-design:shopping-cart-outlined" />
                     <Link to={"/Cart/" + product.slug}>
                         Add to Cart
                     </Link>
+                    
                   </button>
                   <div className='prod__menuWish'>
                     <Icon icon="icon-park-outline:like" />
@@ -135,3 +141,7 @@ function ProductInfo() {
 }
 
 export default ProductInfo
+
+//POST
+//https://admin.juciparo.com/api/v1/cart/add
+
