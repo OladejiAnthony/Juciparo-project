@@ -3,12 +3,14 @@ import axios from 'axios';
 import { Link, useParams } from 'react-router-dom'
 function CategoriesProd() {
     const [data, setData] = useState([]);
-    const {test} = useParams();
+  const { test } = useParams();
+  
+  // console.log(test, "HEREGKGHKGDKSGKGSKDHSKD");
 
     const getProduct = () => {
         axios.get(`https://admin.juciparo.com/api/v1/categories/${test}`)
         .then(function (response) {
-             //console.log(response?.data?.data);
+             console.log(response?.data?.data);
             setData(response?.data?.data);
         })
     }

@@ -38,32 +38,32 @@ function App() {
         <ScrollToTop>
         <Routes> 
           <Route path='/' exact element={<Home />}  />
-          <Route path='CategoriesProd/:test'  element={<CategoriesProd />} />
-          <Route path='productDetails/:id' element={<ProductsDetails />} />
+          <Route path='/CategoriesProd/:test'  element={<CategoriesProd />} />
+          <Route path='/productDetails/:id' element={<ProductsDetails />} />
 
-          <Route path='AccountLogin/' element={<AccountLogin />  } />
-          <Route path='CreateAccount/' element={<CreateAccount />} />
-          <Route path='AddressBook/'  element={<AddressBook />} />
-          <Route path='AccountManagement/'  element={<AccountManagement />} />
+          <Route path='/AccountLogin' element={<AccountLogin />  } />
+          <Route path='/CreateAccount' element={<CreateAccount />} />
+          <Route path='/AddressBook'  element={<AddressBook />} />
+          <Route path='/AccountManagement'  element={<AccountManagement />} />
 
-          <Route path='SellerProfile/' element={<SellerProfile />} />
-          <Route path='IntroPage/' element={<IntroPage /> } />
-          <Route path='SellerCreate/' element={<SellerCreateAccount  />} />
-          <Route path='SellerCreateTwo/' element={<SellerCreateTwo />} />
-          <Route path='AccountSeller/'  element={<AccountSeller />} />
+          <Route path='/SellerProfile' element={<SellerProfile />} />
+          <Route path='/IntroPage' element={<IntroPage /> } />
+          <Route path='/SellerCreate' element={<SellerCreateAccount  />} />
+          <Route path='/SellerCreateTwo' element={<SellerCreateTwo />} />
+          <Route path='/AccountSeller'  element={<AccountSeller />} />
           
-          <Route path='Cart/:id' element={<Cart />}  />
-          <Route path='CheckoutOne/' element={<CheckoutOne />} />
-          <Route path='DeliveryMethod/' exact element={<DeliveryMethod />}  />
-          <Route path='PaymentMethod/' exact element={<PaymentMethod />}  />
+          <Route path='/Cart/:id' element={<Cart />}  />
+          <Route path='/CheckoutOne' element={<CheckoutOne />} />
+          <Route path='/DeliveryMethod' exact element={<DeliveryMethod />}  />
+          <Route path='/PaymentMethod' exact element={<PaymentMethod />}  />
 
-          <Route path='AboutUs/' element={<AboutUs />} />
-          <Route path='Help/' element={<Help />} />
-          <Route path='Privacy/' exact element={<Privacy />}  />
-          <Route path='Track/' exact element={<Track />}  />
-          <Route path='ContactUs/' exact element={<ContactUs />}  />
-          <Route path='Terms/' exact element={<Terms />}  />
-          <Route path='PlaceOrder/' exact element={<PlaceOrder />}  />
+          <Route path='/AboutUs' element={<AboutUs />} />
+          <Route path='/Help' element={<Help />} />
+          <Route path='/Privacy' exact element={<Privacy />}  />
+          <Route path='/Track' exact element={<Track />}  />
+          <Route path='/ContactUs' exact element={<ContactUs />}  />
+          <Route path='/Terms' exact element={<Terms />}  />
+          <Route path='/PlaceOrder' exact element={<PlaceOrder />}  />
         </Routes> 
         </ScrollToTop>
       </Router>

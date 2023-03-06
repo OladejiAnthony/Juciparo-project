@@ -118,7 +118,7 @@ function SellingCarousel () {
             <h5>See All</h5>
           </div>
           <Slider {...settings}>
-          {data?.map((product) => {
+          {data.slice(0,5)?.map((product) => {
             return (
               <div key={product.id}>
                 <button className=''>{product.condition}</button>

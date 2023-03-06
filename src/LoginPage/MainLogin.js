@@ -36,7 +36,7 @@ function MainLogin() {
         .unwrap()
         .then(() => {
             navigate("/AccountSeller");
-            window.location.reload();
+            // window.location.reload();
         })
         .catch(() => {
             setSuccessful(false);

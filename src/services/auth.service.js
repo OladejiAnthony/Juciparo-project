@@ -14,19 +14,20 @@ const register = (firstname, lastname, email, password, phone) => {
     });
 };
 
-const login = (email, password) => {
-  return axios
+const login = async (email, password) => {
+  const response = await axios
     .post(API_URL + "login", {
       email,
       password,
-    })
-    .then((response) => {
-      if (response.data.accessToken) {
-        localStorage.setItem("user", JSON.stringify(response.data));
-      }
-
-      return response.data;
     });
+  console.log(response);
+  if (response.data.authorisation.access_token) {
+    localStorage.setItem(
+      "userToken",
+      JSON.stringify(response?.data?.authorisation?.access_token)
+    );
+  }
+  return response.data;
 };
 
 const logout = () => {

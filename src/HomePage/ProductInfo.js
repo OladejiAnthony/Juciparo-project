@@ -2,18 +2,20 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./ProductInfo.css"
 import { Icon } from '@iconify/react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { addCart, delCart } from "../redux/action";
 import axios from "axios";
 import SelectLabels from "./sizeButton";
 
 
 const handleClick = (event, key) => {
+
   console.log(event.target);
   console.log('key index: ', key);
 };
 
 function ProductInfo() {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [product, setProduct] = useState([]);
   const [cart, setCart] = useState([]);
@@ -23,15 +25,16 @@ function ProductInfo() {
   const state = useSelector((state) => state.handleCart);
 
   const addProduct = async () => {
-    setLoading(true);
-    const response = await axios.get(`https://admin.juciparo.com/api/v1/cart/add/${id}`)
-    .then(function() {
-        console.log(response?.message);
-        console.log(response?.status);
-        //setProduct(response?.data?.data);
-      })
+    // setLoading(true);
+    // const response = await axios.get(`https://admin.juciparo.com/api/v1/cart/add/${id}`)
+    // .then(function() {
+    //     console.log(response?.message);
+    //     console.log(response?.status);
+    //     //setProduct(response?.data?.data);
+    //   })
 
     dispatch(addCart(product));
+    navigate(`/cart/${product.slug}`)
     
   }
   
@@ -113,11 +116,11 @@ function ProductInfo() {
                   </div>
               )})}
 
-                  <button onClick={addProduct}>
+                  <button onClick={addProduct} style={{cursor:"pointer"}}> 
                     <Icon icon="ant-design:shopping-cart-outlined" />
-                    <Link to={"/Cart/" + product.slug}>
+                    <p >
                         Add to Cart
-                    </Link>
+                    </p>
                     
                   </button>
                   <div className='prod__menuWish'>

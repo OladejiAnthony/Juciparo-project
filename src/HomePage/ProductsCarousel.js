@@ -124,7 +124,7 @@ function ProductsCarousel (props) {
           </div>
           <Slider {...settings}>
 
-          {data?.map((product) => {
+          {data.slice(0,5)?.map((product) => {
             return (
               <div key={product.id}>
                 <button className=''>{product.condition}</button>

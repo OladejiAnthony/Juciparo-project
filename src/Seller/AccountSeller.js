@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
 import Newsletter from '../Newsletter'
@@ -12,11 +12,22 @@ import { useSelector } from "react-redux";
 
 function AccountSeller() {
     const { user: currentUser } = useSelector((state) => state.auth);
-     if (!currentUser) {
-        return <Navigate to="/AccountLogin" />;
-     }
+    // const {user: savedUser} = window.localStorage.getItem('userInfo')
+    const { user, status, authorisation } = currentUser;
+    useEffect(() => {
+        if (authorisation.access_token) {
+            localStorage.setItem('token', authorisation.access_token);
+        }
+    }, [])
     //firstname, lastname, email, phone, password
-
+    
+    // console.log(authorisation.access_token);
+    // console.log(user);
+    // console.log(currentUser);
+    if (!currentUser) {
+       return <Navigate to="/AccountLogin" />;
+   }
+    
   return (
     <>
         <Navbar />
@@ -29,8 +40,8 @@ function AccountSeller() {
             <div className='accountSeller__top'>
                 <div className='left'>
                     <Link>Account Details</Link>
-                    <h5>{currentUser.firstname}</h5> {/* <h5> Olaniyi Abiodun</h5>*/}
-                    {/* <h5>{currentUser.email}</h5> <h5> abiodunolaniyi7@gmail.com</h5>  */}
+                    <h5>{ user?.name ? user?.name : "No name" }</h5> 
+                    <h5>{user?.email ? user?.email : "No email"}</h5>  
                 </div>
                 <div className='right'>
                     <Link>Address Book</Link>

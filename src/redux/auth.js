@@ -32,6 +32,7 @@ export const login = createAsyncThunk(
     try {
       const data = await AuthService.login(email, password);
       return { user: data };
+      
     } catch (error) {
       const message =
         (error.response &&
@@ -53,7 +54,7 @@ export const logout = createAsyncThunk("auth/logout", async () => {
 
 const initialState = user
   ? { isLoggedIn: true, user }
-  : { isLoggedIn: false, user: null };
+  : { isLoggedIn: false, user: {} };
 
 const authSlice = createSlice({
   name: "auth",
@@ -68,6 +69,7 @@ const authSlice = createSlice({
     [login.fulfilled]: (state, action) => {
       state.isLoggedIn = true;
       state.user = action.payload.user;
+      // window.localStorage.setItem('userInfo', JSON.stringify(action?.payload?.user))
     },
     [login.rejected]: (state, action) => {
       state.isLoggedIn = false;
